@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   error?: string
   label?: string
-  options: Array<{ value: string; label: string }>
+  options: ReadonlyArray<{ readonly value: string; readonly label: string }> | Array<{ value: string; label: string }>
 }
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(
