@@ -1,16 +1,24 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+// @ts-check
+import { createRequire } from 'module';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+// Import Next.js ESLint configs directly
+const nextConfig = require('eslint-config-next');
+const nextCoreWebVitals = require('eslint-config-next/core-web-vitals');
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+/** @type {import('eslint').Linter.Config[]} */
+const config = [
+  {
+    ignores: [
+      '.next/**',
+      'node_modules/**',
+      'out/**',
+      '.vercel/**',
+      'public/**',
+    ],
+  },
+  ...nextCoreWebVitals,
 ];
 
-export default eslintConfig;
+export default config;

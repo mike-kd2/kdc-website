@@ -187,14 +187,14 @@ export default function Services() {
                           </ul>
                         </div>
 
-                        <div className="mt-8 space-y-4">
-                          <Link href="/#discovery-call">
+                        <div className="mt-8 flex flex-col gap-4">
+                          <Link href="/#discovery-call" className="w-full">
                             <Button variant="primary" size="lg" className="w-full">
                               <Sparkles className="mr-2 h-5 w-5" />
                               Discovery Call buchen
                             </Button>
                           </Link>
-                          <Link href="/#business-audit">
+                          <Link href="/#business-audit" className="w-full">
                             <Button variant="outline" size="lg" className="w-full">
                               Kostenlose Analyse anfordern
                               <ArrowRight className="ml-2 h-4 w-4" />
