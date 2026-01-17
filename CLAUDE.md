@@ -41,13 +41,14 @@ Before completing any code changes:
 3. Address warnings when reasonable
 
 ### Git Version Control
-All changes must be committed to GitHub:
+**All changes must be committed and pushed to GitHub after every completed task:**
 1. **NEVER commit secrets, API keys, passwords, or sensitive credentials** - Always verify files before committing
 2. After completing a task or feature, create a git commit with a descriptive message
 3. Include a Co-Authored-By line in commit messages: `Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>`
 4. Follow the repository's existing commit message style
-5. Push changes to the remote repository at https://github.com/mike-kd2/kdc-website when appropriate
+5. **ALWAYS push changes to the remote repository at https://github.com/mike-kd2/kdc-website after committing**
 6. If a user requests to commit files containing secrets (e.g., .env files), warn them and refuse
+7. Ensure all work is backed up to remote before reporting task completion
 
 ## Architecture
 
