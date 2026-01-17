@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { motion, Variants } from 'framer-motion'
+import { motion, Variants, useReducedMotion } from 'framer-motion'
 
 export interface ScrollRevealProps {
   children: ReactNode
@@ -25,18 +25,20 @@ export function ScrollReveal({
   className,
   once = true,
 }: ScrollRevealProps) {
+  const shouldReduceMotion = useReducedMotion()
+
   const variants: Variants = {
     hidden: {
       opacity: 0,
-      ...directionVariants[direction],
+      ...(shouldReduceMotion ? {} : directionVariants[direction]),
     },
     visible: {
       opacity: 1,
       x: 0,
       y: 0,
       transition: {
-        duration,
-        delay,
+        duration: shouldReduceMotion ? 0 : duration,
+        delay: shouldReduceMotion ? 0 : delay,
         ease: [0.25, 0.4, 0.25, 1],
       },
     },

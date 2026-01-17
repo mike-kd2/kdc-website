@@ -26,3 +26,29 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   color: #1F2937;
 }
+
+/* Focus Styles for Accessibility */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #0A4D4E;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove default focus outline when using focus-visible ring */
+.focus-visible\:ring-2:focus-visible {
+  outline: none;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

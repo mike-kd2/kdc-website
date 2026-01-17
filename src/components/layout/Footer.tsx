@@ -6,14 +6,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-neutral-charcoal text-neutral-off-white">
+    <footer className="bg-neutral-charcoal text-neutral-off-white" role="contentinfo" aria-label="Fusszeile">
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand & Description */}
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="inline-block text-xl font-bold text-white hover:text-accent transition-colors mb-4"
+              className="inline-block text-xl font-bold text-white hover:text-accent transition-colors mb-4 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
             >
               {SITE_NAME}
             </Link>
@@ -40,7 +40,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-neutral-light-gray hover:text-white transition-colors"
+                    className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
                   >
                     {item.label}
                   </Link>
@@ -58,7 +58,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-neutral-light-gray hover:text-white transition-colors"
+                  className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -66,7 +66,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-neutral-light-gray hover:text-white transition-colors"
+                  className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
                 >
                   Kontaktformular
                 </Link>
@@ -84,13 +84,13 @@ export function Footer() {
             <div className="flex flex-wrap gap-6 text-sm">
               <Link
                 href="/impressum"
-                className="text-neutral-light-gray hover:text-white transition-colors"
+                className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
               >
                 Impressum
               </Link>
               <Link
                 href="/datenschutz"
-                className="text-neutral-light-gray hover:text-white transition-colors"
+                className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
               >
                 Datenschutz
               </Link>

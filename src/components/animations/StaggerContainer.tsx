@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { motion, Variants } from 'framer-motion'
+import { motion, Variants, useReducedMotion } from 'framer-motion'
 
 export interface StaggerContainerProps {
   children: ReactNode
@@ -12,12 +12,14 @@ export function StaggerContainer({
   staggerDelay = 0.1,
   className,
 }: StaggerContainerProps) {
+  const shouldReduceMotion = useReducedMotion()
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: staggerDelay,
+        staggerChildren: shouldReduceMotion ? 0 : staggerDelay,
       },
     },
   }

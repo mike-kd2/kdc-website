@@ -27,7 +27,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       primary:
         'bg-primary text-white hover:bg-primary-light active:bg-primary',
       secondary:
-        'bg-accent text-white hover:bg-accent-dark active:bg-accent',
+        'bg-accent text-neutral-charcoal hover:bg-accent-dark active:bg-accent',
       outline:
         'border-2 border-primary text-primary hover:bg-primary hover:text-white',
       ghost:

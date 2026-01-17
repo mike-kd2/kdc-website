@@ -68,7 +68,7 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={`space-y-md ${className}`}>
+    <form onSubmit={handleSubmit(onSubmit)} className={`space-y-md ${className}`} aria-label="Kontaktformular">
       {/* Name Field */}
       <div>
         <Input
@@ -121,7 +121,7 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
 
       {/* Error Message */}
       {submitStatus === 'error' && (
-        <div className="rounded-md bg-red-50 p-4 text-sm text-red-800 border border-red-200">
+        <div className="rounded-md bg-red-50 p-4 text-sm text-red-800 border border-red-200" role="alert" aria-live="assertive">
           <p className="font-medium">Fehler beim Senden</p>
           <p className="mt-1">{errorMessage}</p>
         </div>
@@ -129,7 +129,7 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
 
       {/* Success Message */}
       {submitStatus === 'success' && (
-        <div className="rounded-md bg-green-50 p-4 text-sm text-green-800 border border-green-200">
+        <div className="rounded-md bg-green-50 p-4 text-sm text-green-800 border border-green-200" role="status" aria-live="polite">
           <p className="font-medium">Nachricht erfolgreich gesendet!</p>
           <p className="mt-1">Wir melden uns in Kürze bei Ihnen.</p>
         </div>

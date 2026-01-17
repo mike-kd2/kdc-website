@@ -20,7 +20,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
           >
             {label}
             {props.required && (
-              <span className="ml-1 text-accent">*</span>
+              <span className="ml-1 text-primary">*</span>
             )}
           </label>
         )}

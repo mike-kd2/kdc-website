@@ -130,7 +130,7 @@ export default function Contact() {
                     href={process.env.NEXT_PUBLIC_TIDYCAL_URL || 'https://tidycal.com/klauserdesignscoaching/discovery-call'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-accent transition-transform hover:scale-105"
+                    className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-neutral-charcoal transition-transform hover:scale-105"
                   >
                     <Calendar className="mr-2 h-5 w-5" />
                     Discovery Call buchen

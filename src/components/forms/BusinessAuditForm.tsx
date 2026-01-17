@@ -94,7 +94,7 @@ export function BusinessAuditForm({ onSuccess, className = '' }: BusinessAuditFo
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={`space-y-xl ${className}`}>
+    <form onSubmit={handleSubmit(onSubmit)} className={`space-y-xl ${className}`} aria-label="Business Audit Formular">
       {/* Contact Section */}
       <div className="space-y-md">
         <h3 className="text-xl font-semibold text-neutral-charcoal">
@@ -275,7 +275,7 @@ export function BusinessAuditForm({ onSuccess, className = '' }: BusinessAuditFo
 
       {/* Error Message */}
       {submitStatus === 'error' && (
-        <div className="rounded-md bg-red-50 p-4 text-sm text-red-800 border border-red-200">
+        <div className="rounded-md bg-red-50 p-4 text-sm text-red-800 border border-red-200" role="alert" aria-live="assertive">
           <p className="font-medium">Fehler beim Senden</p>
           <p className="mt-1">{errorMessage}</p>
         </div>
@@ -283,7 +283,7 @@ export function BusinessAuditForm({ onSuccess, className = '' }: BusinessAuditFo
 
       {/* Success Message */}
       {submitStatus === 'success' && (
-        <div className="rounded-md bg-green-50 p-4 text-sm text-green-800 border border-green-200">
+        <div className="rounded-md bg-green-50 p-4 text-sm text-green-800 border border-green-200" role="status" aria-live="polite">
           <p className="font-medium">Analyse-Anfrage erfolgreich gesendet!</p>
           <p className="mt-1">
             Vielen Dank für Ihr Interesse. Wir senden Ihnen in Kürze eine detaillierte

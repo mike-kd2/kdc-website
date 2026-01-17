@@ -35,24 +35,26 @@ export function Header() {
           ? 'bg-white/95 backdrop-blur-sm shadow-sm'
           : 'bg-white border-transparent'
       )}
+      role="banner"
+      aria-label="Kopfzeile"
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center space-x-2 text-lg font-bold text-primary hover:text-primary-light transition-colors md:text-xl"
+            className="flex items-center space-x-2 text-lg font-bold text-primary hover:text-primary-light transition-colors md:text-xl rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
-            <span>klauser designs</span>
+            <span>klauser designs & coaching</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex md:items-center md:space-x-8">
+          <nav className="hidden md:flex md:items-center md:space-x-8" aria-label="Hauptnavigation">
             {NAVIGATION_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-neutral-charcoal hover:text-primary transition-colors"
+                className="text-sm font-medium text-neutral-charcoal hover:text-primary transition-colors rounded-md px-2 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 {item.label}
               </Link>
@@ -90,12 +92,12 @@ export function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-white">
-          <nav className="container mx-auto px-4 py-4 space-y-1">
+          <nav className="container mx-auto px-4 py-4 space-y-1" aria-label="Mobile Navigation">
             {NAVIGATION_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-charcoal hover:bg-neutral-light-gray/50 hover:text-primary transition-colors"
+                className="block rounded-md px-3 py-2 text-base font-medium text-neutral-charcoal hover:bg-neutral-light-gray/50 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}
