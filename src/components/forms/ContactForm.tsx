@@ -6,6 +6,11 @@ import { contactFormSchema, type ContactFormData } from '@/lib/validations';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { TextArea } from '@/components/ui/TextArea';
+import {
+  trackContactFormSubmit,
+  trackContactFormSuccess,
+  trackContactFormError,
+} from '@/lib/analytics';
 
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 
@@ -30,6 +35,7 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
   const onSubmit = async (data: ContactFormData) => {
     setSubmitStatus('loading');
     setErrorMessage('');
+    trackContactFormSubmit();
 
     try {
       const response = await fetch('/api/contact', {
@@ -47,15 +53,17 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
       }
 
       setSubmitStatus('success');
+      trackContactFormSuccess();
       reset();
       onSuccess?.();
     } catch (error) {
-      setSubmitStatus('error');
-      setErrorMessage(
+      const errorMsg =
         error instanceof Error
           ? error.message
-          : 'Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.'
-      );
+          : 'Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.';
+      setSubmitStatus('error');
+      setErrorMessage(errorMsg);
+      trackContactFormError(errorMsg);
     }
   };
 

@@ -16,6 +16,11 @@ import { Input } from '@/components/ui/Input';
 import { TextArea } from '@/components/ui/TextArea';
 import { Select } from '@/components/ui/Select';
 import { Checkbox } from '@/components/ui/Checkbox';
+import {
+  trackAuditFormSubmit,
+  trackAuditFormSuccess,
+  trackAuditFormError,
+} from '@/lib/analytics';
 
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 
@@ -55,6 +60,7 @@ export function BusinessAuditForm({ onSuccess, className = '' }: BusinessAuditFo
   const onSubmit = async (data: BusinessAuditFormData) => {
     setSubmitStatus('loading');
     setErrorMessage('');
+    trackAuditFormSubmit();
 
     try {
       const response = await fetch('/api/audit', {
@@ -72,16 +78,18 @@ export function BusinessAuditForm({ onSuccess, className = '' }: BusinessAuditFo
       }
 
       setSubmitStatus('success');
+      trackAuditFormSuccess();
       reset();
       setSelectedGoals([]);
       onSuccess?.();
     } catch (error) {
-      setSubmitStatus('error');
-      setErrorMessage(
+      const errorMsg =
         error instanceof Error
           ? error.message
-          : 'Formular konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.'
-      );
+          : 'Formular konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.';
+      setSubmitStatus('error');
+      setErrorMessage(errorMsg);
+      trackAuditFormError(errorMsg);
     }
   };
 

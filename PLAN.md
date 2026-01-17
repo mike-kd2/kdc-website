@@ -538,33 +538,41 @@ Jede Aufgabe gilt erst als abgeschlossen wenn:
 
 ### Aufgaben
 
-- [ ] **9.1 TidyCal Integration**
+- [x] **9.1 TidyCal Integration**
   - **Datei:** `src/components/integrations/TidyCalEmbed.tsx`
   - Iframe Embed, Responsive, Loading State
+  - ✅ Component created with loading/error states
 
-- [ ] **9.2 Plausible Analytics**
+- [x] **9.2 Plausible Analytics**
   - **Datei:** `src/pages/_document.tsx`
   - Script Tag, nur in Production
+  - ✅ Script added, only loads in production
 
-- [ ] **9.3 Analytics Event Tracking**
+- [x] **9.3 Analytics Event Tracking**
   - **Datei:** `src/lib/analytics.ts`
   - Custom Events: Discovery Call Click, Form Submission
+  - ✅ Type-safe event tracking utility created
 
-- [ ] **9.4 Event Tracking zu CTAs**
+- [x] **9.4 Event Tracking zu CTAs**
   - DiscoveryCall Section, Form Submissions
+  - ✅ Tracking added to DiscoveryCall, CTA, ContactForm, BusinessAuditForm
 
-- [ ] **9.5 Floating CTA Button**
+- [x] **9.5 Floating CTA Button**
   - **Datei:** `src/components/FloatingCTA.tsx`
   - Fixed Position, Pulse Animation, TidyCal Link
+  - ✅ Appears after 300px scroll, responsive text (mobile/desktop)
 
-- [ ] **9.6 Phase 9 Verifikation**
-  - [ ] **MOBILE FIRST:** Playwright Screenshot bei 375px
-  - [ ] **MOBILE CHECK:** TidyCal Embed ist responsive und scrollbar
-  - [ ] **MOBILE CHECK:** Floating CTA überlappt keinen wichtigen Content
-  - [ ] **MOBILE CHECK:** Floating CTA ist nicht zu groß für Mobile
-  - [ ] TidyCal Embed lädt korrekt
-  - [ ] Floating CTA funktioniert
-  - [ ] Plausible Script in Production Build
+- [x] **9.6 Phase 9 Verifikation**
+  - [x] **MOBILE FIRST:** Playwright Screenshot bei 375px
+  - [x] **MOBILE CHECK:** TidyCal Embed ist responsive und scrollbar
+  - [x] **MOBILE CHECK:** Floating CTA überlappt keinen wichtigen Content
+  - [x] **MOBILE CHECK:** Floating CTA ist nicht zu groß für Mobile
+  - [x] TidyCal Embed lädt korrekt
+  - [x] Floating CTA funktioniert
+  - [x] Plausible Script in Production Build
+  - [x] Build successful (pnpm build)
+  - [x] ESLint passed (0 errors, 0 warnings)
+  - [x] Visual verification: Mobile (375px), Tablet (768px), Desktop (1280px)
 
 ---
 
