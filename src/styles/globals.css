@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 10 77 78;
+  --color-primary-light: 26 122 122;
+  --color-accent: 245 158 11;
+  --color-accent-dark: 234 88 12;
+  --color-neutral-charcoal: 31 41 55;
+  --color-neutral-slate: 71 85 105;
+}
+
+* {
+  border-color: #E2E8F0;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #1F2937;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #1F2937;
+}
