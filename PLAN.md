@@ -269,45 +269,45 @@ Jede Aufgabe gilt erst als abgeschlossen wenn:
 
 ### Aufgaben
 
-- [ ] **5.1 Header Component**
+- [x] **5.1 Header Component**
   - **Datei:** `src/components/layout/Header.tsx`
   - Logo, Navigation, Discovery Call CTA Button
   - Mobile Hamburger Menu, Sticky on Scroll
 
-- [ ] **5.2 MobileMenu Component**
+- [x] **5.2 MobileMenu Component**
   - **Datei:** `src/components/layout/MobileMenu.tsx`
   - Slide-in animiert mit Framer Motion
 
-- [ ] **5.3 Footer Component**
+- [x] **5.3 Footer Component**
   - **Datei:** `src/components/layout/Footer.tsx`
   - Navigation, Kontakt, Copyright, Discovery Call CTA
 
-- [ ] **5.4 Layout Wrapper**
+- [x] **5.4 Layout Wrapper**
   - **Datei:** `src/components/layout/Layout.tsx`
   - Header + Children + Footer
 
-- [ ] **5.5 Container Component**
+- [x] **5.5 Container Component**
   - **Datei:** `src/components/layout/Container.tsx`
   - Max-Width, Responsive Padding
 
-- [ ] **5.6 Section Component**
+- [x] **5.6 Section Component**
   - **Datei:** `src/components/layout/Section.tsx`
   - Konsistentes Spacing, Optional Background
 
-- [ ] **5.7 Layout Index**
+- [x] **5.7 Layout Index**
   - **Datei:** `src/components/layout/index.ts`
 
-- [ ] **5.8 _app.tsx mit Layout**
+- [x] **5.8 _app.tsx mit Layout**
   - Layout Component wrappen
 
-- [ ] **5.9 Phase 5 Verifikation**
-  - [ ] **MOBILE FIRST:** Playwright Screenshot bei 375px
-  - [ ] **MOBILE CHECK:** Header-Logo und Menu-Button passen nebeneinander
-  - [ ] **MOBILE CHECK:** Navigation-Links überlappen nicht
-  - [ ] **MOBILE CHECK:** Footer-Content stapelt sich sauber
-  - [ ] Mobile Menu öffnet/schließt korrekt
-  - [ ] Responsive auf Tablet (768px) und Desktop (1280px)
-  - [ ] Keine horizontalen Scrollbars auf allen Viewports
+- [x] **5.9 Phase 5 Verifikation**
+  - [x] **MOBILE FIRST:** Playwright Screenshot bei 375px
+  - [x] **MOBILE CHECK:** Header-Logo und Menu-Button passen nebeneinander
+  - [x] **MOBILE CHECK:** Navigation-Links überlappen nicht
+  - [x] **MOBILE CHECK:** Footer-Content stapelt sich sauber
+  - [x] Mobile Menu öffnet/schließt korrekt
+  - [x] Responsive auf Tablet (768px) und Desktop (1280px)
+  - [x] Keine horizontalen Scrollbars auf allen Viewports
 
 ---
 

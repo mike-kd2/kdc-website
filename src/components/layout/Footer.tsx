@@ -1,0 +1,103 @@
+import Link from 'next/link'
+import { Button } from '@/components/ui'
+import { NAVIGATION_ITEMS, CONTACT_EMAIL, TIDYCAL_URL, SITE_NAME } from '@/lib/constants'
+
+export function Footer() {
+  const currentYear = new Date().getFullYear()
+
+  return (
+    <footer className="bg-neutral-charcoal text-neutral-off-white">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {/* Brand & Description */}
+          <div className="lg:col-span-2">
+            <Link
+              href="/"
+              className="inline-block text-xl font-bold text-white hover:text-accent transition-colors mb-4"
+            >
+              {SITE_NAME}
+            </Link>
+            <p className="text-neutral-light-gray max-w-md mb-6">
+              AI Consultancy für Schweizer KMUs. Wir helfen Ihnen, KI-Lösungen
+              erfolgreich in Ihr Unternehmen zu integrieren.
+            </p>
+            <Button
+              variant="secondary"
+              size="md"
+              onClick={() => window.open(TIDYCAL_URL, '_blank')}
+            >
+              Discovery Call buchen
+            </Button>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Navigation
+            </h3>
+            <ul className="space-y-3">
+              {NAVIGATION_ITEMS.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-neutral-light-gray hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              Kontakt
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="text-neutral-light-gray hover:text-white transition-colors"
+                >
+                  {CONTACT_EMAIL}
+                </a>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-neutral-light-gray hover:text-white transition-colors"
+                >
+                  Kontaktformular
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-neutral-slate/30">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <p className="text-sm text-neutral-light-gray">
+              © {currentYear} {SITE_NAME}. Alle Rechte vorbehalten.
+            </p>
+            <div className="flex flex-wrap gap-6 text-sm">
+              <Link
+                href="/impressum"
+                className="text-neutral-light-gray hover:text-white transition-colors"
+              >
+                Impressum
+              </Link>
+              <Link
+                href="/datenschutz"
+                className="text-neutral-light-gray hover:text-white transition-colors"
+              >
+                Datenschutz
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}

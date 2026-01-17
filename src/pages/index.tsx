@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Button, Badge, Card, CardHeader, CardTitle, CardDescription, CardContent, Input, TextArea } from '@/components/ui'
+import { Container, Section } from '@/components/layout'
 import { Sparkles } from 'lucide-react'
 
 export default function Home() {
@@ -11,8 +12,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen">
-        <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <Section spacing="lg">
+        <Container size="md">
           <div className="mb-8">
             <Badge variant="primary" className="mb-4">
               <Sparkles className="mr-1 h-3 w-3" />
@@ -80,8 +81,8 @@ export default function Home() {
               </Button>
             </CardContent>
           </Card>
-        </div>
-      </main>
+        </Container>
+      </Section>
     </>
   )
 }
