@@ -194,7 +194,7 @@ export default function Projects() {
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <Link href="/#discovery-call">
-                  <Button variant="accent" size="lg">
+                  <Button variant="secondary" size="lg">
                     <Sparkles className="mr-2 h-5 w-5" />
                     Discovery Call buchen
                   </Button>

@@ -216,7 +216,7 @@ export default function About() {
                 Ich freue mich darauf, mehr über Ihre Herausforderungen zu erfahren.
               </p>
               <Link href="/#discovery-call">
-                <Button variant="accent" size="lg">
+                <Button variant="secondary" size="lg">
                   <Sparkles className="mr-2 h-5 w-5" />
                   Jetzt Discovery Call buchen
                 </Button>
