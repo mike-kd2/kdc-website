@@ -1,0 +1,210 @@
+import { SEOHead } from '@/components/SEOHead';
+import { Section, Container } from '@/components/layout';
+import { Badge } from '@/components/ui';
+import { ScrollReveal } from '@/components/animations';
+import { Shield } from 'lucide-react';
+
+export default function Datenschutz() {
+  return (
+    <>
+      <SEOHead
+        title="Datenschutzerklärung"
+        description="Datenschutzerklärung von klauser designs & coaching. Erfahren Sie, wie wir Ihre Daten schützen und verarbeiten."
+        canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/datenschutz`}
+        noindex={true}
+      />
+
+      {/* Hero Section */}
+      <Section className="bg-gradient-to-br from-primary to-primary-light text-white pt-24 pb-16">
+        <Container>
+          <ScrollReveal>
+            <div className="mx-auto max-w-3xl text-center">
+              <Shield className="mx-auto mb-4 h-12 w-12" />
+              <h1 className="mb-4 text-4xl font-bold sm:text-5xl">
+                Datenschutzerklärung
+              </h1>
+              <p className="text-lg text-white/90">
+                Ihre Privatsphäre ist uns wichtig
+              </p>
+            </div>
+          </ScrollReveal>
+        </Container>
+      </Section>
+
+      {/* Content Section */}
+      <Section>
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <ScrollReveal>
+              <div className="prose prose-lg max-w-none">
+                {/* Placeholder Notice */}
+                <div className="mb-8 rounded-lg bg-amber-50 p-6 border border-amber-200">
+                  <p className="text-amber-800 font-medium">
+                    ⚠️ <strong>Platzhalter:</strong> Diese Datenschutzerklärung ist ein
+                    Mustertext und muss vor dem Live-Gang durch eine rechtlich geprüfte,
+                    auf Ihr Unternehmen zugeschnittene Version ersetzt werden.
+                  </p>
+                  <p className="mt-2 text-sm text-amber-700">
+                    Empfehlung: Lassen Sie die Datenschutzerklärung von einem
+                    Fachanwalt oder mit einem Generator wie{' '}
+                    <a
+                      href="https://www.aktiverda tenschutz.de/datenschutz/generatoren/datenschutz/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      Datenschutz-Generator.ch
+                    </a>{' '}
+                    erstellen.
+                  </p>
+                </div>
+
+                <h2>1. Verantwortlicher</h2>
+                <p>
+                  Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+                </p>
+                <p>
+                  <strong>klauser designs & coaching</strong>
+                  <br />
+                  Michael Klauser
+                  <br />
+                  [Adresse]
+                  <br />
+                  Schweiz
+                </p>
+                <p>
+                  E-Mail: michael@klauserdesigns.ch
+                </p>
+
+                <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+                <h3>2.1 Allgemeine Nutzung der Website</h3>
+                <p>
+                  Beim Besuch unserer Website werden automatisch Informationen
+                  erfasst, die Ihr Browser an unseren Server übermittelt. Diese
+                  Informationen werden temporär in einem sogenannten Logfile
+                  gespeichert:
+                </p>
+                <ul>
+                  <li>IP-Adresse</li>
+                  <li>Datum und Uhrzeit der Anfrage</li>
+                  <li>Inhalt der Anforderung (konkrete Seite)</li>
+                  <li>Zugriffsstatus/HTTP-Statuscode</li>
+                  <li>Übertragene Datenmenge</li>
+                  <li>Browser und Betriebssystem</li>
+                </ul>
+
+                <h3>2.2 Kontaktformulare</h3>
+                <p>
+                  Wenn Sie uns über ein Kontaktformular kontaktieren, werden die von
+                  Ihnen angegebenen Daten (Name, E-Mail-Adresse, Telefonnummer,
+                  Nachricht) bei uns gespeichert, um Ihre Anfrage zu bearbeiten.
+                </p>
+                <p>
+                  Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) bzw. Art.
+                  6 Abs. 1 lit. b DSGVO (Vertragsanbahnung).
+                </p>
+
+                <h3>2.3 Business Audit Formular</h3>
+                <p>
+                  Im Business Audit Formular erheben wir zusätzliche Informationen zu
+                  Ihrem Unternehmen (Firmengrösse, Branche, KI-Nutzung, Budget,
+                  Ziele), um Ihnen eine massgeschneiderte Analyse bieten zu können.
+                </p>
+
+                <h2>3. Weitergabe von Daten</h2>
+                <p>
+                  Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt
+                  grundsätzlich nicht, ausser:
+                </p>
+                <ul>
+                  <li>Sie haben ausdrücklich eingewilligt (Art. 6 Abs. 1 lit. a DSGVO)</li>
+                  <li>
+                    Die Weitergabe ist zur Vertragserfüllung erforderlich (Art. 6 Abs.
+                    1 lit. b DSGVO)
+                  </li>
+                  <li>
+                    Eine gesetzliche Verpflichtung zur Weitergabe besteht (Art. 6 Abs.
+                    1 lit. c DSGVO)
+                  </li>
+                </ul>
+
+                <h2>4. E-Mail-Versand (Maileroo)</h2>
+                <p>
+                  Für den Versand von E-Mails nutzen wir den Dienst Maileroo. Die
+                  Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
+                  DSGVO (berechtigtes Interesse an zuverlässigem E-Mail-Versand).
+                </p>
+
+                <h2>5. Webanalyse (Plausible Analytics)</h2>
+                <p>
+                  Diese Website nutzt Plausible Analytics, einen
+                  datenschutzfreundlichen Webanalyse-Dienst. Plausible verzichtet auf
+                  Cookies und erfasst keine personenbezogenen Daten. Es werden
+                  anonyme Nutzungsstatistiken erhoben (Seitenaufrufe, Herkunftsland,
+                  Geräteklasse).
+                </p>
+                <p>
+                  Weitere Informationen:{' '}
+                  <a
+                    href="https://plausible.io/data-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    plausible.io/data-policy
+                  </a>
+                </p>
+
+                <h2>6. Ihre Rechte</h2>
+                <p>Sie haben folgende Rechte:</p>
+                <ul>
+                  <li>Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)</li>
+                  <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+                  <li>Löschung Ihrer Daten (Art. 17 DSGVO)</li>
+                  <li>
+                    Einschränkung der Datenverarbeitung (Art. 18 DSGVO)
+                  </li>
+                  <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+                  <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+                  <li>
+                    Widerruf einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)
+                  </li>
+                </ul>
+                <p>
+                  Zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter:
+                  michael@klauserdesigns.ch
+                </p>
+
+                <h2>7. Speicherdauer</h2>
+                <p>
+                  Wir speichern Ihre personenbezogenen Daten nur so lange, wie dies
+                  für die Erfüllung des jeweiligen Zwecks erforderlich ist oder
+                  gesetzliche Aufbewahrungsfristen dies vorsehen.
+                </p>
+
+                <h2>8. Datensicherheit</h2>
+                <p>
+                  Wir setzen technische und organisatorische Sicherheitsmassnahmen
+                  ein, um Ihre Daten gegen zufällige oder vorsätzliche Manipulation,
+                  Verlust, Zerstörung oder gegen den Zugriff unberechtigter Personen
+                  zu schützen (SSL/TLS-Verschlüsselung, sichere Server, regelmässige
+                  Sicherheitsupdates).
+                </p>
+
+                <h2>9. Änderungen der Datenschutzerklärung</h2>
+                <p>
+                  Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie
+                  an geänderte Rechtslagen oder Änderungen unserer Dienstleistungen
+                  anzupassen. Die aktuelle Version finden Sie stets auf dieser Seite.
+                </p>
+
+                <p className="text-sm text-neutral-slate mt-8">
+                  <strong>Stand:</strong> Januar 2026
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </Container>
+      </Section>
+    </>
+  );
+}
