@@ -89,16 +89,19 @@ export default function About() {
                 </h2>
                 <div className="space-y-4 text-neutral-slate">
                   <p>
-                    Seit Jahren beschäftige ich mich mit der Frage: <strong>Wie können wir Technologie nutzen, um echte Probleme zu lösen?</strong> Diese Frage hat mich von der Software-Entwicklung zur KI-Beratung geführt.
+                    Seit über 20 Jahren treibt mich eine Frage an: <strong>Wie können wir Technologie nutzen, um echte Business-Probleme zu lösen?</strong> Diese Frage hat meinen Weg geprägt – vom Systemtechnik-Ingenieur über die Rolle als CIO und Geschäftsleitungsmitglied bis hin zur KI-Beratung.
                   </p>
                   <p>
-                    Als ich gesehen habe, wie KI-Tools wie ChatGPT, Midjourney und Co. plötzlich kreative und operative Aufgaben revolutionieren, war mir klar: <strong>Das ist die Zukunft – und viele Schweizer KMUs haben noch keinen Zugang dazu.</strong>
+                    Bevor ich mich der Künstlichen Intelligenz widmete, habe ich Jahrzehnte im &quot;Maschinenraum&quot; von Unternehmen verbracht. Ich habe komplexe ERP-Landschaften integriert, Schnittstellen zwischen isolierten Systemen gebaut und gelernt, wie wichtig saubere Datenflüsse sind. Als CIO wusste ich: <strong>Die beste Software nützt nichts, wenn die Prozesse dahinter nicht stimmen.</strong>
                   </p>
                   <p>
-                    Deshalb habe ich <strong>klauser designs&coaching</strong> gegründet. Mein Ziel: KI-Technologie für kleine und mittlere Unternehmen zugänglich, verständlich und profitabel machen.
+                    Als dann KI-Tools wie ChatGPT und Midjourney aufkamen, sah ich nicht nur einen Hype, sondern das fehlende Puzzlestück. Mir war klar: Wer seine Daten und Systeme im Griff hat, kann mit KI eine nie dagewesene Effizienz erreichen. <strong>Doch viele Schweizer KMUs haben zwar die Daten, aber noch keinen Zugang zu dieser Technologie.</strong>
                   </p>
                   <p>
-                    Ich arbeite nicht mit Buzzwords oder unrealistischen Versprechen. Ich setze auf <strong>pragmatische Lösungen, die wirklich funktionieren</strong> – von der ersten Analyse bis zur erfolgreichen Implementierung.
+                    Deshalb habe ich <strong>klauser designs&amp;coaching</strong> neu ausgerichtet: KI-Technologie für kleine und mittlere Unternehmen zugänglich, sicher und profitabel machen.
+                  </p>
+                  <p>
+                    Ich arbeite nicht mit Buzzwords. Ich bringe meine Erfahrung aus über 10 Jahren Arbeit mit komplexen Datenstrukturen und Systemarchitekturen ein, um pragmatische Lösungen zu schaffen. <strong>Von der sauberen Datenbasis bis zur erfolgreichen Implementierung</strong> – ich sorge dafür, dass KI bei Ihnen nicht nur Spielerei ist, sondern funktioniert.
                   </p>
                 </div>
               </div>
