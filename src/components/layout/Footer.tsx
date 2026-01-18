@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="bg-neutral-charcoal text-neutral-off-white" role="contentinfo" aria-label="Fusszeile">
-      <div className="container mx-auto px-4 py-12 md:py-16 pb-24">
+      <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand & Description */}
           <div className="lg:col-span-2">
@@ -81,7 +81,7 @@ export function Footer() {
             <p className="text-sm text-neutral-light-gray">
               © {currentYear} {SITE_NAME}. Alle Rechte vorbehalten.
             </p>
-            <div className="flex flex-wrap gap-6 text-sm pr-44">
+            <div className="flex flex-wrap gap-6 text-sm">
               <Link
                 href="/impressum"
                 className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"

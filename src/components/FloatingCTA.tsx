@@ -9,10 +9,11 @@ import { trackFloatingCtaClick } from '@/lib/analytics';
  *
  * A fixed-position button that appears in the bottom-right corner
  * after the user scrolls past a certain threshold.
- * Includes a subtle pulse animation to draw attention.
+ * Hides when the footer becomes visible (footer has its own CTA).
  */
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,12 +33,28 @@ export function FloatingCTA() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const footer = document.querySelector('footer');
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsFooterVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(footer);
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleClick = () => {
     trackFloatingCtaClick();
     window.open(TIDYCAL_URL, '_blank');
   };
 
-  if (!isVisible) {
+  if (!isVisible || isFooterVisible) {
     return null;
   }
 
