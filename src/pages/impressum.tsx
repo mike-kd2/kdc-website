@@ -61,6 +61,16 @@ export default function Impressum() {
                       <br />
                       Schweiz
                     </p>
+                    <p>
+                      <strong className="text-neutral-charcoal">UID:</strong>
+                      <br />
+                      CHE-351.216.842
+                    </p>
+                    <p>
+                      <strong className="text-neutral-charcoal">MwSt-Nr:</strong>
+                      <br />
+                      CHE-351.216.842 MWST
+                    </p>
                   </div>
                 </div>
 
