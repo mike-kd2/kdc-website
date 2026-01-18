@@ -71,7 +71,7 @@ const services = [
   },
   {
     icon: Wrench,
-    title: 'Junior Software-Entwicklung',
+    title: 'Software-Entwicklung',
     subtitle: 'Praktische Unterstützung',
     description:
       'Unterstützung bei der Umsetzung von Softwareprojekten. Ideal für Teams, die zusätzliche Entwicklungskapazität benötigen.',

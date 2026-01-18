@@ -1,8 +1,13 @@
 import type { ContactFormData, BusinessAuditFormData } from './validations';
 
-const MAILEROO_API_URL = 'https://smtp.maileroo.com/send';
+const MAILEROO_API_URL = 'https://smtp.maileroo.com/api/v2/emails';
 const MAILEROO_API_KEY = process.env.MAILEROO_API_KEY;
 const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'michael@klauserdesigns.ch';
+
+interface EmailObject {
+  address: string;
+  name?: string;
+}
 
 interface EmailOptions {
   to: string;
@@ -19,19 +24,33 @@ async function sendEmail({ to, subject, html, replyTo }: EmailOptions): Promise<
     throw new Error('Maileroo API key is not configured');
   }
 
+  const fromObj: EmailObject = {
+    address: 'noreply@klauserdesigns.ch',
+    name: 'KDC Website',
+  };
+
+  const toObj: EmailObject = {
+    address: to,
+  };
+
+  const payload: Record<string, unknown> = {
+    from: fromObj,
+    to: toObj,
+    subject,
+    html,
+  };
+
+  if (replyTo) {
+    payload.reply_to = { address: replyTo };
+  }
+
   const response = await fetch(MAILEROO_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'X-API-Key': MAILEROO_API_KEY,
     },
-    body: JSON.stringify({
-      to,
-      subject,
-      html,
-      from: `KDC Website <noreply@klauserdesigns.ch>`,
-      ...(replyTo && { reply_to: replyTo }),
-    }),
+    body: JSON.stringify(payload),
   });
 
   if (!response.ok) {

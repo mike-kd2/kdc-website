@@ -27,7 +27,7 @@ const services = [
   {
     icon: Terminal,
     title: 'Software-Entwicklung',
-    description: 'Junior-Level Software-Entwicklung und technische Unterstützung für Ihre Projekte.',
+    description: 'Software-Entwicklung und technische Unterstützung für Ihre Projekte.',
     tags: ['JavaScript', 'TypeScript', 'Python'],
   },
 ]

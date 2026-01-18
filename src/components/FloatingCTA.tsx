@@ -43,15 +43,11 @@ export function FloatingCTA() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
-      {/* Subtle pulse ring animation */}
-      <div className="absolute inset-0 rounded-full bg-primary opacity-20 animate-pulse" />
-
-      {/* Button */}
       <Button
         variant="primary"
         size="lg"
         onClick={handleClick}
-        className="relative shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+        className="animate-soft-glow hover:scale-105 transition-transform duration-300"
         aria-label="Discovery Call buchen"
       >
         <Calendar className="h-5 w-5 mr-2" />

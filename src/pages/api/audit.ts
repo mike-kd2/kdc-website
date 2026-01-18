@@ -38,7 +38,6 @@ export default async function handler(
   } catch (error) {
     console.error('Business audit form error:', error);
 
-    // Return generic error to client (don't expose internal details)
     return res.status(500).json({
       error: 'Ein Fehler ist beim Senden der Anfrage aufgetreten. Bitte versuchen Sie es später erneut.',
     });

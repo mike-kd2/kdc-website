@@ -50,9 +50,14 @@ const config: Config = {
           '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        'soft-glow': {
+          '0%, 100%': { boxShadow: '0 4px 14px 0 rgba(10, 77, 78, 0.25)' },
+          '50%': { boxShadow: '0 4px 20px 0 rgba(10, 77, 78, 0.4)' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 0.3s ease-out',
+        'soft-glow': 'soft-glow 4s ease-in-out infinite',
       },
     },
   },

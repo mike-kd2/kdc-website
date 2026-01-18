@@ -54,7 +54,7 @@ export const SERVICES = [
   {
     id: 'software-entwicklung',
     title: 'Software-Entwicklung',
-    description: 'Junior-Level Software-Entwicklung und technische Unterstützung',
+    description: 'Software-Entwicklung und technische Unterstützung',
     icon: 'Terminal',
     tags: ['JavaScript', 'TypeScript', 'Python'],
   },
