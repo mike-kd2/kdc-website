@@ -37,28 +37,6 @@ export default function Datenschutz() {
           <div className="mx-auto max-w-4xl">
             <ScrollReveal>
               <div className="prose prose-lg max-w-none">
-                {/* Placeholder Notice */}
-                <div className="mb-8 rounded-lg bg-amber-50 p-6 border border-amber-200">
-                  <p className="text-amber-800 font-medium">
-                    ⚠️ <strong>Platzhalter:</strong> Diese Datenschutzerklärung ist ein
-                    Mustertext und muss vor dem Live-Gang durch eine rechtlich geprüfte,
-                    auf Ihr Unternehmen zugeschnittene Version ersetzt werden.
-                  </p>
-                  <p className="mt-2 text-sm text-amber-700">
-                    Empfehlung: Lassen Sie die Datenschutzerklärung von einem
-                    Fachanwalt oder mit einem Generator wie{' '}
-                    <a
-                      href="https://www.aktiverda tenschutz.de/datenschutz/generatoren/datenschutz/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline"
-                    >
-                      Datenschutz-Generator.ch
-                    </a>{' '}
-                    erstellen.
-                  </p>
-                </div>
-
                 <h2>1. Verantwortlicher</h2>
                 <p>
                   Verantwortlich für die Datenverarbeitung auf dieser Website ist:
@@ -68,7 +46,9 @@ export default function Datenschutz() {
                   <br />
                   Michael Klauser
                   <br />
-                  [Adresse]
+                  Notkerstrasse 14
+                  <br />
+                  9000 St. Gallen
                   <br />
                   Schweiz
                 </p>
