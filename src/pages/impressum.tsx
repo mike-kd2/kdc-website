@@ -32,19 +32,6 @@ export default function Impressum() {
         <Container>
           <div className="mx-auto max-w-4xl">
             <ScrollReveal>
-              {/* Placeholder Notice */}
-              <div className="mb-8 rounded-lg bg-amber-50 p-6 border border-amber-200">
-                <p className="text-amber-800 font-medium">
-                  ⚠️ <strong>Platzhalter:</strong> Dieses Impressum ist ein
-                  Mustertext und muss vor dem Live-Gang mit den korrekten rechtlichen
-                  Informationen befüllt werden.
-                </p>
-                <p className="mt-2 text-sm text-amber-700">
-                  Gemäss Schweizer Recht sind vollständige Angaben zu Identität und
-                  Kontaktdaten des Betreibers erforderlich.
-                </p>
-              </div>
-
               <div className="space-y-8">
                 {/* Angaben gemäss Art. 10 UWG */}
                 <div className="rounded-lg bg-white p-8 shadow-sm">
@@ -68,9 +55,9 @@ export default function Impressum() {
                     <p>
                       <strong className="text-neutral-charcoal">Adresse:</strong>
                       <br />
-                      [Strasse und Hausnummer]
+                      Notkerstrasse 14
                       <br />
-                      [PLZ] [Ort]
+                      9000 St. Gallen
                       <br />
                       Schweiz
                     </p>
@@ -160,7 +147,6 @@ export default function Impressum() {
                   </p>
                   <ul className="mt-2 space-y-1 text-neutral-slate">
                     <li>• Icons: Lucide Icons (MIT Lizenz)</li>
-                    <li>• [Weitere Bildquellen nach Bedarf einfügen]</li>
                   </ul>
                 </div>
               </div>
