@@ -81,7 +81,7 @@ export function Footer() {
             <p className="text-sm text-neutral-light-gray">
               © {currentYear} {SITE_NAME}. Alle Rechte vorbehalten.
             </p>
-            <div className="flex flex-wrap gap-6 text-sm">
+            <div className="flex flex-wrap gap-6 text-sm pr-44">
               <Link
                 href="/impressum"
                 className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
