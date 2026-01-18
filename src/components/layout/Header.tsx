@@ -45,7 +45,7 @@ export function Header() {
             href="/"
             className="flex items-center space-x-2 text-lg font-bold text-primary hover:text-primary-light transition-colors md:text-xl rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
-            <span>klauser designs & coaching</span>
+            <span>klauser designs&coaching</span>
           </Link>
 
           {/* Desktop Navigation */}

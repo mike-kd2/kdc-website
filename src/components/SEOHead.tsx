@@ -10,7 +10,7 @@ export interface SEOHeadProps {
   noindex?: boolean;
 }
 
-const DEFAULT_TITLE = 'klauser designs & coaching - KI-Beratung für Schweizer KMUs';
+const DEFAULT_TITLE = 'klauser designs&coaching - KI-Beratung für Schweizer KMUs';
 const DEFAULT_DESCRIPTION =
   'Professionelle KI-Beratung und -Integration für Schweizer KMUs. Von Prompt-Engineering bis Anwendungsentwicklung. Buchen Sie jetzt einen kostenlosen Discovery Call.';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://klauserdesigns.ch';
@@ -25,7 +25,7 @@ export function SEOHead({
   twitterCard = 'summary_large_image',
   noindex = false,
 }: SEOHeadProps) {
-  const fullTitle = title ? `${title} | klauser designs & coaching` : DEFAULT_TITLE;
+  const fullTitle = title ? `${title} | klauser designs&coaching` : DEFAULT_TITLE;
   const canonicalUrl = canonical || SITE_URL;
 
   return (
@@ -48,7 +48,7 @@ export function SEOHead({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="klauser designs & coaching" />
+      <meta property="og:site_name" content="klauser designs&coaching" />
       <meta property="og:locale" content="de_CH" />
 
       {/* Twitter Card */}

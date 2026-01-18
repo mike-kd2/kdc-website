@@ -32,7 +32,7 @@ export default function Contact() {
     <>
       <SEOHead
         title="Kontakt"
-        description="Kontaktieren Sie klauser designs & coaching. Buchen Sie einen Discovery Call oder senden Sie uns eine Nachricht. Wir helfen Ihnen gerne bei Ihrer KI-Integration."
+        description="Kontaktieren Sie klauser designs&coaching. Buchen Sie einen Discovery Call oder senden Sie uns eine Nachricht. Wir helfen Ihnen gerne bei Ihrer KI-Integration."
         canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/contact`}
       />
 

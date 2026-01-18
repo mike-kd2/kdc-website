@@ -1,5 +1,5 @@
 // Site Metadata
-export const SITE_NAME = 'klauser designs & coaching'
+export const SITE_NAME = 'klauser designs&coaching'
 export const SITE_DESCRIPTION = 'AI Consultancy für Schweizer KMUs - KI-Prompt-Engineering, Anwendungsentwicklung und KI-Integration'
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://klauserdesigns.ch'
 

@@ -9,7 +9,7 @@ export default function Datenschutz() {
     <>
       <SEOHead
         title="Datenschutzerklärung"
-        description="Datenschutzerklärung von klauser designs & coaching. Erfahren Sie, wie wir Ihre Daten schützen und verarbeiten."
+        description="Datenschutzerklärung von klauser designs&coaching. Erfahren Sie, wie wir Ihre Daten schützen und verarbeiten."
         canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/datenschutz`}
         noindex={true}
       />
@@ -42,7 +42,7 @@ export default function Datenschutz() {
                   Verantwortlich für die Datenverarbeitung auf dieser Website ist:
                 </p>
                 <p>
-                  <strong>klauser designs & coaching</strong>
+                  <strong>klauser designs&coaching</strong>
                   <br />
                   Michael Klauser
                   <br />

@@ -56,7 +56,7 @@ export default function Projects() {
     <>
       <SEOHead
         title="Projekte"
-        description="Entdecken Sie erfolgreiche KI-Projekte und Case Studies von klauser designs & coaching. Erfahren Sie, wie Schweizer KMUs von KI-Integration profitieren."
+        description="Entdecken Sie erfolgreiche KI-Projekte und Case Studies von klauser designs&coaching. Erfahren Sie, wie Schweizer KMUs von KI-Integration profitieren."
         canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/projects`}
       />
 

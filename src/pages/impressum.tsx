@@ -9,7 +9,7 @@ export default function Impressum() {
     <>
       <SEOHead
         title="Impressum"
-        description="Impressum und rechtliche Informationen von klauser designs & coaching."
+        description="Impressum und rechtliche Informationen von klauser designs&coaching."
         canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/impressum`}
         noindex={true}
       />
@@ -43,7 +43,7 @@ export default function Impressum() {
                     <p>
                       <strong className="text-neutral-charcoal">Firma:</strong>
                       <br />
-                      klauser designs & coaching
+                      klauser designs&coaching
                     </p>
                     <p>
                       <strong className="text-neutral-charcoal">

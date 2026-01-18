@@ -54,7 +54,7 @@ export default function About() {
     <>
       <SEOHead
         title="Über mich"
-        description="Erfahren Sie mehr über Michael Klauser und klauser designs & coaching. Professionelle KI-Beratung für Schweizer KMUs mit Fokus auf praktische Lösungen."
+        description="Erfahren Sie mehr über Michael Klauser und klauser designs&coaching. Professionelle KI-Beratung für Schweizer KMUs mit Fokus auf praktische Lösungen."
         canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/about`}
       />
 
@@ -95,7 +95,7 @@ export default function About() {
                     Als ich gesehen habe, wie KI-Tools wie ChatGPT, Midjourney und Co. plötzlich kreative und operative Aufgaben revolutionieren, war mir klar: <strong>Das ist die Zukunft – und viele Schweizer KMUs haben noch keinen Zugang dazu.</strong>
                   </p>
                   <p>
-                    Deshalb habe ich <strong>klauser designs & coaching</strong> gegründet. Mein Ziel: KI-Technologie für kleine und mittlere Unternehmen zugänglich, verständlich und profitabel machen.
+                    Deshalb habe ich <strong>klauser designs&coaching</strong> gegründet. Mein Ziel: KI-Technologie für kleine und mittlere Unternehmen zugänglich, verständlich und profitabel machen.
                   </p>
                   <p>
                     Ich arbeite nicht mit Buzzwords oder unrealistischen Versprechen. Ich setze auf <strong>pragmatische Lösungen, die wirklich funktionieren</strong> – von der ersten Analyse bis zur erfolgreichen Implementierung.
