@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="bg-neutral-charcoal text-neutral-off-white" role="contentinfo" aria-label="Fusszeile">
-      <div className="container mx-auto px-4 py-12 md:py-16">
+      <div className="container mx-auto px-4 py-12 md:py-16 pb-24">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand & Description */}
           <div className="lg:col-span-2">
