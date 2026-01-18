@@ -51,8 +51,7 @@ export function FloatingCTA() {
         aria-label="Discovery Call buchen"
       >
         <Calendar className="h-5 w-5 mr-2" />
-        <span className="hidden sm:inline">Discovery Call</span>
-        <span className="sm:hidden">Termin</span>
+        Discovery Call
       </Button>
     </div>
   );
