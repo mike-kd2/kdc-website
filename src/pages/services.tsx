@@ -16,6 +16,24 @@ import Link from 'next/link';
 
 const services = [
   {
+    icon: Cpu,
+    title: 'KI-Integrationsberatung',
+    subtitle: 'Für KMUs',
+    description:
+      'Strategische Beratung für die Integration von KI in Ihre bestehenden Geschäftsprozesse. Identifizieren Sie Quick Wins und langfristige KI-Potenziale.',
+    features: [
+      'KI-Potenzialanalyse Ihrer Prozesse',
+      'Tool-Evaluierung und Empfehlungen',
+      'Implementierungs-Roadmap',
+      'Change Management und Mitarbeiter-Schulung',
+    ],
+    benefits: [
+      'Konkrete Handlungsempfehlungen',
+      'ROI-orientierte KI-Strategie',
+      'Risikominimierung bei der Einführung',
+    ],
+  },
+  {
     icon: Sparkles,
     title: 'KI-Prompt-Engineering',
     subtitle: 'Video & Bild',
@@ -52,26 +70,8 @@ const services = [
     ],
   },
   {
-    icon: Cpu,
-    title: 'KI-Integrationsberatung',
-    subtitle: 'Für KMUs',
-    description:
-      'Strategische Beratung für die Integration von KI in Ihre bestehenden Geschäftsprozesse. Identifizieren Sie Quick Wins und langfristige KI-Potenziale.',
-    features: [
-      'KI-Potenzialanalyse Ihrer Prozesse',
-      'Tool-Evaluierung und Empfehlungen',
-      'Implementierungs-Roadmap',
-      'Change Management und Mitarbeiter-Schulung',
-    ],
-    benefits: [
-      'Konkrete Handlungsempfehlungen',
-      'ROI-orientierte KI-Strategie',
-      'Risikominimierung bei der Einführung',
-    ],
-  },
-  {
     icon: Wrench,
-    title: 'Software-Entwicklung',
+    title: 'Unterstützung bei Software-Entwicklung',
     subtitle: 'Praktische Unterstützung',
     description:
       'Unterstützung bei der Umsetzung von Softwareprojekten. Ideal für Teams, die zusätzliche Entwicklungskapazität benötigen.',

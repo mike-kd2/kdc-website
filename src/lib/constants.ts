@@ -31,6 +31,13 @@ export const NAVIGATION_ITEMS = [
 // Services
 export const SERVICES = [
   {
+    id: 'ki-integration',
+    title: 'KI-Integrationsberatung',
+    description: 'Beratung zur Integration von KI-Lösungen in bestehende Systeme',
+    icon: 'Network',
+    tags: ['Strategie', 'Integration', 'Beratung'],
+  },
+  {
     id: 'ki-prompt-engineering',
     title: 'KI-Prompt-Engineering',
     description: 'Optimierung von KI-Prompts für Video- und Bildgenerierung',
@@ -45,15 +52,8 @@ export const SERVICES = [
     tags: ['Web Apps', 'APIs', 'Integration'],
   },
   {
-    id: 'ki-integration',
-    title: 'KI-Integrationsberatung',
-    description: 'Beratung zur Integration von KI-Lösungen in bestehende Systeme',
-    icon: 'Network',
-    tags: ['Strategie', 'Integration', 'Beratung'],
-  },
-  {
     id: 'software-entwicklung',
-    title: 'Software-Entwicklung',
+    title: 'Unterstützung bei Software-Entwicklung',
     description: 'Software-Entwicklung und technische Unterstützung',
     icon: 'Terminal',
     tags: ['JavaScript', 'TypeScript', 'Python'],
