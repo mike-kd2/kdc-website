@@ -5,8 +5,8 @@ import { ScrollReveal, FadeIn } from '@/components/animations';
 import {
   Sparkles,
   Code,
-  Cpu,
-  Wrench,
+  Network,
+  GraduationCap,
   Target,
   Zap,
   CheckCircle2,
@@ -18,20 +18,20 @@ import Link from 'next/link';
 
 const services = [
   {
-    icon: Cpu,
-    title: 'KI-Integrationsberatung für KMUs',
-    subtitle: 'Strategische Beratung',
+    icon: Network,
+    title: 'KI-Strategie & Integration',
+    subtitle: 'Ihr Einstieg in die KI-Welt',
     description:
       'Wir helfen Ihnen, KI erfolgreich in Ihre Geschäftsprozesse zu integrieren. Von der Potenzialanalyse bis zur Umsetzung – pragmatisch und ROI-orientiert.',
     features: [
       'KI-Potenzialanalyse Ihrer Prozesse',
       'Tool-Evaluierung und Empfehlungen',
       'Implementierungs-Roadmap',
-      'Change Management und Mitarbeiter-Schulung',
+      'Change Management und Begleitung',
     ],
     benefits: [
-      'Konkrete Handlungsempfehlungen',
-      'ROI-orientierte KI-Strategie',
+      'Klarheit über KI-Chancen in Ihrem Unternehmen',
+      'ROI-orientierte Entscheidungsgrundlage',
       'Risikominimierung bei der Einführung',
     ],
   },
@@ -72,21 +72,21 @@ const services = [
     ],
   },
   {
-    icon: Sparkles,
-    title: 'KI-Strategie & Prompt-Engineering',
-    subtitle: 'Content-Erstellung optimieren',
+    icon: GraduationCap,
+    title: 'KI-Schulungen & Workshops',
+    subtitle: 'Ihr Team fit für KI machen',
     description:
-      'Wir entwickeln massgeschneiderte Prompt-Strategien für die Video- und Bildgenerierung. Maximieren Sie die Qualität Ihrer KI-generierten Inhalte.',
+      'Praxisnahe Trainings für Ihr Team: Vom effektiven Prompting bis zum souveränen Umgang mit KI-Tools im Arbeitsalltag.',
     features: [
-      'Prompt-Optimierung für Midjourney, DALL-E, Stable Diffusion',
-      'Video-Prompts für Runway, Pika Labs',
-      'Best Practices und Prompt-Bibliotheken',
-      'Training Ihres Teams im Prompt-Engineering',
+      'Prompt-Engineering für Text, Bild & Video (ChatGPT, Midjourney, Runway)',
+      'Hands-on Workshops mit Ihren realen Anwendungsfällen',
+      'Best Practices und Prompt-Bibliotheken zum Mitnehmen',
+      'Individuelle Schulungen für Teams (2-12 Personen)',
     ],
     benefits: [
-      'Konsistente, hochwertige Ergebnisse',
-      'Zeitersparnis durch optimierte Prompts',
-      'Kreative Kontrolle über KI-generierte Inhalte',
+      'Sofort anwendbares Wissen für den Arbeitsalltag',
+      'Höhere Qualität bei KI-generierten Inhalten',
+      'Selbständigkeit Ihres Teams im Umgang mit KI-Tools',
     ],
   },
 ];
