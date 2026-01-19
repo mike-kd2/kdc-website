@@ -1,34 +1,34 @@
 import { Container, Section } from '@/components/layout'
 import { ScrollReveal, StaggerContainer } from '@/components/animations'
 import { ServiceCard } from './ServiceCard'
-import { Wand2, Code2, Network, Terminal } from 'lucide-react'
+import { Wand2, Code2, Network, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { staggerItem } from '@/components/animations/variants'
 
 const services = [
   {
-    icon: Wand2,
-    title: 'KI-Prompt-Engineering',
-    description: 'Optimierung von KI-Prompts für Video- und Bildgenerierung. Maximieren Sie die Qualität Ihrer KI-generierten Inhalte.',
-    tags: ['Video', 'Bilder', 'Prompts'],
+    icon: Network,
+    title: 'KI-Integrationsberatung für KMUs',
+    description: 'Strategische Beratung zur Integration von KI-Lösungen in bestehende Systeme und Prozesse. Wir identifizieren Quick Wins und langfristige KI-Potenziale.',
+    tags: ['Strategie', 'Integration', 'Beratung'],
+  },
+  {
+    icon: Zap,
+    title: 'KI-gestützte Prozessautomatisierung',
+    description: 'Automatisierung von Geschäftsprozessen mit KI-Tools. Wir bringen Effizienz in Ihre täglichen Abläufe.',
+    tags: ['Automation', 'Effizienz', 'ROI'],
   },
   {
     icon: Code2,
     title: 'Anwendungsentwicklung',
-    description: 'Low/Mid-Level Entwicklung von KI-gestützten Anwendungen. Von Prototypen bis zur produktionsreifen Lösung.',
+    description: 'Entwicklung von massgeschneiderten Webanwendungen und Tools. Von MVPs bis zu vollständigen Geschäftsanwendungen.',
     tags: ['Web Apps', 'APIs', 'Integration'],
   },
   {
-    icon: Network,
-    title: 'KI-Integrationsberatung',
-    description: 'Strategische Beratung zur Integration von KI-Lösungen in bestehende Systeme und Prozesse.',
-    tags: ['Strategie', 'Integration', 'Beratung'],
-  },
-  {
-    icon: Terminal,
-    title: 'Software-Entwicklung',
-    description: 'Software-Entwicklung und technische Unterstützung für Ihre Projekte.',
-    tags: ['JavaScript', 'TypeScript', 'Python'],
+    icon: Wand2,
+    title: 'KI-Strategie & Prompt-Engineering',
+    description: 'Optimierung von KI-Prompts und Entwicklung von KI-Strategien. Wir maximieren die Qualität Ihrer KI-generierten Inhalte.',
+    tags: ['Video', 'Bilder', 'Prompts'],
   },
 ]
 

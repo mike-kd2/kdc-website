@@ -11,16 +11,18 @@ import {
   Zap,
   CheckCircle2,
   ArrowRight,
+  Users,
+  TrendingUp,
 } from 'lucide-react';
 import Link from 'next/link';
 
 const services = [
   {
     icon: Cpu,
-    title: 'KI-Integrationsberatung',
-    subtitle: 'Für KMUs',
+    title: 'KI-Integrationsberatung für KMUs',
+    subtitle: 'Strategische Beratung',
     description:
-      'Strategische Beratung für die Integration von KI in Ihre bestehenden Geschäftsprozesse. Identifizieren Sie Quick Wins und langfristige KI-Potenziale.',
+      'Wir helfen Ihnen, KI erfolgreich in Ihre Geschäftsprozesse zu integrieren. Von der Potenzialanalyse bis zur Umsetzung – pragmatisch und ROI-orientiert.',
     features: [
       'KI-Potenzialanalyse Ihrer Prozesse',
       'Tool-Evaluierung und Empfehlungen',
@@ -34,29 +36,29 @@ const services = [
     ],
   },
   {
-    icon: Sparkles,
-    title: 'KI-Prompt-Engineering',
-    subtitle: 'Video & Bild',
+    icon: Zap,
+    title: 'KI-gestützte Prozessautomatisierung',
+    subtitle: 'Effizienz steigern',
     description:
-      'Professionelle Entwicklung von KI-Prompts für Video- und Bildgenerierung. Optimieren Sie Ihre kreativen Workflows mit massgeschneiderten Prompt-Strategien.',
+      'Wir automatisieren wiederkehrende Aufgaben mit KI-Tools und schaffen messbare Effizienzgewinne. Von der Datenverarbeitung bis zur Kundenkommunikation.',
     features: [
-      'Prompt-Optimierung für Midjourney, DALL-E, Stable Diffusion',
-      'Video-Prompts für Runway, Pika Labs',
-      'Best Practices und Prompt-Bibliotheken',
-      'Training Ihres Teams im Prompt-Engineering',
+      'Analyse und Identifikation von Automatisierungspotenzialen',
+      'Integration von KI-Tools (ChatGPT, Make.com, Power Automate)',
+      'Workflow-Design und Implementierung',
+      'Monitoring und kontinuierliche Optimierung',
     ],
     benefits: [
-      'Konsistente, hochwertige Ergebnisse',
-      'Zeitersparnis durch optimierte Prompts',
-      'Kreative Kontrolle über KI-generierte Inhalte',
+      'Zeitersparnis bei Routineaufgaben',
+      'Höhere Datenqualität durch Automatisierung',
+      'Skalierbare Prozesse ohne Personalaufbau',
     ],
   },
   {
     icon: Code,
     title: 'Anwendungsentwicklung',
-    subtitle: 'Low/Mid-Level',
+    subtitle: 'Massgeschneiderte Software',
     description:
-      'Entwicklung von massgeschneiderten Webanwendungen und Tools. Von MVPs bis zu vollständigen Geschäftsanwendungen mit modernen Technologien.',
+      'Wir entwickeln moderne Webanwendungen und Tools, die genau zu Ihren Anforderungen passen. Von MVPs bis zu vollständigen Geschäftsanwendungen.',
     features: [
       'Next.js, React, TypeScript',
       'API-Integration und Backend-Entwicklung',
@@ -70,21 +72,21 @@ const services = [
     ],
   },
   {
-    icon: Wrench,
-    title: 'Unterstützung bei Software-Entwicklung',
-    subtitle: 'Praktische Unterstützung',
+    icon: Sparkles,
+    title: 'KI-Strategie & Prompt-Engineering',
+    subtitle: 'Content-Erstellung optimieren',
     description:
-      'Unterstützung bei der Umsetzung von Softwareprojekten. Ideal für Teams, die zusätzliche Entwicklungskapazität benötigen.',
+      'Wir entwickeln massgeschneiderte Prompt-Strategien für die Video- und Bildgenerierung. Maximieren Sie die Qualität Ihrer KI-generierten Inhalte.',
     features: [
-      'Frontend- und Backend-Entwicklung',
-      'Code Reviews und Qualitätssicherung',
-      'Bug-Fixing und Maintenance',
-      'Feature-Entwicklung nach Spezifikation',
+      'Prompt-Optimierung für Midjourney, DALL-E, Stable Diffusion',
+      'Video-Prompts für Runway, Pika Labs',
+      'Best Practices und Prompt-Bibliotheken',
+      'Training Ihres Teams im Prompt-Engineering',
     ],
     benefits: [
-      'Flexible Kapazitätserweiterung',
-      'Qualitätsbewusste Umsetzung',
-      'Agile Arbeitsweise',
+      'Konsistente, hochwertige Ergebnisse',
+      'Zeitersparnis durch optimierte Prompts',
+      'Kreative Kontrolle über KI-generierte Inhalte',
     ],
   },
 ];
@@ -110,8 +112,8 @@ export default function Services() {
                 Massgeschneiderte KI-Lösungen für Ihr Business
               </h1>
               <p className="text-xl text-white/90 sm:text-2xl">
-                Von Prompt-Engineering bis zur vollständigen Anwendungsentwicklung –
-                wir bringen KI in Ihr Unternehmen.
+                Von der KI-Strategie bis zur vollständigen Anwendungsentwicklung –
+                wir unterstützen Sie auf dem Weg zur digitalen Transformation.
               </p>
             </div>
           </ScrollReveal>
@@ -207,6 +209,48 @@ export default function Services() {
                 </ScrollReveal>
               );
             })}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Network & Scalability Section */}
+      <Section className="bg-gradient-to-br from-neutral-off-white to-white">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <ScrollReveal>
+              <div className="grid gap-8 md:grid-cols-2">
+                <Card className="p-8">
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="rounded-lg bg-accent/10 p-3">
+                      <Users className="h-8 w-8 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-neutral-charcoal">
+                      Spezialisiertes Netzwerk
+                    </h3>
+                  </div>
+                  <p className="text-neutral-slate">
+                    Je nach Projektanforderung arbeiten wir mit spezialisierten Partnern
+                    aus unserem Netzwerk zusammen – so erhalten Sie immer die passende
+                    Expertise.
+                  </p>
+                </Card>
+
+                <Card className="p-8">
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="rounded-lg bg-primary/10 p-3">
+                      <TrendingUp className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-neutral-charcoal">
+                      Flexible Skalierung
+                    </h3>
+                  </div>
+                  <p className="text-neutral-slate">
+                    Von der Einzelberatung bis zum Projektteam – wir passen uns Ihren
+                    Anforderungen an und skalieren mit Ihrem Bedarf.
+                  </p>
+                </Card>
+              </div>
+            </ScrollReveal>
           </div>
         </Container>
       </Section>

@@ -10,6 +10,7 @@ import {
   Users,
   TrendingUp,
   CheckCircle2,
+  Handshake,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -33,20 +34,20 @@ const values = [
       'Keine Theorie ohne Praxis. Meine Lösungen sind konkret, umsetzbar und liefern messbare Ergebnisse.',
   },
   {
-    icon: Users,
-    title: 'Transparent',
+    icon: Handshake,
+    title: 'Vermittler',
     description:
-      'Offene Kommunikation und Ehrlichkeit sind die Basis unserer Zusammenarbeit. Keine versteckten Kosten, keine leeren Versprechen.',
+      'Ob zwischen Fachbereich und IT oder in hitzigen Projekt-Meetings – ich bringe unterschiedliche Perspektiven zusammen und sorge für konstruktive Lösungen.',
   },
 ];
 
 const expertise = [
-  'KI-Integration und Prompt-Engineering',
-  'Web-Entwicklung (Next.js, React, TypeScript)',
-  'Prozessoptimierung mit KI-Tools',
-  'Change Management und Team-Training',
-  'API-Integration und Automation',
-  'Agile Projektmethodik',
+  'KI-Integration und Strategie',
+  'Datenfluss und Systemintegration',
+  'Data Warehouse & Business Intelligence',
+  'ERP-Integration (SAP, D365, ES2000)',
+  'Web-Entwicklung & Automatisierung',
+  'Workshop-Moderation & Change Management',
 ];
 
 export default function About() {
@@ -70,8 +71,7 @@ export default function About() {
                 Hi, ich bin Michael
               </h1>
               <p className="text-xl text-white/90 sm:text-2xl">
-                KI-Berater, Entwickler und Partner für Schweizer KMUs auf dem Weg zur
-                KI-Integration
+                Systemtechnik-Ingenieur, ehemaliger CIO und KI-Berater mit über 20 Jahren Erfahrung in der Schweizer IT-Landschaft
               </p>
             </div>
           </ScrollReveal>
@@ -85,23 +85,20 @@ export default function About() {
             <ScrollReveal>
               <div className="prose prose-lg mx-auto">
                 <h2 className="text-3xl font-bold text-neutral-charcoal mb-6">
-                  Meine Geschichte
+                  Mein Weg zur KI-Beratung
                 </h2>
                 <div className="space-y-4 text-neutral-slate">
                   <p>
-                    Seit über 20 Jahren treibt mich eine Frage an: <strong>Wie können wir Technologie nutzen, um echte Business-Probleme zu lösen?</strong> Diese Frage hat meinen Weg geprägt – vom Systemtechnik-Ingenieur über die Rolle als CIO und Geschäftsleitungsmitglied bis hin zur KI-Beratung.
+                    Ich bin kein Quereinsteiger, der auf den KI-Zug aufgesprungen ist. Mein Weg begann mit einer Lehre als Fahrzeugelektroniker, führte über ein Ingenieurstudium bis in die Geschäftsleitung eines Schweizer Technologieunternehmens.
                   </p>
                   <p>
-                    Bevor ich mich der Künstlichen Intelligenz widmete, habe ich Jahrzehnte im &quot;Maschinenraum&quot; von Unternehmen verbracht. Ich habe komplexe ERP-Landschaften integriert, Schnittstellen zwischen isolierten Systemen gebaut und gelernt, wie wichtig saubere Datenflüsse sind. Als CIO wusste ich: <strong>Die beste Software nützt nichts, wenn die Prozesse dahinter nicht stimmen.</strong>
+                    Als CIO und Mitglied der Geschäftsleitung der IMT AG war ich verantwortlich für die gesamte IT-Infrastruktur und leitete ein Entwicklungsteam von 8 Ingenieuren. Ich habe ERP-Systeme eingeführt, Data Warehouses gebaut und über 10 Jahre lang ein Schweizer Energieunternehmen bei der Digitalisierung begleitet.
                   </p>
                   <p>
-                    Als dann KI-Tools wie ChatGPT und Midjourney aufkamen, sah ich nicht nur einen Hype, sondern das fehlende Puzzlestück. Mir war klar: Wer seine Daten und Systeme im Griff hat, kann mit KI eine nie dagewesene Effizienz erreichen. <strong>Doch viele Schweizer KMUs haben zwar die Daten, aber noch keinen Zugang zu dieser Technologie.</strong>
+                    Diese Erfahrung macht den Unterschied: Ich verstehe nicht nur die Technologie, sondern auch die Realität in KMUs – mit begrenzten Budgets, gewachsenen Strukturen und dem Druck, schnell Ergebnisse zu liefern.
                   </p>
                   <p>
-                    Deshalb habe ich <strong>klauser designs&amp;coaching</strong> neu ausgerichtet: KI-Technologie für kleine und mittlere Unternehmen zugänglich, sicher und profitabel machen.
-                  </p>
-                  <p>
-                    Ich arbeite nicht mit Buzzwords. Ich bringe meine Erfahrung aus über 10 Jahren Arbeit mit komplexen Datenstrukturen und Systemarchitekturen ein, um pragmatische Lösungen zu schaffen. <strong>Von der sauberen Datenbasis bis zur erfolgreichen Implementierung</strong> – ich sorge dafür, dass KI bei Ihnen nicht nur Spielerei ist, sondern funktioniert.
+                    Heute bringe ich dieses Wissen in die KI-Beratung ein. Denn die beste KI nützt nichts, wenn die Daten und Prozesse dahinter nicht stimmen.
                   </p>
                 </div>
               </div>
@@ -179,8 +176,95 @@ export default function About() {
         </Container>
       </Section>
 
-      {/* Work Philosophy Section */}
+      {/* Timeline Section */}
       <Section className="bg-gradient-to-br from-neutral-off-white to-white">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <ScrollReveal>
+              <div className="mb-8 text-center">
+                <h2 className="mb-4 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
+                  Mein Werdegang
+                </h2>
+                <p className="text-lg text-neutral-slate">
+                  Über 20 Jahre IT-Erfahrung – vom Ingenieur zum CIO zum KI-Berater
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <div className="space-y-6">
+                <div className="border-l-4 border-accent pl-6 pb-6">
+                  <div className="mb-2 text-sm font-semibold text-accent">
+                    2013 - heute
+                  </div>
+                  <h3 className="mb-2 text-xl font-bold text-neutral-charcoal">
+                    Inhaber & Geschäftsführer
+                  </h3>
+                  <p className="mb-2 text-neutral-slate">klauser designs&amp;coaching</p>
+                  <p className="text-sm text-neutral-slate">
+                    Data Warehouse, KI-Beratung, Middleware-Entwicklung
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-primary pl-6 pb-6">
+                  <div className="mb-2 text-sm font-semibold text-primary">
+                    2006 - 2013
+                  </div>
+                  <h3 className="mb-2 text-xl font-bold text-neutral-charcoal">
+                    CIO, Geschäftsleitung, Dev Team Manager
+                  </h3>
+                  <p className="mb-2 text-neutral-slate">IMT AG</p>
+                  <p className="text-sm text-neutral-slate">
+                    IT-Strategie, Team-Leitung (8 Personen), Infrastruktur
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-neutral-slate/30 pl-6 pb-6">
+                  <div className="mb-2 text-sm font-semibold text-neutral-slate">
+                    2005 - 2006
+                  </div>
+                  <h3 className="mb-2 text-xl font-bold text-neutral-charcoal">
+                    Projektleiter, Software Engineer
+                  </h3>
+                  <p className="mb-2 text-neutral-slate">Kyberna AG</p>
+                  <p className="text-sm text-neutral-slate">
+                    ITIL-Einführung bei Banken/Versicherungen
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-neutral-slate/30 pl-6 pb-6">
+                  <div className="mb-2 text-sm font-semibold text-neutral-slate">
+                    2002 - 2005
+                  </div>
+                  <h3 className="mb-2 text-xl font-bold text-neutral-charcoal">
+                    Junior Software Engineer
+                  </h3>
+                  <p className="mb-2 text-neutral-slate">IMT AG</p>
+                  <p className="text-sm text-neutral-slate">
+                    Medizintechnik (Beatmungs-/Anästhesiegeräte)
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-neutral-slate/30 pl-6">
+                  <div className="mb-2 text-sm font-semibold text-neutral-slate">
+                    2002
+                  </div>
+                  <h3 className="mb-2 text-xl font-bold text-neutral-charcoal">
+                    Dipl. Systemtechnik Ingenieur FH
+                  </h3>
+                  <p className="mb-2 text-neutral-slate">NTB Buchs</p>
+                  <p className="text-sm text-neutral-slate">
+                    Vertiefung: Ingenieurinformatik
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Work Philosophy Section */}
+      <Section>
         <Container>
           <div className="mx-auto max-w-4xl">
             <ScrollReveal>
@@ -216,7 +300,7 @@ export default function About() {
               </h2>
               <p className="mb-8 text-xl text-white/90">
                 Buchen Sie einen kostenlosen Discovery Call und lernen wir uns kennen.
-                Ich freue mich darauf, mehr über Ihre Herausforderungen zu erfahren.
+                Wir freuen uns darauf, mehr über Ihre Herausforderungen zu erfahren.
               </p>
               <Link href="/#discovery-call">
                 <Button variant="secondary" size="lg">

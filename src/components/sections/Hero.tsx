@@ -31,8 +31,7 @@ export function Hero() {
 
           <FadeIn direction="up" delay={0.3}>
             <p className="mb-8 text-lg text-neutral-slate sm:text-xl md:mb-10 md:text-2xl">
-              Wir helfen Ihnen, künstliche Intelligenz erfolgreich zu
-              integrieren – von Prompt-Engineering bis zur Anwendungsentwicklung.
+              KI-Beratung mit 20 Jahren IT-Erfahrung. Wir kennen die Realität in KMUs und wissen, welche KI-Lösungen wirklich funktionieren.
             </p>
           </FadeIn>
 
@@ -65,15 +64,15 @@ export function Hero() {
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-neutral-slate">
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-accent" />
-                <span>Kostenlose Erstberatung</span>
+                <span>20+ Jahre IT-Erfahrung</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-accent" />
-                <span>Massgeschneiderte Lösungen</span>
+                <span>Ehem. CIO & Geschäftsleitung</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-accent" />
-                <span>Praxisnahe Umsetzung</span>
+                <span>Pragmatische KI-Lösungen</span>
               </div>
             </div>
           </ScrollReveal>

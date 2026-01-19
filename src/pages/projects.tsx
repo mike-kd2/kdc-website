@@ -2,52 +2,66 @@ import { SEOHead } from '@/components/SEOHead';
 import { Section, Container } from '@/components/layout';
 import { Badge, Card, CardHeader, CardContent, Button } from '@/components/ui';
 import { ScrollReveal, FadeIn } from '@/components/animations';
-import { Sparkles, ExternalLink, Code, Cpu, Image as ImageIcon } from 'lucide-react';
+import { Sparkles, ExternalLink, Code, Database, BarChart3, GitMerge } from 'lucide-react';
 import Link from 'next/link';
 
-// Placeholder projects - to be replaced with real case studies
+// Real anonymized projects
 const projects = [
   {
-    title: 'KI-gestützte Content-Erstellung für E-Commerce',
-    category: 'Prompt-Engineering',
-    icon: ImageIcon,
+    title: 'Data Warehouse für Schweizer Energieunternehmen',
+    category: 'Data Warehouse & BI',
+    icon: Database,
     description:
-      'Entwicklung eines Prompt-Systems für die automatisierte Erstellung von Produktbildern und Beschreibungen für einen Schweizer Online-Shop.',
-    technologies: ['Midjourney', 'ChatGPT', 'Automation'],
+      'Konzeption, Aufbau und Betrieb eines Data Warehouse für ein Schweizer Energieunternehmen. Langfristige Zusammenarbeit über 10 Jahre.',
+    technologies: ['SQL Server', 'ETL', 'Business Intelligence', 'Data Modeling'],
     results: [
-      '70% Zeitersparnis bei der Content-Erstellung',
-      'Konsistente Bildqualität über 500+ Produkte',
-      'ROI innerhalb von 3 Monaten',
+      '10 Jahre erfolgreiche Zusammenarbeit',
+      'Zentrale Datenplattform für alle Geschäftsbereiche',
+      'Fundierte Entscheidungsgrundlage durch konsolidierte Daten',
     ],
-    status: 'Case Study in Vorbereitung',
+    status: 'Langzeitprojekt',
   },
   {
-    title: 'Prozessautomatisierung mit KI für Beratungsunternehmen',
-    category: 'KI-Integration',
-    icon: Cpu,
+    title: 'Middleware-Integration CPQ-System mit SAP',
+    category: 'Systemintegration',
+    icon: GitMerge,
     description:
-      'Implementierung von KI-Tools zur Automatisierung von Reporting, Kundenkommunikation und Dokumentenanalyse.',
-    technologies: ['ChatGPT API', 'Make.com', 'Custom Workflows'],
+      'Entwicklung einer Middleware zur Integration eines CPQ-Systems mit SAP für ein KMU. Medienbruchfreie Prozesse vom Angebot bis zur Rechnung.',
+    technologies: ['C#', 'SAP Integration', 'REST APIs', 'SQL'],
     results: [
-      '15 Stunden/Woche Zeitersparnis',
-      'Höhere Kundenzufriedenheit durch schnellere Reaktionszeiten',
-      'Skalierbare Prozesse für Wachstum',
+      'Medienbruchfreie Prozesse',
+      'Eliminierung manueller Übertragungsfehler',
+      'Deutliche Zeitersparnis im Vertrieb',
     ],
-    status: 'Case Study in Vorbereitung',
+    status: 'Erfolgreich abgeschlossen',
   },
   {
-    title: 'Web-Applikation für KMU-Management',
-    category: 'Anwendungsentwicklung',
+    title: 'KPI-Dashboard mit Power BI',
+    category: 'Business Intelligence',
+    icon: BarChart3,
+    description:
+      'Entwicklung eines Power BI Dashboards für die Vertriebssteuerung. Echtzeit-Einblick in wichtige Kennzahlen und Trends.',
+    technologies: ['Power BI', 'SQL', 'DAX', 'Data Modeling'],
+    results: [
+      'Echtzeit-Entscheidungsgrundlage für Management',
+      'Automatisierte Reports statt manuelle Excel-Auswertungen',
+      'Transparenz über alle Vertriebskennzahlen',
+    ],
+    status: 'Im Einsatz',
+  },
+  {
+    title: 'ERP-Migration zu Dynamics 365',
+    category: 'Datenmigration & Integration',
     icon: Code,
     description:
-      'Entwicklung einer massgeschneiderten Management-Plattform für die Verwaltung von Kundenprojekten und internen Prozessen.',
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Vercel'],
+      'Datenmigration und Integration beim Wechsel zu Microsoft Dynamics 365. Bereinigung und Optimierung der Datenqualität.',
+    technologies: ['Dynamics 365', 'SQL', 'ETL', 'Data Quality'],
     results: [
-      'Zentrale Plattform für alle Geschäftsprozesse',
-      'Mobile-first Design für Nutzung unterwegs',
-      'Integration mit bestehenden Tools',
+      'Verbesserte Datenqualität durch Bereinigung',
+      'Erfolgreiche Migration ohne Datenverlust',
+      'Optimierte Prozesse im neuen ERP-System',
     ],
-    status: 'Case Study in Vorbereitung',
+    status: 'Erfolgreich abgeschlossen',
   },
 ];
 
@@ -69,33 +83,13 @@ export default function Projects() {
                 Projekte
               </Badge>
               <h1 className="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl">
-                Erfolgreiche KI-Projekte
+                Erfolgreiche Projekte
               </h1>
               <p className="text-xl text-white/90 sm:text-2xl">
-                Von der Idee zur Implementierung – so sieht erfolgreiche KI-Integration
-                in der Praxis aus
+                Von Data Warehouses bis zur Systemintegration – ein Einblick in realisierte Projekte
               </p>
             </div>
           </ScrollReveal>
-        </Container>
-      </Section>
-
-      {/* Coming Soon Notice */}
-      <Section className="bg-gradient-to-br from-accent/10 to-white">
-        <Container>
-          <FadeIn>
-            <div className="mx-auto max-w-2xl text-center">
-              <Sparkles className="mx-auto mb-4 h-12 w-12 text-accent" />
-              <h2 className="mb-4 text-2xl font-bold text-neutral-charcoal">
-                Case Studies folgen in Kürze
-              </h2>
-              <p className="text-lg text-neutral-slate">
-                Wir arbeiten gerade an detaillierten Case Studies unserer Projekte.
-                Die folgenden Beispiele geben Ihnen bereits einen Einblick in unsere
-                Arbeit.
-              </p>
-            </div>
-          </FadeIn>
         </Container>
       </Section>
 
