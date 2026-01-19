@@ -1,0 +1,11 @@
+# robots.txt für klauserdesigns.ch
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://klauserdesigns.ch/sitemap.xml
+
+# Disallow paths (optional - füge hier Pfade hinzu, die nicht indexiert werden sollen)
+# Disallow: /api/
+# Disallow: /admin/
