@@ -84,7 +84,7 @@ export default function About() {
         <Container>
           <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <div className="grid gap-8 lg:grid-cols-5 lg:gap-12 items-start">
+              <div className="grid gap-8 lg:grid-cols-5 lg:gap-12 items-center">
                 {/* Photo */}
                 <div className="lg:col-span-2">
                   <div className="relative mx-auto max-w-xs lg:max-w-none">
