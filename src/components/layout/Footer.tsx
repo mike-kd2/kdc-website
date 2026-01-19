@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui'
-import { NAVIGATION_ITEMS, CONTACT_EMAIL, TIDYCAL_URL, SITE_NAME } from '@/lib/constants'
+import { NAVIGATION_ITEMS, CONTACT_EMAIL, CONTACT_PHONE, TIDYCAL_URL, SITE_NAME } from '@/lib/constants'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -61,6 +61,14 @@ export function Footer() {
                   className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
                 >
                   {CONTACT_EMAIL}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`}
+                  className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
+                >
+                  {CONTACT_PHONE}
                 </a>
               </li>
               <li>

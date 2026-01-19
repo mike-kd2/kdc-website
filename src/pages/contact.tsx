@@ -14,6 +14,12 @@ const contactInfo = [
     href: 'mailto:michael@klauserdesigns.ch',
   },
   {
+    icon: Phone,
+    label: 'Telefon',
+    value: '+41 79 691 55 98',
+    href: 'tel:+41796915598',
+  },
+  {
     icon: MapPin,
     label: 'Standort',
     value: 'Schweiz',

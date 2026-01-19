@@ -5,6 +5,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://klauserdesi
 
 // Contact Information
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'michael@klauserdesigns.ch'
+export const CONTACT_PHONE = '+41 79 691 55 98'
 
 // External URLs
 export const TIDYCAL_URL = process.env.NEXT_PUBLIC_TIDYCAL_URL || 'https://tidycal.com/klauserdesignscoaching/discovery-call'
