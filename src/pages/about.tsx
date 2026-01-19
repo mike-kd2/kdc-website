@@ -13,6 +13,7 @@ import {
   Handshake,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const values = [
   {
@@ -81,25 +82,46 @@ export default function About() {
       {/* Story Section */}
       <Section>
         <Container>
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-5xl">
             <ScrollReveal>
-              <div className="prose prose-lg mx-auto">
-                <h2 className="text-3xl font-bold text-neutral-charcoal mb-6">
-                  Mein Weg zur KI-Beratung
-                </h2>
-                <div className="space-y-4 text-neutral-slate">
-                  <p>
-                    Ich bin kein Quereinsteiger, der auf den KI-Zug aufgesprungen ist. Mein Weg begann mit einer Lehre als Fahrzeugelektroniker, führte über ein Ingenieurstudium bis in die Geschäftsleitung eines Schweizer Technologieunternehmens.
-                  </p>
-                  <p>
-                    Als CIO und Mitglied der Geschäftsleitung der IMT AG war ich verantwortlich für die gesamte IT-Infrastruktur und leitete ein Entwicklungsteam von 8 Ingenieuren. Ich habe ERP-Systeme eingeführt, Data Warehouses gebaut und über 10 Jahre lang ein Schweizer Energieunternehmen bei der Digitalisierung begleitet.
-                  </p>
-                  <p>
-                    Diese Erfahrung macht den Unterschied: Ich verstehe nicht nur die Technologie, sondern auch die Realität in KMUs – mit begrenzten Budgets, gewachsenen Strukturen und dem Druck, schnell Ergebnisse zu liefern.
-                  </p>
-                  <p>
-                    Heute bringe ich dieses Wissen in die KI-Beratung ein. Denn die beste KI nützt nichts, wenn die Daten und Prozesse dahinter nicht stimmen.
-                  </p>
+              <div className="grid gap-8 lg:grid-cols-5 lg:gap-12 items-start">
+                {/* Photo */}
+                <div className="lg:col-span-2">
+                  <div className="relative mx-auto max-w-xs lg:max-w-none">
+                    <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl">
+                      <Image
+                        src="/images/portrait_Michael_Klauser_square.jpg"
+                        alt="Michael Klauser - KI-Berater und Systemtechnik-Ingenieur"
+                        fill
+                        sizes="(max-width: 1024px) 320px, 400px"
+                        className="object-cover"
+                        priority
+                      />
+                    </div>
+                    {/* Decorative element */}
+                    <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl bg-accent/20" />
+                  </div>
+                </div>
+
+                {/* Text */}
+                <div className="lg:col-span-3">
+                  <h2 className="text-3xl font-bold text-neutral-charcoal mb-6">
+                    Mein Weg zur KI-Beratung
+                  </h2>
+                  <div className="space-y-4 text-neutral-slate">
+                    <p>
+                      Ich bin kein Quereinsteiger, der auf den KI-Zug aufgesprungen ist. Mein Weg begann mit einer Lehre als Fahrzeugelektroniker, führte über ein Ingenieurstudium bis in die Geschäftsleitung eines Schweizer Technologieunternehmens.
+                    </p>
+                    <p>
+                      Als CIO und Mitglied der Geschäftsleitung der IMT AG war ich verantwortlich für die gesamte IT-Infrastruktur und leitete ein Entwicklungsteam von 8 Ingenieuren. Ich habe ERP-Systeme eingeführt, Data Warehouses gebaut und über 10 Jahre lang ein Schweizer Energieunternehmen bei der Digitalisierung begleitet.
+                    </p>
+                    <p>
+                      Diese Erfahrung macht den Unterschied: Ich verstehe nicht nur die Technologie, sondern auch die Realität in KMUs – mit begrenzten Budgets, gewachsenen Strukturen und dem Druck, schnell Ergebnisse zu liefern.
+                    </p>
+                    <p>
+                      Heute bringe ich dieses Wissen in die KI-Beratung ein. Denn die beste KI nützt nichts, wenn die Daten und Prozesse dahinter nicht stimmen.
+                    </p>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
