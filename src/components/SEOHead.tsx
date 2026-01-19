@@ -65,6 +65,23 @@ export function SEOHead({
 
       {/* Theme Color */}
       <meta name="theme-color" content="#0A4D4E" />
+
+      {/* AI/LLM Optimization - Enhanced Semantic Understanding */}
+      <meta
+        name="keywords"
+        content="AI Beratung Schweiz, KI Consulting, Prompt Engineering, Low-Code Entwicklung, ChatGPT Beratung, Claude AI, KI Integration, Software Entwicklung Schweiz, IT Beratung KMU, Künstliche Intelligenz, Business Automation, Digital Transformation"
+      />
+      <meta
+        name="abstract"
+        content="AI-Beratung und Software-Entwicklung für Schweizer KMUs mit Fokus auf KI-Integration, Prompt Engineering und Low-Code-Lösungen"
+      />
+      <meta
+        name="topic"
+        content="Artificial Intelligence Consulting, AI Integration, Prompt Engineering"
+      />
+      <meta name="classification" content="Business Services, Technology Consulting" />
+      <meta name="robots" content="index, follow, max-image-preview:large" />
+      <meta name="googlebot" content="index, follow" />
     </Head>
   );
 }

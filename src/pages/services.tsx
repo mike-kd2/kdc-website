@@ -1,4 +1,5 @@
 import { SEOHead } from '@/components/SEOHead';
+import { StructuredData } from '@/components/seo/StructuredData';
 import { Section, Container } from '@/components/layout';
 import { Badge, Card, CardHeader, CardContent, Button } from '@/components/ui';
 import { ScrollReveal, FadeIn } from '@/components/animations';
@@ -98,6 +99,12 @@ export default function Services() {
         title="Services"
         description="Professionelle KI-Beratung, Prompt-Engineering, Anwendungsentwicklung und Software-Entwicklung für Schweizer KMUs. Entdecken Sie unser Leistungsangebot."
         canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/services`}
+      />
+      <StructuredData
+        type="service"
+        pageTitle="Services - AI-Beratung und Software-Entwicklung"
+        pageDescription="KI-Integration, Prompt Engineering, Low-Code-Entwicklung und massgeschneiderte Software-Lösungen für Schweizer KMUs"
+        pagePath="/services"
       />
 
       {/* Hero Section */}
