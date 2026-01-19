@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, Badge, Button } from '@/components/ui'
 import { Container, Section } from '@/components/layout'
 import { ScrollReveal, StaggerContainer } from '@/components/animations'
-import { ArrowRight, ExternalLink } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 interface Project {
   id: string
@@ -9,33 +9,36 @@ interface Project {
   description: string
   tags: string[]
   category: string
-  link?: string
+  highlight?: string
 }
 
 const projects: Project[] = [
   {
     id: '1',
-    title: 'KI-gestütztes Content Management System',
+    title: 'Data Warehouse für Schweizer Energieunternehmen',
     description:
-      'Entwicklung eines intelligenten CMS mit automatischer Content-Generierung und -Optimierung für ein Schweizer Medienunternehmen.',
-    tags: ['Web App', 'KI-Integration', 'TypeScript'],
-    category: 'Anwendungsentwicklung',
+      'Konzeption, Aufbau und Betrieb eines Data Warehouse. Langfristige Partnerschaft mit zentraler Datenplattform für alle Geschäftsbereiche.',
+    tags: ['SQL Server', 'ETL', 'Business Intelligence'],
+    category: 'Data Warehouse & BI',
+    highlight: '10 Jahre Zusammenarbeit',
   },
   {
     id: '2',
-    title: 'Prompt Engineering Workshop',
+    title: 'KI-gestütztes Datenvalidierungs-Framework',
     description:
-      'Massgeschneiderte Schulung für Video- und Bildgenerierung. Teilnehmer konnten ihre Output-Qualität um durchschnittlich 60% steigern.',
-    tags: ['Schulung', 'Prompt Engineering', 'Bildgenerierung'],
-    category: 'Training & Beratung',
+      'Entwicklung eines Validierungs-Frameworks für eine ERP-Migration. Tägliche 100%-Validierung statt Stichproben – Framework-Entwicklung mit KI massiv beschleunigt.',
+    tags: ['Python', 'SQL', 'REST API', 'KI-Entwicklung'],
+    category: 'Datenmigration & KI',
+    highlight: 'Helion Energy AG',
   },
   {
     id: '3',
-    title: 'Prozessautomatisierung mit KI',
+    title: 'Elgato Stream Deck Plugin',
     description:
-      'Integration von KI-gestützten Workflows in bestehende Unternehmensprozesse. Zeitersparnis von 15 Stunden pro Woche.',
-    tags: ['Automatisierung', 'API Integration', 'Python'],
-    category: 'KI-Integration',
+      'Entwicklung eines produktiven Elgato-Plugins mit KI-Unterstützung. Von der Idee zum fertigen, produktiv eingesetzten Produkt in kürzester Zeit.',
+    tags: ['TypeScript', 'KI-Entwicklung', 'Rapid Prototyping'],
+    category: 'KI-gestützte Entwicklung',
+    highlight: 'Produktiv im Einsatz',
   },
 ]
 
@@ -73,7 +76,7 @@ export function FeaturedProjects() {
                     {project.description}
                   </p>
 
-                  <div className="mb-6 flex flex-wrap gap-2">
+                  <div className="mb-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <Badge key={tag} variant="outline">
                         {tag}
@@ -81,16 +84,10 @@ export function FeaturedProjects() {
                     ))}
                   </div>
 
-                  {project.link && (
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => window.open(project.link, '_blank')}
-                      className="group/btn"
-                    >
-                      Mehr erfahren
-                      <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                    </Button>
+                  {project.highlight && (
+                    <div className="inline-flex items-center rounded-lg bg-amber-50 px-3 py-1.5 text-sm font-medium text-amber-800">
+                      {project.highlight}
+                    </div>
                   )}
                 </CardContent>
               </Card>

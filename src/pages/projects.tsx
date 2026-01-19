@@ -1,8 +1,8 @@
 import { SEOHead } from '@/components/SEOHead';
 import { Section, Container } from '@/components/layout';
-import { Badge, Card, CardHeader, CardContent, Button } from '@/components/ui';
+import { Badge, Card, Button } from '@/components/ui';
 import { ScrollReveal, FadeIn } from '@/components/animations';
-import { Sparkles, ExternalLink, Code, Database, BarChart3, GitMerge } from 'lucide-react';
+import { Sparkles, ExternalLink, Code, Database, BarChart3, GitMerge, CheckCircle, Plug, ClipboardList } from 'lucide-react';
 import Link from 'next/link';
 
 // Real anonymized projects
@@ -20,6 +20,21 @@ const projects = [
       'Fundierte Entscheidungsgrundlage durch konsolidierte Daten',
     ],
     status: 'Langzeitprojekt',
+  },
+  {
+    title: 'KI-gestütztes Datenvalidierungs-Framework',
+    category: 'Datenmigration & KI',
+    icon: CheckCircle,
+    description:
+      'Entwicklung eines automatisierten Validierungs-Frameworks für die ERP-Migration bei Helion Energy AG (ES2000 → Dynamics 365). Statt Stichproben ermöglichte das Framework eine tägliche Vollvalidierung des gesamten migrierten Datenbestands.',
+    technologies: ['Python', 'SQL Server', 'T-SQL', 'REST API', 'Dynamics 365'],
+    results: [
+      'Tägliche 100%-Validierung statt Stichproben',
+      'Schnelles Feedback bei Migrationsfehlern',
+      'Framework-Entwicklung mit KI massiv beschleunigt',
+      'Deutlich verbesserte Datenqualität vor Go-Live',
+    ],
+    status: 'Helion Energy AG',
   },
   {
     title: 'Middleware-Integration CPQ-System mit SAP',
@@ -50,18 +65,32 @@ const projects = [
     status: 'Im Einsatz',
   },
   {
-    title: 'ERP-Migration zu Dynamics 365',
-    category: 'Datenmigration & Integration',
-    icon: Code,
+    title: 'Elgato Stream Deck Plugin',
+    category: 'KI-gestützte Entwicklung',
+    icon: Plug,
     description:
-      'Datenmigration und Integration beim Wechsel zu Microsoft Dynamics 365. Bereinigung und Optimierung der Datenqualität.',
-    technologies: ['Dynamics 365', 'SQL', 'ETL', 'Data Quality'],
+      'Entwicklung eines produktiven Elgato Stream Deck Plugins mit KI-Unterstützung. Von der Idee zum fertigen, produktiv eingesetzten Produkt in kürzester Zeit dank KI-gestützter Entwicklung.',
+    technologies: ['TypeScript', 'Elgato SDK', 'KI-Entwicklung'],
     results: [
-      'Verbesserte Datenqualität durch Bereinigung',
-      'Erfolgreiche Migration ohne Datenverlust',
-      'Optimierte Prozesse im neuen ERP-System',
+      'Produktiv im täglichen Einsatz',
+      'Rapid Prototyping dank KI-Unterstützung',
+      'Von der Idee zum Produkt in Rekordzeit',
     ],
-    status: 'Erfolgreich abgeschlossen',
+    status: 'Produktiv im Einsatz',
+  },
+  {
+    title: 'Cut-Over-Planung für Schweizer Gebäudetechnik-Unternehmen',
+    category: 'KI-gestützte Projektplanung',
+    icon: ClipboardList,
+    description:
+      'Ausarbeitung eines detaillierten Cut-Over-Plans für eine komplexe Systemumstellung. Strukturierte Planung und Koordination aller Migrationsschritte mit Unterstützung von Claude Code.',
+    technologies: ['Projektmanagement', 'Claude Code', 'Systemintegration'],
+    results: [
+      'Strukturierter Migrationsfahrplan',
+      'Klare Verantwortlichkeiten und Zeitpläne',
+      'KI-gestützte Dokumentation und Planung',
+    ],
+    status: 'In Bearbeitung',
   },
 ];
 
