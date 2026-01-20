@@ -139,12 +139,25 @@ export default function Services() {
                     <div className="grid gap-8 lg:grid-cols-2">
                       {/* Left Column - Info */}
                       <div className="p-8 lg:p-10">
-                        <div className="mb-4 flex items-start gap-3">
-                          <div className="flex-shrink-0 rounded-lg bg-accent/10 p-3">
+                        <div className="mb-4">
+                          <div className="mb-3 rounded-lg bg-accent/10 p-3 w-fit md:hidden">
                             <Icon className="h-8 w-8 text-accent" />
                           </div>
-                          <div className="min-w-0 flex-1">
-                            <h2 className="text-2xl font-bold text-neutral-charcoal sm:text-3xl" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                          <div className="hidden md:flex items-start gap-3">
+                            <div className="flex-shrink-0 rounded-lg bg-accent/10 p-3">
+                              <Icon className="h-8 w-8 text-accent" />
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <h2 className="text-2xl font-bold text-neutral-charcoal sm:text-3xl" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+                                {service.title}
+                              </h2>
+                              <p className="text-sm text-neutral-slate">
+                                {service.subtitle}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="md:hidden">
+                            <h2 className="text-2xl font-bold text-neutral-charcoal mb-1" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                               {service.title}
                             </h2>
                             <p className="text-sm text-neutral-slate">
