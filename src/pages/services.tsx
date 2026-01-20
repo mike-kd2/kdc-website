@@ -139,12 +139,12 @@ export default function Services() {
                     <div className="grid gap-8 lg:grid-cols-2">
                       {/* Left Column - Info */}
                       <div className="p-8 lg:p-10">
-                        <div className="mb-4 flex items-center gap-3">
-                          <div className="rounded-lg bg-accent/10 p-3">
+                        <div className="mb-4 flex items-start gap-3">
+                          <div className="flex-shrink-0 rounded-lg bg-accent/10 p-3">
                             <Icon className="h-8 w-8 text-accent" />
                           </div>
-                          <div>
-                            <h2 className="text-2xl font-bold text-neutral-charcoal sm:text-3xl">
+                          <div className="min-w-0 flex-1">
+                            <h2 className="text-2xl font-bold text-neutral-charcoal sm:text-3xl" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
                               {service.title}
                             </h2>
                             <p className="text-sm text-neutral-slate">
