@@ -68,7 +68,7 @@ export function Header() {
               size="md"
               onClick={() => window.open(TIDYCAL_URL, '_blank')}
             >
-              Discovery Call
+              Gespräch vereinbaren
             </Button>
           </div>
 
@@ -113,7 +113,7 @@ export function Header() {
                   setMobileMenuOpen(false)
                 }}
               >
-                Discovery Call
+                Gespräch vereinbaren
               </Button>
             </div>
           </nav>

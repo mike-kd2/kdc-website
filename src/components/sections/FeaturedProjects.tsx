@@ -15,30 +15,30 @@ interface Project {
 const projects: Project[] = [
   {
     id: '1',
-    title: 'Data Warehouse für Schweizer Energieunternehmen',
+    title: 'OdA ARTECURA — Automatisierte Prüfungslösung',
     description:
-      'Konzeption, Aufbau und Betrieb eines Data Warehouse. Langfristige Partnerschaft mit zentraler Datenplattform für alle Geschäftsbereiche.',
-    tags: ['SQL Server', 'ETL', 'Business Intelligence'],
-    category: 'Data Warehouse & BI',
-    highlight: '10 Jahre Zusammenarbeit',
+      'Ein Schweizer Berufsverband hatte eine aufwändige, fehleranfällige Prüfungsauswertung in Excel. Ich habe den gesamten Prozess automatisiert: von der Datenvalidierung über die Auswertung bis zur Ergebnisaufbereitung.',
+    tags: ['Excel', 'VBA', 'C#', '.NET'],
+    category: 'Verband',
+    highlight: 'Berufsverband für Kunsttherapie',
   },
   {
     id: '2',
-    title: 'KI-gestütztes Datenvalidierungs-Framework',
+    title: 'Helion Energy AG — Data Warehouse & Reporting',
     description:
-      'Entwicklung eines Validierungs-Frameworks für eine ERP-Migration. Tägliche 100%-Validierung statt Stichproben – Framework-Entwicklung mit KI massiv beschleunigt.',
-    tags: ['Python', 'SQL', 'REST API', 'KI-Entwicklung'],
-    category: 'Datenmigration & KI',
-    highlight: 'Helion Energy AG',
+      'Konzeption und Betrieb eines firmenweiten Data Warehouse über 10 Jahre. Von KPI-Dashboards in Power BI bis zur automatisierten Report-Generierung.',
+    tags: ['SQL Server', 'Power BI', 'T-SQL', 'SSIS'],
+    category: 'KMU',
+    highlight: '10 Jahre Zusammenarbeit',
   },
   {
     id: '3',
-    title: 'Elgato Stream Deck Plugin',
+    title: 'SBKH GmbH — Automatisierte Datenverarbeitung',
     description:
-      'Entwicklung eines produktiven Elgato-Plugins mit KI-Unterstützung. Von der Idee zum fertigen, produktiv eingesetzten Produkt in kürzester Zeit.',
-    tags: ['TypeScript', 'KI-Entwicklung', 'Rapid Prototyping'],
-    category: 'KI-gestützte Entwicklung',
-    highlight: 'Produktiv im Einsatz',
+      'Vollautomatisierte ETL-Pipeline für eine Preisvergleichsplattform. Tägliche Datenverarbeitung aus mehreren externen Quellen, komplett ohne manuelle Eingriffe.',
+    tags: ['SQL Server', 'SSIS', 'C#', 'REST'],
+    category: 'KMU',
+    highlight: 'Null manueller Aufwand',
   },
 ]
 
@@ -48,14 +48,9 @@ export function FeaturedProjects() {
       <Container size="lg">
         <div className="text-center">
           <ScrollReveal>
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-neutral-charcoal sm:text-4xl md:text-5xl">
-              Ausgewählte Projekte
+            <h2 className="mb-12 text-3xl font-bold tracking-tight text-neutral-charcoal sm:text-4xl md:mb-16 md:text-5xl">
+              Einblick in realisierte Projekte
             </h2>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <p className="mx-auto mb-12 max-w-2xl text-lg text-neutral-slate md:mb-16 md:text-xl">
-              Einblicke in unsere erfolgreichen KI-Implementierungen
-            </p>
           </ScrollReveal>
         </div>
 
@@ -101,12 +96,7 @@ export function FeaturedProjects() {
               variant="outline"
               size="lg"
               onClick={() => {
-                const element = document.getElementById('contact')
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' })
-                } else {
-                  window.location.href = '/projects'
-                }
+                window.location.href = '/projects'
               }}
             >
               Alle Projekte ansehen

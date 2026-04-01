@@ -18,15 +18,14 @@ export function Footer() {
               {SITE_NAME}
             </Link>
             <p className="text-neutral-light-gray max-w-md mb-6">
-              AI Consultancy für Schweizer KMUs. Wir helfen Ihnen, KI-Lösungen
-              erfolgreich in Ihr Unternehmen zu integrieren.
+              Automatisierung, massgeschneiderte Tools und Datenlösungen für Verbände und KMUs in der Schweiz.
             </p>
             <Button
               variant="secondary"
               size="md"
               onClick={() => window.open(TIDYCAL_URL, '_blank')}
             >
-              Discovery Call buchen
+              Gespräch vereinbaren
             </Button>
           </div>
 

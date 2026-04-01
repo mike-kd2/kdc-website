@@ -1,8 +1,8 @@
-import { Button, Badge } from '@/components/ui'
+import { Button } from '@/components/ui'
 import { Container } from '@/components/layout'
 import { FadeIn, ScrollReveal } from '@/components/animations'
-import { Sparkles, ArrowRight } from 'lucide-react'
-import { TIDYCAL_URL } from '@/lib/constants'
+import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export function Hero() {
   return (
@@ -12,51 +12,40 @@ export function Hero() {
 
       <Container size="lg">
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-          <FadeIn direction="up" delay={0.1}>
-            <Badge variant="primary" className="mb-6 inline-flex">
-              <Sparkles className="mr-1.5 h-3.5 w-3.5" />
-              KI-Beratung für Schweizer KMUs
-            </Badge>
-          </FadeIn>
-
           <FadeIn direction="up" delay={0.2}>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-neutral-charcoal sm:text-5xl md:text-6xl lg:text-7xl">
-              Bringen Sie{' '}
-              <span className="bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent">
-                KI-Power
-              </span>{' '}
-              in Ihr Unternehmen
+              Weniger Fleissarbeit. Mehr Zeit für das, was zählt.
             </h1>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.3}>
             <p className="mb-8 text-lg text-neutral-slate sm:text-xl md:mb-10 md:text-2xl">
-              KI-Beratung mit 20 Jahren IT-Erfahrung. Wir kennen die Realität in KMUs und wissen, welche KI-Lösungen wirklich funktionieren.
+              Ich automatisiere wiederkehrende Abläufe, baue massgeschneiderte Tools und bringe Struktur in Ihre Daten. Für Verbände und KMUs in der Schweiz.
             </p>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.4}>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button
-                variant="primary"
-                size="lg"
-                onClick={() => window.open(TIDYCAL_URL, '_blank')}
-                className="w-full sm:w-auto"
-              >
-                Discovery Call buchen
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => {
-                  const element = document.getElementById('services')
-                  element?.scrollIntoView({ behavior: 'smooth' })
-                }}
-                className="w-full sm:w-auto"
-              >
-                Services entdecken
-              </Button>
+              <Link href="/verbaende" className="w-full sm:w-auto">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="w-full"
+                >
+                  Für Verbände
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/kmu" className="w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full"
+                >
+                  Für KMUs
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </FadeIn>
 
@@ -68,11 +57,11 @@ export function Hero() {
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-accent" />
-                <span>Ehem. CIO & Geschäftsleitung</span>
+                <span>Dipl. Systemtechnik-Ingenieur FH</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-accent" />
-                <span>Pragmatische KI-Lösungen</span>
+                <span>Langfristige Partnerschaften statt Einmal-Projekte</span>
               </div>
             </div>
           </ScrollReveal>

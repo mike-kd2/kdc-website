@@ -65,10 +65,10 @@ export function FloatingCTA() {
         size="lg"
         onClick={handleClick}
         className="animate-soft-glow hover:scale-105 transition-transform duration-300"
-        aria-label="Discovery Call buchen"
+        aria-label="Gespräch vereinbaren"
       >
         <Calendar className="h-5 w-5 mr-2" />
-        Discovery Call
+        Gespräch vereinbaren
       </Button>
     </div>
   );

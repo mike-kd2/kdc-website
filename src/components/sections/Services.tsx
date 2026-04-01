@@ -1,34 +1,30 @@
 import { Container, Section } from '@/components/layout'
 import { ScrollReveal, StaggerContainer } from '@/components/animations'
 import { ServiceCard } from './ServiceCard'
-import { GraduationCap, Code2, Network, Zap } from 'lucide-react'
+import { Workflow, Wrench, Database, RefreshCw } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { staggerItem } from '@/components/animations/variants'
 
 const services = [
   {
-    icon: Network,
-    title: 'KI-Strategie & Integration',
-    description: 'Ihr Einstieg in die KI-Welt: Potenzialanalyse, Tool-Auswahl und Implementierungs-Roadmap für Ihr KMU.',
-    tags: ['Strategie', 'Roadmap', 'Beratung'],
+    icon: Workflow,
+    title: 'Prozesse automatisieren',
+    description: 'Wiederkehrende Abläufe, die heute manuell laufen, mache ich automatisch. Import, Export, Validierung, Benachrichtigungen. Sie definieren die Regeln, die Software erledigt den Rest.',
   },
   {
-    icon: Zap,
-    title: 'KI-gestützte Prozessautomatisierung',
-    description: 'Wir automatisieren repetitive Aufgaben und verbinden Ihre Tools – für messbare Effizienzgewinne.',
-    tags: ['Automation', 'Workflows', 'Effizienz'],
+    icon: Wrench,
+    title: 'Massgeschneiderte Tools entwickeln',
+    description: 'Wenn Excel an seine Grenzen stösst und Standard-Software nicht passt, baue ich Ihnen genau das Werkzeug, das Sie brauchen. Keine aufgeblähte Lösung, sondern exakt das, was funktioniert.',
   },
   {
-    icon: Code2,
-    title: 'Anwendungsentwicklung',
-    description: 'Massgeschneiderte Webanwendungen und Tools, wenn Standard-Lösungen nicht ausreichen.',
-    tags: ['Web Apps', 'APIs', 'Integration'],
+    icon: Database,
+    title: 'Daten nutzbar machen',
+    description: 'Sie haben Daten in verschiedenen Systemen, aber keinen Überblick? Ich bringe Struktur rein, verbinde Systeme und schaffe Dashboards, die Ihnen echte Entscheidungsgrundlagen liefern.',
   },
   {
-    icon: GraduationCap,
-    title: 'KI-Schulungen & Workshops',
-    description: 'Praxisnahe Trainings für Ihr Team: Prompt-Engineering, KI-Tools und Best Practices.',
-    tags: ['Training', 'Prompts', 'Team'],
+    icon: RefreshCw,
+    title: 'Systeme wechseln, Daten mitnehmen',
+    description: 'Sie wechseln Ihr ERP, Ihre Mitgliederverwaltung oder ein anderes System? Ich sorge dafür, dass Ihre Daten sauber, vollständig und validiert im neuen System ankommen.',
   },
 ]
 
@@ -39,17 +35,13 @@ export function Services() {
         <ScrollReveal direction="up">
           <div className="mb-12 text-center md:mb-16">
             <h2 className="mb-4 text-3xl font-bold text-neutral-charcoal sm:text-4xl md:text-5xl">
-              Unsere Services
+              Ich baue Lösungen, die Ihnen den Rücken freihalten.
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-neutral-slate">
-              Massgeschneiderte KI-Lösungen für Ihr Unternehmen – von der
-              Beratung bis zur Umsetzung.
-            </p>
           </div>
         </ScrollReveal>
 
         <StaggerContainer staggerDelay={0.15}>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
             {services.map((service, index) => (
               <motion.div key={index} variants={staggerItem}>
                 <ServiceCard {...service} />

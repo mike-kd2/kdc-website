@@ -1,11 +1,12 @@
 // Site Metadata
 export const SITE_NAME = 'klauser designs&coaching'
-export const SITE_DESCRIPTION = 'AI Consultancy für Schweizer KMUs - KI-Prompt-Engineering, Anwendungsentwicklung und KI-Integration'
+export const SITE_DESCRIPTION = 'Automatisierung, massgeschneiderte Tools und Datenlösungen für Verbände und KMUs in der Schweiz'
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://klauserdesigns.ch'
 
 // Contact Information
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'michael@klauserdesigns.ch'
 export const CONTACT_PHONE = '+41 79 691 55 98'
+export const CONTACT_NAME = 'Michael Klauser'
 
 // External URLs
 export const TIDYCAL_URL = process.env.NEXT_PUBLIC_TIDYCAL_URL || 'https://tidycal.com/klauserdesignscoaching/discovery-call'
@@ -23,41 +24,38 @@ export const SOCIAL_LINKS = {
 // Navigation
 export const NAVIGATION_ITEMS = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
-  { label: 'Über uns', href: '/about' },
+  { label: 'Für Verbände', href: '/verbaende' },
+  { label: 'Für KMUs', href: '/kmu' },
   { label: 'Projekte', href: '/projects' },
+  { label: 'Über mich', href: '/about' },
   { label: 'Kontakt', href: '/contact' },
 ]
 
 // Services
 export const SERVICES = [
   {
-    id: 'ki-integration',
-    title: 'KI-Integrationsberatung',
-    description: 'Beratung zur Integration von KI-Lösungen in bestehende Systeme',
-    icon: 'Network',
-    tags: ['Strategie', 'Integration', 'Beratung'],
+    id: 'automatisierung',
+    title: 'Prozesse automatisieren',
+    description: 'Wiederkehrende Abläufe, die heute manuell laufen, mache ich automatisch. Import, Export, Validierung, Benachrichtigungen. Sie definieren die Regeln, die Software erledigt den Rest.',
+    icon: 'Workflow',
   },
   {
-    id: 'ki-prompt-engineering',
-    title: 'KI-Prompt-Engineering',
-    description: 'Optimierung von KI-Prompts für Video- und Bildgenerierung',
-    icon: 'Wand2',
-    tags: ['Video', 'Bilder', 'Prompts'],
+    id: 'tools',
+    title: 'Massgeschneiderte Tools entwickeln',
+    description: 'Wenn Excel an seine Grenzen stösst und Standard-Software nicht passt, baue ich Ihnen genau das Werkzeug, das Sie brauchen. Keine aufgeblähte Lösung, sondern exakt das, was funktioniert.',
+    icon: 'Wrench',
   },
   {
-    id: 'anwendungsentwicklung',
-    title: 'Anwendungsentwicklung',
-    description: 'Low/Mid-Level Entwicklung von KI-gestützten Anwendungen',
-    icon: 'Code2',
-    tags: ['Web Apps', 'APIs', 'Integration'],
+    id: 'daten',
+    title: 'Daten nutzbar machen',
+    description: 'Sie haben Daten in verschiedenen Systemen, aber keinen Überblick? Ich bringe Struktur rein, verbinde Systeme und schaffe Dashboards, die Ihnen echte Entscheidungsgrundlagen liefern.',
+    icon: 'Database',
   },
   {
-    id: 'software-entwicklung',
-    title: 'Unterstützung bei Software-Entwicklung',
-    description: 'Software-Entwicklung und technische Unterstützung',
-    icon: 'Terminal',
-    tags: ['JavaScript', 'TypeScript', 'Python'],
+    id: 'migration',
+    title: 'Systeme wechseln, Daten mitnehmen',
+    description: 'Sie wechseln Ihr ERP, Ihre Mitgliederverwaltung oder ein anderes System? Ich sorge dafür, dass Ihre Daten sauber, vollständig und validiert im neuen System ankommen.',
+    icon: 'RefreshCw',
   },
 ]
 
@@ -65,23 +63,18 @@ export const SERVICES = [
 export const PROCESS_STEPS = [
   {
     id: 1,
-    title: 'Analyse',
-    description: 'Wir analysieren Ihre aktuellen Prozesse und identifizieren KI-Potenziale',
+    title: 'Verstehen',
+    description: 'Wir sprechen über Ihren Alltag. Was nervt? Was dauert zu lange? Wo passieren Fehler? Daraus entsteht ein klares Bild, was automatisiert werden kann und soll.',
   },
   {
     id: 2,
-    title: 'Konzeption',
-    description: 'Entwicklung einer massgeschneiderten KI-Strategie für Ihr Unternehmen',
+    title: 'Umsetzen',
+    description: 'Ich baue die Lösung, teste sie mit Ihnen und passe sie an, bis sie sitzt. Kein Wasserfall-Projekt mit Pflichtenheft, sondern pragmatisches Arbeiten mit regelmässigem Feedback.',
   },
   {
     id: 3,
-    title: 'Umsetzung',
-    description: 'Implementierung der KI-Lösung mit kontinuierlichem Feedback',
-  },
-  {
-    id: 4,
-    title: 'Optimierung',
-    description: 'Laufende Verbesserung und Anpassung an Ihre Bedürfnisse',
+    title: 'Begleiten',
+    description: 'Nach dem Go-Live bleibe ich an Ihrer Seite. Wartung, kleine Anpassungen, Weiterentwicklung. Wenn sich Ihre Anforderungen ändern, wächst die Lösung mit.',
   },
 ]
 

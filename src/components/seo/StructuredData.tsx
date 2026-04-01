@@ -26,7 +26,7 @@ export function StructuredData({
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
     description:
-      'AI-Beratung und Low-Code-Entwicklung für Schweizer KMUs. Spezialisiert auf KI-Integration, Prompt Engineering und massgeschneiderte Softwarelösungen.',
+      'Automatisierung, massgeschneiderte Tools und Datenlösungen für Schweizer Verbände und KMUs. Spezialisiert auf Prozessautomatisierung, individuelle Software-Entwicklung und Datenintegration.',
     email: 'michael@klauserdesigns.ch',
     address: {
       '@type': 'PostalAddress',
@@ -36,29 +36,32 @@ export function StructuredData({
     founder: {
       '@type': 'Person',
       name: 'Michael Klauser',
-      jobTitle: 'AI Consultant & Software Developer',
+      jobTitle: 'Systemtechnik-Ingenieur & Automatisierungs-Spezialist',
       description:
-        'IT-Experte mit über 20 Jahren Erfahrung in Software-Entwicklung, IT-Infrastruktur und KI-Integration',
+        'IT-Experte mit über 20 Jahren Erfahrung in Software-Entwicklung, Systemintegration und Prozessautomatisierung',
     },
     areaServed: {
       '@type': 'Country',
       name: 'Switzerland',
     },
     knowsAbout: [
-      'Artificial Intelligence',
-      'AI Consulting',
-      'Prompt Engineering',
-      'Low-Code Development',
-      'Software Development',
-      'Business Process Automation',
-      'IT Consulting',
+      'Prozessautomatisierung',
+      'Datenintegration',
+      'Massgeschneiderte Software',
+      'Data Warehouse',
+      'ETL',
+      'Reporting',
+      'Datenmigration',
+      'Power BI',
+      'SQL Server',
+      'C#',
+      '.NET',
     ],
     serviceType: [
-      'AI-Beratung',
-      'Prompt Engineering',
-      'Low-Code-Entwicklung',
-      'KI-Integration',
-      'Software-Entwicklung',
+      'Prozesse automatisieren',
+      'Massgeschneiderte Tools entwickeln',
+      'Daten nutzbar machen',
+      'Systeme wechseln, Daten mitnehmen',
     ],
   };
 
@@ -70,7 +73,7 @@ export function StructuredData({
     url: baseUrl,
     name: 'klauser designs & coaching',
     description:
-      'AI-Beratung und Software-Entwicklung für Schweizer KMUs - KI-Integration, Prompt Engineering und massgeschneiderte Lösungen',
+      'Automatisierung, massgeschneiderte Tools und Datenlösungen für Schweizer Verbände und KMUs - Prozessautomatisierung, individuelle Software und Datenintegration',
     publisher: {
       '@id': `${baseUrl}/#organization`,
     },
@@ -81,7 +84,7 @@ export function StructuredData({
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: 'AI Consulting',
+    serviceType: 'Automatisierung & Datenlösungen',
     provider: {
       '@id': `${baseUrl}/#organization`,
     },
@@ -91,33 +94,42 @@ export function StructuredData({
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'AI & Software Services',
+      name: 'Automatisierung, Tools & Datenlösungen',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'KI-Integration & Beratung',
+            name: 'Prozesse automatisieren',
             description:
-              'Nahtlose Integration von KI-Tools in bestehende Geschäftsprozesse',
+              'Wiederkehrende Abläufe automatisieren und manuelle Arbeit reduzieren',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Prompt Engineering',
+            name: 'Massgeschneiderte Tools entwickeln',
             description:
-              'Optimierung von KI-Prompts für Text-, Bild- und Video-Generierung',
+              'Individuelle Software-Tools, die genau zu Ihren Anforderungen passen',
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Low-Code-Entwicklung',
+            name: 'Daten nutzbar machen',
             description:
-              'Schnelle Entwicklung massgeschneiderter Anwendungen mit modernen Tools',
+              'Datenintegration, Reporting und Data Warehouse für fundierte Entscheidungen',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Systeme wechseln, Daten mitnehmen',
+            description:
+              'Sichere Datenmigration und Systemwechsel ohne Datenverlust',
           },
         },
       ],
@@ -156,7 +168,7 @@ export function StructuredData({
     name: pageTitle || 'klauser designs & coaching',
     description:
       pageDescription ||
-      'AI-Beratung und Software-Entwicklung für Schweizer KMUs',
+      'Automatisierung, massgeschneiderte Tools und Datenlösungen für Schweizer Verbände und KMUs',
     isPartOf: {
       '@id': `${baseUrl}/#website`,
     },

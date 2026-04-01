@@ -10,9 +10,9 @@ export interface SEOHeadProps {
   noindex?: boolean;
 }
 
-const DEFAULT_TITLE = 'klauser designs&coaching - KI-Beratung für Schweizer KMUs';
+const DEFAULT_TITLE = 'Automatisierung & Datenlösungen für Verbände und KMUs | klauser designs&coaching';
 const DEFAULT_DESCRIPTION =
-  'Professionelle KI-Beratung und -Integration für Schweizer KMUs. Von Prompt-Engineering bis Anwendungsentwicklung. Buchen Sie jetzt einen kostenlosen Discovery Call.';
+  'Ich automatisiere wiederkehrende Abläufe, baue massgeschneiderte Tools und bringe Struktur in Ihre Daten. Für Verbände und KMUs in der Schweiz. 20+ Jahre IT-Erfahrung.';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://klauserdesigns.ch';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
@@ -72,20 +72,20 @@ export function SEOHead({
       {/* Theme Color */}
       <meta name="theme-color" content="#0A4D4E" />
 
-      {/* AI/LLM Optimization - Enhanced Semantic Understanding */}
+      {/* SEO Optimization - Semantic Understanding */}
       <meta
         name="keywords"
-        content="AI Beratung Schweiz, KI Consulting, Prompt Engineering, Low-Code Entwicklung, ChatGPT Beratung, Claude AI, KI Integration, Software Entwicklung Schweiz, IT Beratung KMU, Künstliche Intelligenz, Business Automation, Digital Transformation"
+        content="Automatisierung, Verbände, KMU, Datenlösungen, massgeschneiderte Tools, Prozessautomatisierung, Datenintegration, Reporting, Schweiz, Excel Automatisierung, Datenmigration"
       />
       <meta
         name="abstract"
-        content="AI-Beratung und Software-Entwicklung für Schweizer KMUs mit Fokus auf KI-Integration, Prompt Engineering und Low-Code-Lösungen"
+        content="Automatisierung, massgeschneiderte Tools und Datenlösungen für Verbände und KMUs in der Schweiz. 20+ Jahre IT-Erfahrung."
       />
       <meta
         name="topic"
-        content="Artificial Intelligence Consulting, AI Integration, Prompt Engineering"
+        content="Automatisierung, Datenlösungen, Prozessoptimierung, Tools für Verbände und KMUs"
       />
-      <meta name="classification" content="Business Services, Technology Consulting" />
+      <meta name="classification" content="Business Services, Automation, Data Solutions" />
       <meta name="robots" content="index, follow, max-image-preview:large" />
       <meta name="googlebot" content="index, follow" />
     </Head>

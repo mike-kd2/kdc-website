@@ -1,9 +1,9 @@
 import {
   Hero,
-  DiscoveryCall,
+  Problem,
   Services,
+  TwoWorlds,
   Process,
-  BusinessAudit,
   FeaturedProjects,
   CTA,
 } from '@/components/sections'
@@ -16,16 +16,16 @@ export default function Home() {
       <SEOHead />
       <StructuredData
         type="website"
-        pageTitle="klauser designs & coaching - AI-Beratung für Schweizer KMUs"
-        pageDescription="Professionelle AI-Beratung, Prompt Engineering und Low-Code-Entwicklung für Schweizer KMUs. Über 20 Jahre IT-Expertise."
+        pageTitle="Automatisierung & Datenlösungen für Verbände und KMUs | klauser designs&coaching"
+        pageDescription="Ich automatisiere wiederkehrende Abläufe, baue massgeschneiderte Tools und bringe Struktur in Ihre Daten. Für Verbände und KMUs in der Schweiz."
         pagePath="/"
       />
 
       <Hero />
-      <DiscoveryCall />
+      <Problem />
       <Services />
+      <TwoWorlds />
       <Process />
-      <BusinessAudit />
       <FeaturedProjects />
       <CTA />
     </>

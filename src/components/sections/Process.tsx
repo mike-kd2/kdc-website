@@ -10,10 +10,10 @@ export function Process() {
         <ScrollReveal direction="up">
           <div className="mb-12 text-center md:mb-16">
             <h2 className="mb-4 text-3xl font-bold text-neutral-charcoal sm:text-4xl md:text-5xl">
-              Unser Prozess
+              Partnerschaft statt Projekt.
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-neutral-slate">
-              In vier klaren Schritten zu Ihrer erfolgreichen KI-Integration
+              Ich baue Ihre Lösung, und danach lasse ich Sie nicht im Regen stehen.
             </p>
           </div>
         </ScrollReveal>

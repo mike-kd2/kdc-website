@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, Badge } from '@/components/ui'
+import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui'
 import { LucideIcon } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -6,10 +6,10 @@ export interface ServiceCardProps {
   icon: LucideIcon
   title: string
   description: string
-  tags: string[]
+  tags?: string[]
 }
 
-export function ServiceCard({ icon: Icon, title, description, tags }: ServiceCardProps) {
+export function ServiceCard({ icon: Icon, title, description }: ServiceCardProps) {
   return (
     <motion.div
       whileHover={{ y: -8 }}
@@ -23,15 +23,6 @@ export function ServiceCard({ icon: Icon, title, description, tags }: ServiceCar
           <CardTitle className="text-xl">{title}</CardTitle>
           <CardDescription className="text-base">{description}</CardDescription>
         </CardHeader>
-        <CardContent>
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <Badge key={tag} variant="default">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </CardContent>
       </Card>
     </motion.div>
   )
