@@ -69,16 +69,28 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={`space-y-md ${className}`} aria-label="Kontaktformular">
-      {/* Name Field */}
-      <div>
-        <Input
-          {...register('name')}
-          label="Name"
-          placeholder="Ihr vollständiger Name"
-          error={errors.name?.message}
-          disabled={submitStatus === 'loading'}
-          required
-        />
+      {/* Name Fields */}
+      <div className="grid gap-md sm:grid-cols-2">
+        <div>
+          <Input
+            {...register('firstName')}
+            label="Vorname"
+            placeholder="Ihr Vorname"
+            error={errors.firstName?.message}
+            disabled={submitStatus === 'loading'}
+            required
+          />
+        </div>
+        <div>
+          <Input
+            {...register('lastName')}
+            label="Nachname"
+            placeholder="Ihr Nachname"
+            error={errors.lastName?.message}
+            disabled={submitStatus === 'loading'}
+            required
+          />
+        </div>
       </div>
 
       {/* Email Field */}
@@ -99,9 +111,20 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
         <Input
           {...register('phone')}
           type="tel"
-          label="Telefon (Optional)"
+          label="Telefon (optional)"
           placeholder="+41 79 123 45 67"
           error={errors.phone?.message}
+          disabled={submitStatus === 'loading'}
+        />
+      </div>
+
+      {/* Organization Field (Optional) */}
+      <div>
+        <Input
+          {...register('organization')}
+          label="Organisation / Firma (optional)"
+          placeholder="Ihre Firma oder Organisation"
+          error={errors.organization?.message}
           disabled={submitStatus === 'loading'}
         />
       </div>
@@ -110,7 +133,7 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
       <div>
         <TextArea
           {...register('message')}
-          label="Nachricht"
+          label="Wie kann ich Ihnen helfen?"
           placeholder="Beschreiben Sie Ihr Anliegen..."
           rows={6}
           error={errors.message?.message}
@@ -131,7 +154,7 @@ export function ContactForm({ onSuccess, className = '' }: ContactFormProps) {
       {submitStatus === 'success' && (
         <div className="rounded-md bg-green-50 p-4 text-sm text-green-800 border border-green-200" role="status" aria-live="polite">
           <p className="font-medium">Nachricht erfolgreich gesendet!</p>
-          <p className="mt-1">Wir melden uns in Kürze bei Ihnen.</p>
+          <p className="mt-1">Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
         </div>
       )}
 

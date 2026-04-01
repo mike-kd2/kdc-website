@@ -11,9 +11,6 @@ export type AnalyticsEvent =
   | 'contact_form_submit'
   | 'contact_form_success'
   | 'contact_form_error'
-  | 'audit_form_submit'
-  | 'audit_form_success'
-  | 'audit_form_error'
   | 'floating_cta_click'
   | 'service_card_click'
   | 'email_click'
@@ -78,31 +75,6 @@ export const trackContactFormSuccess = () => {
  */
 export const trackContactFormError = (error: string) => {
   trackEvent('contact_form_error', {
-    props: { error },
-  });
-};
-
-/**
- * Track business audit form submission
- */
-export const trackAuditFormSubmit = () => {
-  trackEvent('audit_form_submit');
-};
-
-/**
- * Track business audit form success
- */
-export const trackAuditFormSuccess = () => {
-  trackEvent('audit_form_success');
-};
-
-/**
- * Track business audit form error
- *
- * @param error - Error message or code
- */
-export const trackAuditFormError = (error: string) => {
-  trackEvent('audit_form_error', {
     props: { error },
   });
 };

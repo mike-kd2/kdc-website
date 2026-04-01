@@ -1,106 +1,153 @@
 import { SEOHead } from '@/components/SEOHead';
+import { StructuredData } from '@/components/seo/StructuredData';
 import { Section, Container } from '@/components/layout';
-import { Badge, Card, Button } from '@/components/ui';
-import { ScrollReveal, FadeIn } from '@/components/animations';
-import { Sparkles, ExternalLink, Code, Database, BarChart3, GitMerge, CheckCircle, Plug, ClipboardList } from 'lucide-react';
+import { Badge, Card, CardHeader, CardTitle, CardContent } from '@/components/ui';
+import { ScrollReveal } from '@/components/animations';
+import { CTA } from '@/components/sections/CTA';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
 
-// Real anonymized projects
-const projects = [
+interface Project {
+  title: string;
+  subtitle: string;
+  description: string;
+  ergebnis: string;
+  technologies: string[];
+}
+
+const verbaendeProjects: Project[] = [
   {
-    title: 'Data Warehouse für Schweizer Energieunternehmen',
-    category: 'Data Warehouse & BI',
-    icon: Database,
+    title: 'OdA ARTECURA — Automatisierte Prüfungslösung',
+    subtitle: 'Berufsverband für Kunsttherapie',
     description:
-      'Konzeption, Aufbau und Betrieb eines Data Warehouse für ein Schweizer Energieunternehmen. Langfristige Zusammenarbeit über 10 Jahre.',
-    technologies: ['SQL Server', 'ETL', 'Business Intelligence', 'Data Modeling'],
-    results: [
-      '10 Jahre erfolgreiche Zusammenarbeit',
-      'Zentrale Datenplattform für alle Geschäftsbereiche',
-      'Fundierte Entscheidungsgrundlage durch konsolidierte Daten',
-    ],
-    status: 'Langzeitprojekt',
-  },
-  {
-    title: 'KI-gestütztes Datenvalidierungs-Framework',
-    category: 'Datenmigration & KI',
-    icon: CheckCircle,
-    description:
-      'Entwicklung eines automatisierten Validierungs-Frameworks für die ERP-Migration bei Helion Energy AG (ES2000 → Dynamics 365). Statt Stichproben ermöglichte das Framework eine tägliche Vollvalidierung des gesamten migrierten Datenbestands.',
-    technologies: ['Python', 'SQL Server', 'T-SQL', 'REST API', 'Dynamics 365'],
-    results: [
-      'Tägliche 100%-Validierung statt Stichproben',
-      'Schnelles Feedback bei Migrationsfehlern',
-      'Framework-Entwicklung mit KI massiv beschleunigt',
-      'Deutlich verbesserte Datenqualität vor Go-Live',
-    ],
-    status: 'Helion Energy AG',
-  },
-  {
-    title: 'Middleware-Integration CPQ-System mit SAP',
-    category: 'Systemintegration',
-    icon: GitMerge,
-    description:
-      'Entwicklung einer Middleware zur Integration eines CPQ-Systems mit SAP für ein KMU. Medienbruchfreie Prozesse vom Angebot bis zur Rechnung.',
-    technologies: ['C#', 'SAP Integration', 'REST APIs', 'SQL'],
-    results: [
-      'Medienbruchfreie Prozesse',
-      'Eliminierung manueller Übertragungsfehler',
-      'Deutliche Zeitersparnis im Vertrieb',
-    ],
-    status: 'Erfolgreich abgeschlossen',
-  },
-  {
-    title: 'KPI-Dashboard mit Power BI',
-    category: 'Business Intelligence',
-    icon: BarChart3,
-    description:
-      'Entwicklung eines Power BI Dashboards für die Vertriebssteuerung. Echtzeit-Einblick in wichtige Kennzahlen und Trends.',
-    technologies: ['Power BI', 'SQL', 'DAX', 'Data Modeling'],
-    results: [
-      'Echtzeit-Entscheidungsgrundlage für Management',
-      'Automatisierte Reports statt manuelle Excel-Auswertungen',
-      'Transparenz über alle Vertriebskennzahlen',
-    ],
-    status: 'Im Einsatz',
-  },
-  {
-    title: 'Elgato Stream Deck Plugin',
-    category: 'KI-gestützte Entwicklung',
-    icon: Plug,
-    description:
-      'Entwicklung eines produktiven Elgato Stream Deck Plugins mit KI-Unterstützung. Von der Idee zum fertigen, produktiv eingesetzten Produkt in kürzester Zeit dank KI-gestützter Entwicklung.',
-    technologies: ['TypeScript', 'Elgato SDK', 'KI-Entwicklung'],
-    results: [
-      'Produktiv im täglichen Einsatz',
-      'Rapid Prototyping dank KI-Unterstützung',
-      'Von der Idee zum Produkt in Rekordzeit',
-    ],
-    status: 'Produktiv im Einsatz',
-  },
-  {
-    title: 'Cut-Over-Planung für Schweizer Gebäudetechnik-Unternehmen',
-    category: 'KI-gestützte Projektplanung',
-    icon: ClipboardList,
-    description:
-      'Ausarbeitung eines detaillierten Cut-Over-Plans für eine komplexe Systemumstellung. Strukturierte Planung und Koordination aller Migrationsschritte mit Unterstützung von Claude Code.',
-    technologies: ['Projektmanagement', 'Claude Code', 'Systemintegration'],
-    results: [
-      'Strukturierter Migrationsfahrplan',
-      'Klare Verantwortlichkeiten und Zeitpläne',
-      'KI-gestützte Dokumentation und Planung',
-    ],
-    status: 'In Bearbeitung',
+      'Ein Schweizer Berufsverband wickelte seine Qualifikationsverfahren mit einer Kombination aus Excel-Dateien und manuellen Schritten ab. Ich habe den gesamten Prüfungsprozess automatisiert: von der Datenvalidierung über die Zuordnung von Kandidaten und Experten bis zur Ergebnisaufbereitung.',
+    ergebnis:
+      'Drastische Reduktion des manuellen Aufwands, weniger Fehler, eigenständig durchführbar.',
+    technologies: ['Excel', 'VBA', 'C#', '.NET', 'ClosedXML'],
   },
 ];
+
+const kmuProjects: Project[] = [
+  {
+    title: 'Helion Energy AG — Data Warehouse & Reporting',
+    subtitle: 'Schweizer Energieunternehmen | 10 Jahre Zusammenarbeit',
+    description:
+      'Konzeption, Aufbau und Betrieb des firmenweiten Data Warehouse. Zentrale Datenplattform für Geschäfts- und Projektreporting, KPI-Dashboards in Power BI, automatisierte Report-Generierung.',
+    ergebnis:
+      'Single Point of Truth. Report-Generierung von Tagen auf Stunden reduziert.',
+    technologies: ['SQL Server', 'SSIS', 'Power BI', 'DAX', 'T-SQL', 'C#'],
+  },
+  {
+    title: 'Helion Energy AG — KPI Datenbank & Power BI Reports',
+    subtitle: 'Schweizer Energieunternehmen',
+    description:
+      'Konzeptionierung und Umsetzung einer Sales KPI Datenbank mit automatischer Aktualisierung. Erstellung des KPI Reportings mit Power BI.',
+    ergebnis:
+      'Detaillierte Auswertung des Verkaufsprozesses. Reduktion der Report-Generierungszeit von Tagen auf Stunden.',
+    technologies: ['SQL Server', 'Power BI', 'T-SQL', 'DAX'],
+  },
+  {
+    title: 'Helion Energy AG — Bedarfsmanagement-Software',
+    subtitle: 'Schweizer Energieunternehmen',
+    description:
+      'Konzeption und Entwicklung einer Software für Bedarfsmanagement mit Anbindung externer Logistikpartner. Automatisches Demand-Forecasting und Datentransfer via REST APIs.',
+    ergebnis:
+      'Massive Reduktion manueller Koordination zwischen Projektleitern und Supply Chain Management.',
+    technologies: ['SQL Server', 'C#', '.NET Framework', 'DevExpress', 'REST APIs'],
+  },
+  {
+    title: 'Helion Energy AG — Import Tool und Middleware',
+    subtitle: 'Schweizer Energieunternehmen',
+    description:
+      'Geführtes Import- und Sync-Tool für Adress-, Projekt-, Offert- und Rechnungsdaten. Middleware für automatisierten Datenfluss zwischen webbasierter Vertriebssoftware und Business-Systemen.',
+    ergebnis:
+      'Automatisierter End-to-End Workflow von der Offerte bis zur Rechnung. Manuelle Dateneingabe eliminiert.',
+    technologies: ['SQL Server', 'C#', '.NET Framework', 'EF6', 'REST'],
+  },
+  {
+    title: 'Helion Energy AG — Theia Bridge (Azure Middleware)',
+    subtitle: 'Schweizer Energieunternehmen',
+    description:
+      'Konzeptionierung und Umsetzung einer Azure-basierten Middleware zwischen webbasierter Vertriebssoftware, internen ERP-Applikationen und konzernweitem SAP.',
+    ergebnis:
+      'Integration in konzernweite ERP-Systemlandschaft. Modularisierung für geplanten Umstieg auf neue ERP-Lösungen.',
+    technologies: ['Azure SQL', 'C#', '.NET Core', 'Azure App Service', 'Hangfire', 'REST'],
+  },
+  {
+    title: 'Helion Energy AG — Datenmigration ES2000 → Dynamics 365',
+    subtitle: 'Schweizer Energieunternehmen',
+    description:
+      'End-to-End Datenmigration aus Legacy-System nach Dynamics 365. Entwicklung eines Python-basierten Validierungs-Frameworks, das 100% der migrierten Datensätze über die D365 OData API prüft.',
+    ergebnis:
+      'Validierungszyklen alle 1-2 Tage, Fehler früh erkannt, deutlich verbesserte Datenqualität vor Go-Live.',
+    technologies: ['Python', 'Pandas', 'Azure SQL', 'OData API', 'T-SQL'],
+  },
+  {
+    title: 'SBKH GmbH — Automatisierte ETL-Pipeline',
+    subtitle: 'Preisvergleichsplattform',
+    description:
+      'Vollautomatisierte ETL-Pipeline für tägliche Datenverarbeitung aus mehreren externen Quellen. Von der Datenabholung bis zur Bereitstellung ohne manuellen Eingriff.',
+    ergebnis:
+      'Manuelle Datenverarbeitung auf null reduziert. Sortimentserweiterung ohne zusätzlichen Personalaufwand.',
+    technologies: ['SQL Server', 'MySQL', 'SSIS', 'C#', 'REST'],
+  },
+];
+
+function ProjectCard({ project }: { project: Project }) {
+  return (
+    <ScrollReveal>
+      <Card className="overflow-hidden">
+        <CardHeader>
+          <div className="mb-2">
+            <Badge variant="outline">{project.subtitle}</Badge>
+          </div>
+          <CardTitle className="text-xl sm:text-2xl text-neutral-charcoal">
+            {project.title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-5">
+          <p className="text-neutral-slate leading-relaxed">
+            {project.description}
+          </p>
+
+          {/* Ergebnis */}
+          <div className="flex items-start gap-3 rounded-lg bg-green-50 p-4">
+            <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600" />
+            <div>
+              <span className="text-sm font-semibold text-green-800">Ergebnis: </span>
+              <span className="text-sm text-green-800">{project.ergebnis}</span>
+            </div>
+          </div>
+
+          {/* Technologies */}
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full bg-neutral-light-gray px-3 py-1 text-xs font-medium text-neutral-charcoal"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </ScrollReveal>
+  );
+}
 
 export default function Projects() {
   return (
     <>
       <SEOHead
-        title="Projekte"
-        description="Entdecken Sie erfolgreiche KI-Projekte und Case Studies von klauser designs&coaching. Erfahren Sie, wie Schweizer KMUs von KI-Integration profitieren."
-        canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/projects`}
+        title="Realisierte Projekte: Automatisierung & Datenlösungen | klauser designs&coaching"
+        description="Von automatisierten Prüfungslösungen bis zu Data Warehouses. Einblick in Projekte für Verbände und KMUs, die heute im Einsatz sind."
+      />
+      <StructuredData
+        type="website"
+        pageTitle="Realisierte Projekte: Automatisierung & Datenlösungen"
+        pageDescription="Von automatisierten Prüfungslösungen bis zu Data Warehouses. Einblick in Projekte für Verbände und KMUs, die heute im Einsatz sind."
+        pagePath="/projects"
       />
 
       {/* Hero Section */}
@@ -112,127 +159,71 @@ export default function Projects() {
                 Projekte
               </Badge>
               <h1 className="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl">
-                Erfolgreiche Projekte
+                Realisierte Projekte
               </h1>
               <p className="text-xl text-white/90 sm:text-2xl">
-                Von Data Warehouses bis zur Systemintegration – ein Einblick in realisierte Projekte
+                Von automatisierten Prüfungslösungen bis zu Data Warehouses. Ein Einblick in Projekte, die heute im Einsatz sind.
               </p>
             </div>
           </ScrollReveal>
         </Container>
       </Section>
 
-      {/* Projects Grid */}
+      {/* Verbände Section */}
       <Section>
         <Container>
-          <div className="grid gap-8 lg:gap-10">
-            {projects.map((project, index) => {
-              const Icon = project.icon;
-              return (
-                <ScrollReveal key={project.title}>
-                  <Card className="overflow-hidden">
-                    <div className="grid gap-8 lg:grid-cols-3">
-                      {/* Left Column - Project Info */}
-                      <div className="lg:col-span-2 p-8">
-                        <div className="mb-4 flex items-start justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="rounded-lg bg-accent/10 p-3">
-                              <Icon className="h-6 w-6 text-accent" />
-                            </div>
-                            <div>
-                              <Badge variant="outline" className="mb-2">
-                                {project.category}
-                              </Badge>
-                              <h3 className="text-xl font-bold text-neutral-charcoal sm:text-2xl">
-                                {project.title}
-                              </h3>
-                            </div>
-                          </div>
-                        </div>
+          <ScrollReveal>
+            <div className="mb-8 flex items-baseline justify-between">
+              <h2 className="text-3xl font-bold text-neutral-charcoal sm:text-4xl">
+                Verbände
+              </h2>
+              <Link
+                href="/verbaende"
+                className="group flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-light"
+              >
+                Mehr erfahren
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </ScrollReveal>
+          <div className="grid gap-8">
+            {verbaendeProjects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </Container>
+      </Section>
 
-                        <p className="mb-6 text-lg text-neutral-slate">
-                          {project.description}
-                        </p>
-
-                        {/* Technologies */}
-                        <div className="mb-6">
-                          <h4 className="mb-2 text-sm font-semibold text-neutral-charcoal">
-                            Technologien:
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((tech) => (
-                              <span
-                                key={tech}
-                                className="rounded-full bg-neutral-light-gray px-3 py-1 text-sm text-neutral-charcoal"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Status */}
-                        <div className="inline-flex items-center rounded-lg bg-amber-50 px-4 py-2 text-sm font-medium text-amber-800">
-                          {project.status}
-                        </div>
-                      </div>
-
-                      {/* Right Column - Results */}
-                      <div className="bg-gradient-to-br from-green-50 to-white p-8">
-                        <h4 className="mb-4 font-semibold text-neutral-charcoal">
-                          Ergebnisse:
-                        </h4>
-                        <ul className="space-y-3">
-                          {project.results.map((result) => (
-                            <li
-                              key={result}
-                              className="flex items-start gap-2 text-sm text-neutral-slate"
-                            >
-                              <span className="mt-1 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-600" />
-                              <span>{result}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </Card>
-                </ScrollReveal>
-              );
-            })}
+      {/* KMU Section */}
+      <Section background="gray">
+        <Container>
+          <ScrollReveal>
+            <div className="mb-8 flex items-baseline justify-between">
+              <h2 className="text-3xl font-bold text-neutral-charcoal sm:text-4xl">
+                KMU
+              </h2>
+              <Link
+                href="/kmu"
+                className="group flex items-center gap-1 text-sm font-medium text-primary hover:text-primary-light"
+              >
+                Mehr erfahren
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </ScrollReveal>
+          <div className="grid gap-8">
+            {kmuProjects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
           </div>
         </Container>
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-primary to-primary-light text-white">
-        <Container>
-          <FadeIn>
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-                Ihr Projekt könnte das nächste sein
-              </h2>
-              <p className="mb-8 text-xl text-white/90">
-                Lassen Sie uns gemeinsam herausfinden, wie KI Ihr Unternehmen
-                voranbringen kann. Buchen Sie jetzt einen kostenlosen Discovery Call.
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-                <Link href="/#discovery-call">
-                  <Button variant="secondary" size="lg">
-                    <Sparkles className="mr-2 h-5 w-5" />
-                    Discovery Call buchen
-                  </Button>
-                </Link>
-                <Link href="/#business-audit">
-                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                    Kostenlose Analyse
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </FadeIn>
-        </Container>
-      </Section>
+      <CTA
+        title="Ihr Projekt könnte das nächste sein."
+        text="Erzählen Sie mir, was bei Ihnen ansteht. In einem kurzen Gespräch finden wir heraus, ob ich der Richtige dafür bin."
+      />
     </>
   );
 }
