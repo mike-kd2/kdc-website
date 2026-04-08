@@ -12,20 +12,39 @@ export default function Referenzen() {
       />
 
       {/* Header Section */}
-      <section className="bg-primary py-16 text-white md:py-24">
+      <section className="relative bg-primary overflow-hidden py-16 text-white md:py-24">
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+            backgroundSize: '64px 64px',
+          }}
+        />
+        <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary-light opacity-40 blur-3xl pointer-events-none" />
+
         <Container size="md">
-          <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
-            Was ich gebaut habe.
-          </h1>
+          <div className="relative">
+            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+              Referenzen
+            </p>
+            <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl max-w-xl mb-6">
+              Was ich gebaut habe.
+            </h1>
+            <p className="text-white/70 text-lg max-w-lg">
+              Drei abgeschlossene Projekte — mit dem Ergebnis, das zählt.
+            </p>
+          </div>
         </Container>
       </section>
 
       {/* Referenzen Section */}
-      <section className="bg-white py-16">
+      <section className="bg-neutral-off-white py-16">
         <Container size="md">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
             <ReferenzCard
               id="oda-artecura"
+              nummer={1}
               firma="OdA ARTECURA"
               branche="Berufsverband für Kunsttherapie"
               problem="Das gesamte Qualifikationsverfahren lief manuell in Excel. Fehleranfällig und zeitintensiv."
@@ -34,6 +53,7 @@ export default function Referenzen() {
             />
             <ReferenzCard
               id="helion-energy"
+              nummer={2}
               firma="Helion Energy AG"
               branche="Energieunternehmen"
               problem="Wachsendes Unternehmen ohne zentrale Datenplattform. Reporting dauerte Tage, Systeme liefen aneinander vorbei."
@@ -42,6 +62,7 @@ export default function Referenzen() {
             />
             <ReferenzCard
               id="sbkh"
+              nummer={3}
               firma="SBKH GmbH"
               branche="Preisvergleichsplattform"
               problem="Tägliche Datenaktualisierungen aus mehreren externen Quellen liefen manuell."
