@@ -19,20 +19,59 @@ export default function KMU() {
       />
 
       {/* Hero Section */}
-      <section className="bg-primary py-16 text-white md:py-24">
+      <section className="relative bg-primary overflow-hidden py-16 text-white md:py-24">
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+            backgroundSize: '64px 64px',
+          }}
+        />
+        <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary-light opacity-40 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-16 left-1/3 w-48 h-48 rounded-full bg-accent opacity-15 blur-2xl pointer-events-none" />
+
         <Container size="md">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
-            Für KMUs
-          </p>
-          <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl max-w-2xl">
-            Ihre Systeme reden nicht miteinander? Ich baue die Brücke.
-          </h1>
-          <p className="text-lg text-white/80 sm:text-xl max-w-xl">
-            Ihre Daten stecken in fünf Systemen, Ihr Reporting kostet Tage, und
-            bei jedem Systemwechsel hofft jemand, dass nichts verloren geht. Ich
-            baue die Verbindungen und Werkzeuge, die Ihnen das manuelle Hin und
-            Her abnehmen.
-          </p>
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text */}
+            <div>
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+                Für KMUs
+              </p>
+              <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl max-w-2xl">
+                Ihre Systeme reden nicht miteinander? Ich baue die Brücke.
+              </h1>
+              <p className="text-lg text-white/75 max-w-lg">
+                Ihre Daten stecken in fünf Systemen, Ihr Reporting kostet Tage,
+                und bei jedem Systemwechsel hofft jemand, dass nichts verloren
+                geht. Ich baue die Verbindungen und Werkzeuge, die Ihnen das
+                manuelle Hin und Her abnehmen.
+              </p>
+            </div>
+
+            {/* Visual: Typische Probleme */}
+            <div className="hidden lg:flex flex-col gap-3">
+              <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Kommt Ihnen bekannt vor?</p>
+              {[
+                'Reporting braucht Tage statt Minuten',
+                'Daten müssen manuell zwischen Systemen kopiert werden',
+                'Beim Systemwechsel hofft jemand, dass nichts verloren geht',
+                'Kein einheitliches Bild über alle Daten',
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 rounded-md bg-white/[0.06] border border-white/10 px-4 py-3"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/30 flex-shrink-0" />
+                  <span className="text-white/60 text-sm">{item}</span>
+                </div>
+              ))}
+              <div className="mt-2 text-accent text-sm font-semibold">
+                ↓ Genau dafür bin ich da.
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
 

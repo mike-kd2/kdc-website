@@ -19,21 +19,61 @@ export default function Verbaende() {
       />
 
       {/* Hero Section */}
-      <section className="bg-primary py-16 text-white md:py-24">
+      <section className="relative bg-primary overflow-hidden py-16 text-white md:py-24">
+        {/* Grid overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+            backgroundSize: '64px 64px',
+          }}
+        />
+        <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary-light opacity-40 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-16 left-1/3 w-48 h-48 rounded-full bg-accent opacity-15 blur-2xl pointer-events-none" />
+
         <Container size="md">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
-            Für Verbände
-          </p>
-          <h1 className="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl max-w-2xl">
-            Weniger Handarbeit in der Geschäftsstelle.
-          </h1>
-          <p className="text-lg text-white/80 sm:text-xl max-w-xl">
-            Prüfungen planen, Kandidaten zuordnen, Ergebnisse auswerten,
-            Zertifizierungen nachverfolgen. Vieles davon läuft bei Ihnen noch
-            manuell oder in Excel. Ich automatisiere diese Abläufe so, dass
-            Ihre Geschäftsstelle sie eigenständig durchführen kann. Ohne
-            IT-Abteilung.
-          </p>
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text */}
+            <div>
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+                Für Verbände
+              </p>
+              <h1 className="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl max-w-2xl">
+                Weniger Handarbeit in der Geschäftsstelle.
+              </h1>
+              <p className="text-lg text-white/75 max-w-lg">
+                Prüfungen planen, Kandidaten zuordnen, Ergebnisse auswerten,
+                Zertifizierungen nachverfolgen. Vieles davon läuft bei Ihnen noch
+                manuell oder in Excel. Ich automatisiere diese Abläufe so, dass
+                Ihre Geschäftsstelle sie eigenständig durchführen kann. Ohne
+                IT-Abteilung.
+              </p>
+            </div>
+
+            {/* Visual: Vorher / Nachher */}
+            <div className="hidden lg:flex flex-col gap-3">
+              <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Typischer Alltag heute</p>
+              {[
+                'Excel-Datei wird manuell befüllt',
+                'Kandidaten werden per E-Mail informiert',
+                'Ergebnisse werden händisch übertragen',
+                'Dokumente werden einzeln erstellt',
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 rounded-md bg-white/[0.06] border border-white/10 px-4 py-3"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/30 flex-shrink-0" />
+                  <span className="text-white/60 text-sm">{item}</span>
+                </div>
+              ))}
+              <div className="mt-2 flex items-center gap-2 text-accent text-sm font-semibold">
+                <span className="text-accent/60">↓</span>
+                Nach der Automatisierung: keiner dieser Schritte mehr manuell.
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
 
