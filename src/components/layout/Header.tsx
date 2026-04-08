@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui'
-import { NAVIGATION_ITEMS, TIDYCAL_URL } from '@/lib/constants'
+import { NAVIGATION_ITEMS } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 
 export function Header() {
@@ -45,7 +45,7 @@ export function Header() {
             href="/"
             className="flex items-center space-x-2 text-lg font-bold text-primary hover:text-primary-light transition-colors md:text-xl rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           >
-            <span>klauser designs&coaching</span>
+            <span>klauser designs</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -66,9 +66,9 @@ export function Header() {
             <Button
               variant="primary"
               size="md"
-              onClick={() => window.open(TIDYCAL_URL, '_blank')}
+              onClick={() => { window.location.href = '/angebot#prozess-check' }}
             >
-              Gespräch vereinbaren
+              Prozess-Check
             </Button>
           </div>
 
@@ -109,11 +109,11 @@ export function Header() {
                 size="md"
                 className="w-full"
                 onClick={() => {
-                  window.open(TIDYCAL_URL, '_blank')
+                  window.location.href = '/angebot#prozess-check'
                   setMobileMenuOpen(false)
                 }}
               >
-                Gespräch vereinbaren
+                Prozess-Check
               </Button>
             </div>
           </nav>

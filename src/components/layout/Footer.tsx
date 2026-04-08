@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui'
-import { NAVIGATION_ITEMS, CONTACT_EMAIL, CONTACT_PHONE, TIDYCAL_URL, SITE_NAME } from '@/lib/constants'
+import { NAVIGATION_ITEMS, CONTACT_EMAIL, CONTACT_PHONE, TIDYCAL_URL } from '@/lib/constants'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -15,7 +15,7 @@ export function Footer() {
               href="/"
               className="inline-block text-xl font-bold text-white hover:text-accent transition-colors mb-4 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
             >
-              {SITE_NAME}
+              klauser designs
             </Link>
             <p className="text-neutral-light-gray max-w-md mb-6">
               Automatisierung, massgeschneiderte Tools und Datenlösungen für Verbände und KMUs in der Schweiz.
@@ -45,6 +45,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/kontakt"
+                  className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
+                >
+                  Kontakt
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -72,7 +80,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/kontakt"
                   className="text-neutral-light-gray hover:text-white transition-colors rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-charcoal"
                 >
                   Kontaktformular
@@ -86,7 +94,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-neutral-slate/30">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <p className="text-sm text-neutral-light-gray">
-              © {currentYear} {SITE_NAME}. Alle Rechte vorbehalten.
+              © {currentYear} klauser designs & coaching. Alle Rechte vorbehalten.
             </p>
             <div className="flex flex-wrap gap-6 text-sm">
               <Link

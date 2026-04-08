@@ -96,10 +96,10 @@ export function FeaturedProjects() {
               variant="outline"
               size="lg"
               onClick={() => {
-                window.location.href = '/projects'
+                window.location.href = '/referenzen'
               }}
             >
-              Alle Projekte ansehen
+              Alle Referenzen ansehen
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Calendar } from 'lucide-react';
 import { Button } from '@/components/ui';
-import { TIDYCAL_URL } from '@/lib/constants';
 import { trackFloatingCtaClick } from '@/lib/analytics';
 
 /**
@@ -51,7 +50,7 @@ export function FloatingCTA() {
 
   const handleClick = () => {
     trackFloatingCtaClick();
-    window.open(TIDYCAL_URL, '_blank');
+    window.location.href = '/angebot#prozess-check';
   };
 
   if (!isVisible || isFooterVisible) {
@@ -65,10 +64,10 @@ export function FloatingCTA() {
         size="lg"
         onClick={handleClick}
         className="animate-soft-glow hover:scale-105 transition-transform duration-300"
-        aria-label="Gespräch vereinbaren"
+        aria-label="Prozess-Check anfragen"
       >
         <Calendar className="h-5 w-5 mr-2" />
-        Gespräch vereinbaren
+        Prozess-Check anfragen
       </Button>
     </div>
   );
