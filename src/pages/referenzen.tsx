@@ -4,9 +4,9 @@ import { ReferenzCard } from '@/components/ui/ReferenzCard'
 import Link from 'next/link'
 
 const stats = [
-  { wert: '12+', label: 'Jahre Projekterfahrung' },
+  { wert: '20+', label: 'Jahre Projekterfahrung' },
   { wert: '10 J.', label: 'längste Kundenbeziehung' },
-  { wert: '100%', label: 'Datensatz-Validierung' },
+  { wert: '13 J.', label: 'Selbstständig' },
   { wert: '6+', label: 'Branchen' },
 ]
 
