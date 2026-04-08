@@ -12,6 +12,9 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      { source: '/about', destination: '/ueber-mich', permanent: true },
+      { source: '/contact', destination: '/kontakt', permanent: true },
+      { source: '/projects', destination: '/referenzen', permanent: true },
     ]
   },
   async headers() {

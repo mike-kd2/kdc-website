@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: 10 77 78;
-  --color-primary-light: 26 122 122;
+  --color-primary: 63 64 83;
+  --color-primary-light: 90 91 112;
   --color-accent: 245 158 11;
   --color-accent-dark: 234 88 12;
   --color-neutral-charcoal: 31 41 55;
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 a:focus-visible,
 button:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid #0A4D4E;
+  outline: 2px solid #3F4053;
   outline-offset: 2px;
   border-radius: 4px;
 }

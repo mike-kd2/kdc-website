@@ -1,5 +1,5 @@
 // Site Metadata
-export const SITE_NAME = 'klauser designs&coaching'
+export const SITE_NAME = 'klauser designs'
 export const SITE_DESCRIPTION = 'Automatisierung, massgeschneiderte Tools und Datenlösungen für Verbände und KMUs in der Schweiz'
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://klauserdesigns.ch'
 
@@ -23,12 +23,16 @@ export const SOCIAL_LINKS = {
 
 // Navigation
 export const NAVIGATION_ITEMS = [
-  { label: 'Home', href: '/' },
-  { label: 'Für Verbände', href: '/verbaende' },
-  { label: 'Für KMUs', href: '/kmu' },
-  { label: 'Projekte', href: '/projects' },
-  { label: 'Über mich', href: '/about' },
-  { label: 'Kontakt', href: '/contact' },
+  { label: 'Verbände', href: '/verbaende' },
+  { label: 'KMUs', href: '/kmu' },
+  { label: 'Angebot', href: '/angebot' },
+  { label: 'Referenzen', href: '/referenzen' },
+  { label: 'Über mich', href: '/ueber-mich' },
+]
+
+export const LEGAL_PAGES = [
+  { label: 'Impressum', href: '/impressum' },
+  { label: 'Datenschutz', href: '/datenschutz' },
 ]
 
 // Services
@@ -81,9 +85,9 @@ export const PROCESS_STEPS = [
 // Color Palette (for reference)
 export const COLORS = {
   primary: {
-    DEFAULT: '#0A4D4E',
-    light: '#1A7A7A',
-    lighter: '#2D9B9B',
+    DEFAULT: '#3F4053',
+    light: '#5A5B70',
+    lighter: '#7E7F96',
   },
   accent: {
     DEFAULT: '#F59E0B',

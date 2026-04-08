@@ -9,9 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0A4D4E',
-          light: '#1A7A7A',
-          lighter: '#2D9B9B',
+          DEFAULT: '#3F4053',
+          light: '#5A5B70',
+          lighter: '#7E7F96',
         },
         accent: {
           DEFAULT: '#F59E0B',
@@ -25,7 +25,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter', 'SF Pro Display', 'Segoe UI', 'sans-serif'],
+        sans: ['var(--font-poppins)', 'Poppins', 'SF Pro Display', 'Segoe UI', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       spacing: {
@@ -51,8 +51,8 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         'soft-glow': {
-          '0%, 100%': { boxShadow: '0 4px 14px 0 rgba(10, 77, 78, 0.25)' },
-          '50%': { boxShadow: '0 4px 20px 0 rgba(10, 77, 78, 0.4)' },
+          '0%, 100%': { boxShadow: '0 4px 14px 0 rgba(63, 64, 83, 0.25)' },
+          '50%': { boxShadow: '0 4px 20px 0 rgba(63, 64, 83, 0.4)' },
         },
       },
       animation: {
