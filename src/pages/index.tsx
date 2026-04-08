@@ -3,7 +3,6 @@ import { SEOHead } from '@/components/SEOHead'
 import { StructuredData } from '@/components/seo/StructuredData'
 import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/Button'
-import { Card } from '@/components/ui/Card'
 
 export default function Home() {
   return (
@@ -19,37 +18,80 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="min-h-screen bg-primary flex items-center">
-        <Container size="md">
-          <div className="text-center py-24">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Ich baue die Tools, die Ihren Alltag erleichtern.
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Automatisierung, massgeschneiderte Software und Datenstrukturen
-              für Verbände und KMUs in der Schweiz.
-              <br />
-              Kein Foliensatz. Kein Konzeptpapier. Funktionierende Lösungen.
-            </p>
-            <Link href="/angebot#prozess-check">
-              <Button size="lg" variant="secondary">
-                Kostenlosen Prozess-Check anfragen →
-              </Button>
-            </Link>
+      <section className="relative min-h-screen bg-primary overflow-hidden flex items-center">
+        {/* Subtle grid overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+            backgroundSize: '64px 64px',
+          }}
+        />
+        {/* Decorative teal circle — top right */}
+        <div className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full bg-primary-light opacity-30 blur-3xl pointer-events-none" />
+        {/* Decorative amber accent — bottom left */}
+        <div className="absolute -bottom-24 -left-24 w-64 h-64 rounded-full bg-accent opacity-20 blur-2xl pointer-events-none" />
+
+        <Container size="lg">
+          <div className="relative py-24 md:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Text */}
+            <div>
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+                Automatisierung · Software · Daten
+              </p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                Ich baue die Tools,{' '}
+                <span className="text-accent">die Ihren Alltag</span>{' '}
+                erleichtern.
+              </h1>
+              <p className="text-lg text-white/75 max-w-lg mb-10 leading-relaxed">
+                Für Verbände und KMUs in der Schweiz. Kein Foliensatz.
+                Kein Konzeptpapier.{' '}
+                <span className="text-white/95 font-medium">
+                  Funktionierende Lösungen.
+                </span>
+              </p>
+              <Link href="/angebot#prozess-check">
+                <Button size="lg" variant="secondary">
+                  Kostenlosen Prozess-Check anfragen{' '}
+                  <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
+                    →
+                  </span>
+                </Button>
+              </Link>
+            </div>
+
+            {/* Stats / Social proof */}
+            <div className="hidden lg:flex flex-col gap-4">
+              {[
+                { zahl: '10+', text: 'Jahre Partnerschaft mit Helion Energy' },
+                { zahl: 'Null', text: 'manueller Aufwand bei SBKH nach der Automatisierung' },
+                { zahl: '2013', text: 'selbstständig — Verbände und KMUs in der Deutschschweiz' },
+              ].map(({ zahl, text }) => (
+                <div
+                  key={zahl}
+                  className="rounded-lg bg-white/[0.07] border border-white/10 px-6 py-5 backdrop-blur-sm"
+                >
+                  <p className="text-2xl font-bold text-accent mb-1">{zahl}</p>
+                  <p className="text-white/70 text-sm leading-snug">{text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Kurzblock */}
+      {/* Kurzblock — visuelles Zitat */}
       <section className="bg-white py-20">
         <Container size="sm">
-          <div className="text-center">
-            <p className="text-xl text-neutral-charcoal leading-relaxed mb-6">
+          <div className="border-l-4 border-accent pl-8">
+            <p className="text-xl sm:text-2xl text-neutral-charcoal leading-relaxed mb-5">
               Sie haben Abläufe, die zu viel Zeit fressen: manuelle
               Dateneingabe, Excel-Listen, die niemand mehr versteht, Systeme,
               die nicht miteinander reden.
             </p>
-            <p className="text-xl font-semibold text-primary leading-relaxed">
+            <p className="text-xl sm:text-2xl font-semibold text-primary leading-relaxed">
               Ich baue die Lösung, die das ändert. Nicht irgendwann. In Wochen,
               nicht Monaten.
             </p>
@@ -58,83 +100,100 @@ export default function Home() {
       </section>
 
       {/* Zielgruppen-Karten */}
-      <section className="bg-neutral-50 py-20">
+      <section className="bg-neutral-off-white py-20">
         <Container size="md">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-8">
-              <h2 className="text-xl font-bold text-neutral-charcoal mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link
+              href="/verbaende"
+              className="group block rounded-lg bg-white shadow-card hover:shadow-card-hover transition-all hover:-translate-y-1 border-t-4 border-primary p-8"
+            >
+              <h2 className="text-xl font-bold text-neutral-charcoal mb-3">
                 Für Verbände
               </h2>
               <p className="text-neutral-slate leading-relaxed mb-6">
                 Prüfungsprozesse, Mitgliederdaten, Zertifizierungen. Ich
                 automatisiere, was Ihre Geschäftsstelle heute von Hand macht.
               </p>
-              <Link
-                href="/verbaende"
-                className="text-primary font-semibold hover:underline"
-              >
-                Mehr erfahren →
-              </Link>
-            </Card>
+              <span className="text-primary font-semibold inline-flex items-center gap-1">
+                Mehr erfahren{' '}
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </span>
+            </Link>
 
-            <Card className="p-8">
-              <h2 className="text-xl font-bold text-neutral-charcoal mb-4">
+            <Link
+              href="/kmu"
+              className="group block rounded-lg bg-white shadow-card hover:shadow-card-hover transition-all hover:-translate-y-1 border-t-4 border-accent p-8"
+            >
+              <h2 className="text-xl font-bold text-neutral-charcoal mb-3">
                 Für KMUs
               </h2>
               <p className="text-neutral-slate leading-relaxed mb-6">
                 Datenflüsse, Reporting, Systemwechsel. Ich baue die Brücken
                 zwischen Ihren Systemen.
               </p>
-              <Link
-                href="/kmu"
-                className="text-primary font-semibold hover:underline"
-              >
-                Mehr erfahren →
-              </Link>
-            </Card>
+              <span className="text-primary font-semibold inline-flex items-center gap-1">
+                Mehr erfahren{' '}
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </span>
+            </Link>
           </div>
         </Container>
       </section>
 
       {/* Referenz-Teaser */}
-      <section className="bg-neutral-50 py-20 border-t border-neutral-200">
+      <section className="bg-neutral-charcoal py-20">
         <Container size="md">
-          <h2 className="text-2xl font-bold text-neutral-charcoal mb-10">
+          <h2 className="text-2xl font-bold text-white mb-3">
             Was ich bereits gebaut habe.
           </h2>
-          <div className="divide-y divide-neutral-200">
-            <div className="py-8">
-              <p className="font-semibold text-neutral-charcoal mb-1">
-                OdA ARTECURA
-              </p>
-              <p className="text-neutral-slate">
-                Prüfungsprozess von manueller Excel-Arbeit auf eigenständig
-                durchführbare Automatisierung umgestellt.
-              </p>
-            </div>
-            <div className="py-8">
-              <p className="font-semibold text-neutral-charcoal mb-1">
-                Helion Energy AG
-              </p>
-              <p className="text-neutral-slate">
-                10 Jahre Partnerschaft: Data Warehouse, Dashboards, Middleware,
-                Datenmigration.
-              </p>
-            </div>
-            <div className="py-8">
-              <p className="font-semibold text-neutral-charcoal mb-1">
-                SBKH GmbH
-              </p>
-              <p className="text-neutral-slate">
-                Tägliche Datenaktualisierung vollständig automatisiert. Null
-                manueller Aufwand.
-              </p>
-            </div>
+          <p className="text-white/50 text-sm mb-10 uppercase tracking-widest">
+            Ausgewählte Projekte
+          </p>
+          <div className="flex flex-col gap-4">
+            {[
+              {
+                firma: 'OdA ARTECURA',
+                ergebnis:
+                  'Prüfungsprozess von manueller Excel-Arbeit auf eigenständig durchführbare Automatisierung umgestellt.',
+                href: '/referenzen#oda-artecura',
+              },
+              {
+                firma: 'Helion Energy AG',
+                ergebnis:
+                  '10 Jahre Partnerschaft: Data Warehouse, Dashboards, Middleware, Datenmigration.',
+                href: '/referenzen#helion-energy',
+              },
+              {
+                firma: 'SBKH GmbH',
+                ergebnis:
+                  'Tägliche Datenaktualisierung vollständig automatisiert. Null manueller Aufwand.',
+                href: '/referenzen#sbkh',
+              },
+            ].map(({ firma, ergebnis, href }) => (
+              <Link
+                key={firma}
+                href={href}
+                className="group flex items-start gap-4 rounded-lg bg-white/[0.05] border border-white/10 hover:bg-white/10 hover:border-accent/40 transition-all px-6 py-5"
+              >
+                <span className="mt-0.5 flex-shrink-0 w-1 h-full min-h-[40px] rounded-full bg-primary-light opacity-60 group-hover:opacity-100 transition-opacity" />
+                <div className="min-w-0">
+                  <p className="font-bold text-white text-lg leading-tight mb-1">
+                    {firma}
+                  </p>
+                  <p className="text-white/60 text-sm leading-relaxed group-hover:text-accent/90 transition-colors">
+                    {ergebnis}
+                  </p>
+                </div>
+                <span className="ml-auto flex-shrink-0 text-white/30 group-hover:text-accent transition-colors text-lg self-center">
+                  →
+                </span>
+              </Link>
+            ))}
           </div>
           <div className="mt-8">
             <Link
               href="/referenzen"
-              className="text-primary font-semibold hover:underline"
+              className="text-white/60 hover:text-accent font-semibold transition-colors text-sm uppercase tracking-wide"
             >
               Alle Referenzen →
             </Link>
@@ -149,13 +208,16 @@ export default function Home() {
             <p className="text-xl sm:text-2xl text-white mb-3 leading-relaxed">
               Sie haben einen Ablauf, der besser laufen sollte?
             </p>
-            <p className="text-lg text-white/80 mb-10">
+            <p className="text-lg text-white/70 mb-10">
               Lassen Sie uns in 45 Minuten herausfinden, ob Automatisierung
               sich lohnt.
             </p>
             <Link href="/angebot#prozess-check">
               <Button size="lg" variant="secondary">
-                Prozess-Check anfragen →
+                Prozess-Check anfragen{' '}
+                <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
+                  →
+                </span>
               </Button>
             </Link>
           </div>

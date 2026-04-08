@@ -21,7 +21,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'
+      'group inline-flex items-center justify-center rounded-md font-medium transition-all shadow-sm hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'
 
     const variants = {
       primary:
@@ -31,7 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       outline:
         'border-2 border-primary text-primary hover:bg-primary hover:text-white',
       ghost:
-        'text-primary hover:bg-primary/10 active:bg-primary/20',
+        'text-primary hover:bg-primary/10 active:bg-primary/20 shadow-none hover:shadow-none',
     }
 
     const sizes = {

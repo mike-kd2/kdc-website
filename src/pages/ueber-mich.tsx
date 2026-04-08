@@ -80,13 +80,15 @@ export default function UeberMich() {
             </div>
 
             {/* CTA */}
-            <div className="mx-auto mt-12 max-w-5xl text-center">
-              <p className="mb-4 text-lg text-neutral-charcoal">
-                Möchten Sie ein Projekt besprechen?
-              </p>
+            <div className="mx-auto mt-12 max-w-5xl flex flex-col sm:flex-row gap-4 items-center justify-center">
               <Link href="/kontakt">
                 <Button variant="primary" size="lg">
                   Kontakt aufnehmen
+                </Button>
+              </Link>
+              <Link href="/referenzen">
+                <Button variant="outline" size="lg">
+                  Referenzprojekte ansehen →
                 </Button>
               </Link>
             </div>

@@ -9,9 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#3F4053',
-          light: '#5A5B70',
-          lighter: '#7E7F96',
+          DEFAULT: '#0A4D4E',
+          light: '#1A7A7A',
+          lighter: '#2A9D9D',
         },
         accent: {
           DEFAULT: '#F59E0B',
@@ -38,6 +38,10 @@ const config: Config = {
         '3xl': '64px',
         '4xl': '96px',
       },
+      boxShadow: {
+        card: '0 2px 8px 0 rgba(10,77,78,0.08), 0 1px 2px 0 rgba(10,77,78,0.04)',
+        'card-hover': '0 8px 24px 0 rgba(10,77,78,0.14)',
+      },
       borderRadius: {
         sm: '4px',
         DEFAULT: '8px',
@@ -51,8 +55,8 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         'soft-glow': {
-          '0%, 100%': { boxShadow: '0 4px 14px 0 rgba(63, 64, 83, 0.25)' },
-          '50%': { boxShadow: '0 4px 20px 0 rgba(63, 64, 83, 0.4)' },
+          '0%, 100%': { boxShadow: '0 4px 14px 0 rgba(10, 77, 78, 0.25)' },
+          '50%': { boxShadow: '0 4px 20px 0 rgba(10, 77, 78, 0.4)' },
         },
       },
       animation: {

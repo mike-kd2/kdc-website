@@ -59,6 +59,33 @@ export default function KMU() {
         </Container>
       </Section>
 
+      {/* Referenz-Hinweis */}
+      <section className="bg-neutral-off-white py-12 border-t border-neutral-light-gray">
+        <Container size="md">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
+            Aus der Praxis
+          </p>
+          <p className="text-neutral-charcoal mb-2">
+            Wie eine langjährige Datenplattform entsteht:{' '}
+            <Link
+              href="/referenzen#helion-energy"
+              className="font-semibold text-primary hover:underline"
+            >
+              Helion Energy AG →
+            </Link>
+          </p>
+          <p className="text-neutral-charcoal">
+            Wie vollautomatisierte Pipelines aussehen:{' '}
+            <Link
+              href="/referenzen#sbkh"
+              className="font-semibold text-primary hover:underline"
+            >
+              SBKH GmbH →
+            </Link>
+          </p>
+        </Container>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-primary py-16 text-white">
         <Container size="md">

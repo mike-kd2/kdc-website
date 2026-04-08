@@ -25,6 +25,7 @@ export default function Referenzen() {
         <Container size="md">
           <div className="flex flex-col gap-8">
             <ReferenzCard
+              id="oda-artecura"
               firma="OdA ARTECURA"
               branche="Berufsverband für Kunsttherapie"
               problem="Das gesamte Qualifikationsverfahren lief manuell in Excel. Fehleranfällig und zeitintensiv."
@@ -32,6 +33,7 @@ export default function Referenzen() {
               ergebnis="Die Geschäftsstelle führt das Verfahren jetzt eigenständig durch, mit einem Bruchteil des bisherigen Aufwands."
             />
             <ReferenzCard
+              id="helion-energy"
               firma="Helion Energy AG"
               branche="Energieunternehmen"
               problem="Wachsendes Unternehmen ohne zentrale Datenplattform. Reporting dauerte Tage, Systeme liefen aneinander vorbei."
@@ -39,6 +41,7 @@ export default function Referenzen() {
               ergebnis="Single Point of Truth. Reportingzeit von Tagen auf Stunden reduziert."
             />
             <ReferenzCard
+              id="sbkh"
               firma="SBKH GmbH"
               branche="Preisvergleichsplattform"
               problem="Tägliche Datenaktualisierungen aus mehreren externen Quellen liefen manuell."

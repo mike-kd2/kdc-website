@@ -1,4 +1,5 @@
 export interface ReferenzCardProps {
+  id?: string
   firma: string
   branche: string
   problem: string
@@ -7,6 +8,7 @@ export interface ReferenzCardProps {
 }
 
 export function ReferenzCard({
+  id,
   firma,
   branche,
   problem,
@@ -14,7 +16,7 @@ export function ReferenzCard({
   ergebnis,
 }: ReferenzCardProps) {
   return (
-    <div className="rounded-lg border border-neutral-light-gray bg-white shadow-sm">
+    <div id={id} className="rounded-lg bg-white shadow-card border-l-4 border-primary overflow-hidden scroll-mt-24">
       <div className="p-6">
         <div className="mb-4 flex flex-wrap items-center gap-3">
           <h3 className="text-xl font-bold text-neutral-charcoal">{firma}</h3>
@@ -29,12 +31,12 @@ export function ReferenzCard({
             <p className="text-neutral-charcoal">{problem}</p>
           </div>
 
-          <div className="border-t border-neutral-light-gray pt-4">
+          <div className="border-t border-primary/10 pt-4">
             <p className="mb-1 font-semibold text-primary">Lösung:</p>
             <p className="text-neutral-charcoal">{loesung}</p>
           </div>
 
-          <div className="border-t border-neutral-light-gray pt-4">
+          <div className="border-t border-primary/10 pt-4">
             <p className="mb-1 font-semibold text-primary">Ergebnis:</p>
             <p className="text-neutral-charcoal">{ergebnis}</p>
           </div>

@@ -63,6 +63,24 @@ export default function Verbaende() {
         </Container>
       </Section>
 
+      {/* Referenz-Hinweis */}
+      <section className="bg-neutral-off-white py-12 border-t border-neutral-light-gray">
+        <Container size="md">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
+            Aus der Praxis
+          </p>
+          <p className="text-neutral-charcoal mb-4">
+            Wie das konkret aussieht, zeigt das Beispiel{' '}
+            <Link
+              href="/referenzen#oda-artecura"
+              className="font-semibold text-primary hover:underline"
+            >
+              OdA ARTECURA →
+            </Link>
+          </p>
+        </Container>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-primary py-16 text-white">
         <Container size="md">
