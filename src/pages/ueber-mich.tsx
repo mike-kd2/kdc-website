@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/animations';
 
 const technologien = [
   { gruppe: 'Daten & Datenbanken', items: ['SQL Server & T-SQL (10+ Jahre)', 'SSIS, ETL-Pipelines', 'Data Warehouse Architektur', 'Azure SQL'] },
-  { gruppe: 'Entwicklung', items: ['C#, .NET Framework / Core', 'Python (Pandas, Automatisierung)', 'VBA, ClosedXML', 'REST APIs, OData, JSON'] },
+  { gruppe: 'Entwicklung', items: ['C#, .NET Framework / Core', 'Python (Pandas, Automatisierung)', 'VBA, ClosedXML', 'REST APIs, OData, JSON', 'KI-Tools (Claude Code, Copilot)'] },
   { gruppe: 'Reporting & Integration', items: ['Power BI, DAX', 'Microsoft Dynamics 365', 'SAP-Anbindungen', 'Excel (komplex, VBA)'] },
 ];
 
@@ -142,6 +142,22 @@ export default function UeberMich() {
                   Was mich antreibt: Wenn ein Kunde sagt, er verbringt jetzt zwei
                   Tage pro Monat weniger mit Excel. Oder wenn ein Verband seine
                   Prüfungsauswertung in einer Stunde statt in drei Tagen erledigt.
+                </p>
+                <p>
+                  Ich nutze konsequent, was heute verfügbar ist. Dazu gehören
+                  KI-Tools — ich setze mich intensiv damit auseinander, weil es
+                  mir erlaubt, schneller zu recherchieren, Lösungen besser zu
+                  strukturieren und mehr Kapazität für das zu haben, was echte
+                  Denkarbeit braucht. Für meine Kunden heisst das: kürzere
+                  Durchlaufzeiten, durchdachtere Lösungen.
+                </p>
+                <p>
+                  Bei der Automatisierung gilt das genauso: Wo KI oder ein
+                  Sprachmodell einen echten Beitrag leistet, setze ich sie ein.
+                  Wo ein klar definierter Workflow zuverlässiger, transparenter
+                  und wartbarer ist, arbeite ich mit Regeln und Abläufen. Beide
+                  Ansätze haben ihren Platz — die Kunst liegt darin zu wissen,
+                  wann welcher sinnvoll ist.
                 </p>
               </div>
             </div>
