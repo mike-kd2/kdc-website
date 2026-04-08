@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
-import { Button } from '@/components/ui'
 import { NAVIGATION_ITEMS } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 
@@ -61,17 +60,6 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
-            <Button
-              variant="primary"
-              size="md"
-              onClick={() => { window.location.href = '/angebot#prozess-check' }}
-            >
-              Prozess-Check
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             type="button"
@@ -103,19 +91,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="pt-4">
-              <Button
-                variant="primary"
-                size="md"
-                className="w-full"
-                onClick={() => {
-                  window.location.href = '/angebot#prozess-check'
-                  setMobileMenuOpen(false)
-                }}
-              >
-                Prozess-Check
-              </Button>
-            </div>
           </nav>
         </div>
       )}
