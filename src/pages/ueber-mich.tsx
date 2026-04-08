@@ -15,11 +15,17 @@ export default function UeberMich() {
       />
 
       {/* Hero Section */}
-      <Section className="bg-gradient-to-br from-primary to-primary-light text-white pt-24 py-20">
+      <Section className="bg-primary text-white py-16 md:py-20">
         <Container>
           <ScrollReveal>
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="max-w-3xl">
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+                Über mich
+              </p>
               <h1 className="text-4xl font-bold sm:text-5xl">Michael Klauser</h1>
+              <p className="mt-4 text-white/70 text-lg">
+                Systemtechnik-Ingenieur FH. Selbstständig seit 2013.
+              </p>
             </div>
           </ScrollReveal>
         </Container>

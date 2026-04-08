@@ -16,14 +16,20 @@ export default function Angebot() {
       {/* Header Section */}
       <section className="bg-primary py-16 text-white md:py-24">
         <Container size="md">
-          <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+            Angebot
+          </p>
+          <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl max-w-2xl mb-6">
             Drei klare Einstiegspunkte. Kein Kleingedrucktes.
           </h1>
+          <p className="text-white/75 text-lg max-w-xl">
+            Fangen Sie klein an. Lernen Sie, ob es funktioniert. Dann entscheiden Sie, wie es weitergeht.
+          </p>
         </Container>
       </section>
 
       {/* Pakete Section */}
-      <section id="prozess-check" className="bg-white py-16">
+      <section id="prozess-check" className="bg-neutral-off-white py-16">
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <PaketCard
@@ -56,10 +62,13 @@ export default function Angebot() {
       </section>
 
       {/* TidyCal Embed Section */}
-      <section className="bg-neutral-50 py-16">
+      <section className="bg-white py-16">
         <Container size="md">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
+            Termin buchen
+          </p>
           <h2 className="mb-8 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
-            Direkt einen Termin buchen
+            Direkt einen Prozess-Check reservieren
           </h2>
           <TidyCalEmbed url={PROZESS_CHECK_URL} />
         </Container>

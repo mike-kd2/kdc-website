@@ -21,10 +21,13 @@ export default function KMU() {
       {/* Hero Section */}
       <section className="bg-primary py-16 text-white md:py-24">
         <Container size="md">
-          <h1 className="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+            Für KMUs
+          </p>
+          <h1 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl max-w-2xl">
             Ihre Systeme reden nicht miteinander? Ich baue die Brücke.
           </h1>
-          <p className="text-lg text-white/90 sm:text-xl">
+          <p className="text-lg text-white/80 sm:text-xl max-w-xl">
             Ihre Daten stecken in fünf Systemen, Ihr Reporting kostet Tage, und
             bei jedem Systemwechsel hofft jemand, dass nichts verloren geht. Ich
             baue die Verbindungen und Werkzeuge, die Ihnen das manuelle Hin und
@@ -34,8 +37,11 @@ export default function KMU() {
       </section>
 
       {/* Leistungsblöcke Section */}
-      <Section spacing="xl">
+      <Section spacing="lg">
         <Container size="md">
+          <h2 className="mb-8 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
+            Was ich baue
+          </h2>
           <LeistungsBlock
             nummer={1}
             titel="Datenflüsse automatisieren"

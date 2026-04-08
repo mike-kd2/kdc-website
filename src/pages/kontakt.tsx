@@ -17,12 +17,15 @@ export default function Kontakt() {
       />
 
       {/* Hero Section */}
-      <Section className="bg-gradient-to-br from-primary to-primary-light text-white pt-24 py-20">
+      <Section className="bg-primary text-white py-16 md:py-20">
         <Container>
           <ScrollReveal>
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="max-w-2xl">
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+                Kontakt
+              </p>
               <h1 className="mb-4 text-4xl font-bold sm:text-5xl">Lassen Sie uns reden.</h1>
-              <p className="text-lg text-white/90">
+              <p className="text-lg text-white/75">
                 Schreiben Sie mir, rufen Sie an oder buchen Sie direkt einen
                 kostenlosen Prozess-Check.
               </p>

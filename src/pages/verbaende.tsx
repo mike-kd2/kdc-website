@@ -21,10 +21,13 @@ export default function Verbaende() {
       {/* Hero Section */}
       <section className="bg-primary py-16 text-white md:py-24">
         <Container size="md">
-          <h1 className="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl">
+          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+            Für Verbände
+          </p>
+          <h1 className="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl max-w-2xl">
             Weniger Handarbeit in der Geschäftsstelle.
           </h1>
-          <p className="text-lg text-white/90 sm:text-xl">
+          <p className="text-lg text-white/80 sm:text-xl max-w-xl">
             Prüfungen planen, Kandidaten zuordnen, Ergebnisse auswerten,
             Zertifizierungen nachverfolgen. Vieles davon läuft bei Ihnen noch
             manuell oder in Excel. Ich automatisiere diese Abläufe so, dass
@@ -35,9 +38,9 @@ export default function Verbaende() {
       </section>
 
       {/* Leistungsblöcke Section */}
-      <Section spacing="xl">
+      <Section spacing="lg">
         <Container size="md">
-          <h2 className="mb-12 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
+          <h2 className="mb-8 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
             Was ich automatisiere
           </h2>
           <LeistungsBlock
