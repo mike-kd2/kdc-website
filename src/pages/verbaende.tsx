@@ -80,55 +80,84 @@ export default function Verbaende() {
       {/* Leistungsblöcke Section */}
       <Section spacing="lg">
         <Container size="md">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
+            Leistungen
+          </p>
           <h2 className="mb-8 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
             Was ich automatisiere
           </h2>
-          <LeistungsBlock
-            nummer={1}
-            titel="Prüfungsprozesse automatisieren"
-            text="Von der Planung über die Expertenzuordnung bis zur Auswertung und Dokumenterstellung. Ein durchgängiger Ablauf statt einzelner Excel-Schritte."
-          />
-          <LeistungsBlock
-            nummer={2}
-            titel="Mitgliederdaten & Zertifizierungen"
-            text="Daten aus verschiedenen Quellen zusammenführen, Zertifizierungsstatus sauber nachverfolgen, Erinnerungen automatisch auslösen."
-          />
-          <LeistungsBlock
-            nummer={3}
-            titel="Reporting auf Knopfdruck"
-            text="Jahresberichte, Vorstandsstatistiken, GV-Kennzahlen: automatisch generiert statt jedes Mal neu zusammengetragen."
-          />
-          <LeistungsBlock
-            nummer={4}
-            titel="Datenmigration bei Systemwechsel"
-            text="Datenqualität sichern und verbessern: validiert, nicht bloss kopiert."
-          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <LeistungsBlock
+              nummer={1}
+              titel="Prüfungsprozesse automatisieren"
+              text="Von der Planung über die Expertenzuordnung bis zur Auswertung und Dokumenterstellung. Ein durchgängiger Ablauf statt einzelner Excel-Schritte."
+            />
+            <LeistungsBlock
+              nummer={2}
+              titel="Mitgliederdaten & Zertifizierungen"
+              text="Daten aus verschiedenen Quellen zusammenführen, Zertifizierungsstatus sauber nachverfolgen, Erinnerungen automatisch auslösen."
+            />
+            <LeistungsBlock
+              nummer={3}
+              titel="Reporting auf Knopfdruck"
+              text="Jahresberichte, Vorstandsstatistiken, GV-Kennzahlen: automatisch generiert statt jedes Mal neu zusammengetragen."
+            />
+            <LeistungsBlock
+              nummer={4}
+              titel="Datenmigration bei Systemwechsel"
+              text="Datenqualität sichern und verbessern: validiert, nicht bloss kopiert."
+            />
+          </div>
         </Container>
       </Section>
 
       {/* Referenz-Hinweis */}
-      <section className="bg-neutral-off-white py-12 border-t border-neutral-light-gray">
+      <section className="bg-white py-16 border-t border-neutral-light-gray">
         <Container size="md">
           <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
             Aus der Praxis
           </p>
-          <p className="text-neutral-charcoal mb-4">
-            Wie das konkret aussieht, zeigt das Beispiel{' '}
-            <Link
-              href="/referenzen#oda-artecura"
-              className="font-semibold text-primary hover:underline"
-            >
-              OdA ARTECURA →
-            </Link>
-          </p>
+          <h2 className="text-2xl font-bold text-neutral-charcoal mb-8">
+            Ein konkretes Beispiel.
+          </h2>
+          <div className="rounded-xl bg-neutral-off-white border border-neutral-light-gray overflow-hidden shadow-card">
+            <div className="px-8 pt-7 pb-5 border-b border-neutral-light-gray">
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <span className="font-bold text-neutral-charcoal text-lg">OdA ARTECURA</span>
+                <span className="rounded-full bg-primary/[0.08] text-primary px-3 py-0.5 text-xs font-medium">
+                  Berufsverband Kunsttherapie
+                </span>
+                <span className="rounded-full bg-accent/10 text-accent px-3 py-0.5 text-xs font-semibold">
+                  2026
+                </span>
+              </div>
+              <p className="text-primary font-semibold text-lg leading-snug border-l-4 border-accent pl-4">
+                Die Geschäftsstelle führt das Verfahren jetzt eigenständig durch — mit einem Bruchteil des bisherigen Aufwands.
+              </p>
+            </div>
+            <div className="px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <p className="text-neutral-slate text-sm">
+                9 Excel-Worksheets, händische Formeln, fehleranfällig → vollständig automatisiert mit C#.
+              </p>
+              <Link
+                href="/referenzen#oda-artecura"
+                className="text-primary font-semibold text-sm hover:underline whitespace-nowrap flex-shrink-0"
+              >
+                Zum Projekt →
+              </Link>
+            </div>
+          </div>
         </Container>
       </section>
 
       {/* CTA Section */}
       <section className="bg-primary py-16 text-white">
         <Container size="md">
-          <p className="mb-6 text-2xl font-semibold sm:text-3xl">
+          <p className="mb-2 text-2xl font-semibold sm:text-3xl">
             Klingt nach Ihrem Alltag?
+          </p>
+          <p className="text-white/60 mb-8 max-w-md">
+            In 45 Minuten sehen wir gemeinsam, was sich bei Ihnen automatisieren lässt.
           </p>
           <Link
             href="/angebot#prozess-check"

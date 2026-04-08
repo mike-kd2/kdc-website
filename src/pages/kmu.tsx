@@ -78,64 +78,116 @@ export default function KMU() {
       {/* Leistungsblöcke Section */}
       <Section spacing="lg">
         <Container size="md">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
+            Leistungen
+          </p>
           <h2 className="mb-8 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
             Was ich baue
           </h2>
-          <LeistungsBlock
-            nummer={1}
-            titel="Datenflüsse automatisieren"
-            text="System-zu-System-Integration: Import, Export, Synchronisation. Automatisch statt per Copy-Paste."
-          />
-          <LeistungsBlock
-            nummer={2}
-            titel="Reporting & Dashboards"
-            text="Von Excel zu Power BI: Dashboards, die sich selbst aktualisieren und Entscheidungsgrundlagen liefern."
-          />
-          <LeistungsBlock
-            nummer={3}
-            titel="Systemwechsel & Datenmigrationen"
-            text="ERP/CRM-Migrationen mit 100%-Validierung über die gesamte Datenbasis. Nicht Stichproben. Alles."
-          />
-          <LeistungsBlock
-            nummer={4}
-            titel="Massgeschneiderte Software"
-            text="Wenn Standardlösungen nicht passen: Backend-Systeme, Middleware, Integrationen. Gebaut für Ihren konkreten Ablauf."
-          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <LeistungsBlock
+              nummer={1}
+              titel="Datenflüsse automatisieren"
+              text="System-zu-System-Integration: Import, Export, Synchronisation. Automatisch statt per Copy-Paste."
+            />
+            <LeistungsBlock
+              nummer={2}
+              titel="Reporting & Dashboards"
+              text="Von Excel zu Power BI: Dashboards, die sich selbst aktualisieren und Entscheidungsgrundlagen liefern."
+            />
+            <LeistungsBlock
+              nummer={3}
+              titel="Systemwechsel & Datenmigrationen"
+              text="ERP/CRM-Migrationen mit 100%-Validierung über die gesamte Datenbasis. Nicht Stichproben. Alles."
+            />
+            <LeistungsBlock
+              nummer={4}
+              titel="Massgeschneiderte Software"
+              text="Wenn Standardlösungen nicht passen: Backend-Systeme, Middleware, Integrationen. Gebaut für Ihren konkreten Ablauf."
+            />
+          </div>
         </Container>
       </Section>
 
       {/* Referenz-Hinweis */}
-      <section className="bg-neutral-off-white py-12 border-t border-neutral-light-gray">
+      <section className="bg-white py-16 border-t border-neutral-light-gray">
         <Container size="md">
           <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
             Aus der Praxis
           </p>
-          <p className="text-neutral-charcoal mb-2">
-            Wie eine langjährige Datenplattform entsteht:{' '}
-            <Link
-              href="/referenzen#helion-energy"
-              className="font-semibold text-primary hover:underline"
-            >
-              Helion Energy AG →
-            </Link>
-          </p>
-          <p className="text-neutral-charcoal">
-            Wie vollautomatisierte Pipelines aussehen:{' '}
-            <Link
-              href="/referenzen#sbkh"
-              className="font-semibold text-primary hover:underline"
-            >
-              SBKH GmbH →
-            </Link>
-          </p>
+          <h2 className="text-2xl font-bold text-neutral-charcoal mb-8">
+            Zwei Beispiele, die das zeigen.
+          </h2>
+          <div className="flex flex-col gap-4">
+            {/* Helion */}
+            <div className="rounded-xl bg-neutral-off-white border border-neutral-light-gray overflow-hidden shadow-card">
+              <div className="px-8 pt-7 pb-5 border-b border-neutral-light-gray">
+                <div className="flex flex-wrap items-center gap-3 mb-3">
+                  <span className="font-bold text-neutral-charcoal text-lg">Helion Energy AG</span>
+                  <span className="rounded-full bg-primary/[0.08] text-primary px-3 py-0.5 text-xs font-medium">
+                    Energieunternehmen
+                  </span>
+                  <span className="rounded-full bg-accent/10 text-accent px-3 py-0.5 text-xs font-semibold">
+                    2013 – 2025
+                  </span>
+                </div>
+                <p className="text-primary font-semibold text-lg leading-snug border-l-4 border-accent pl-4">
+                  Reportingzeit von Tagen auf Stunden reduziert. Alle Geschäftsbereiche auf demselben Datenstand.
+                </p>
+              </div>
+              <div className="px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <p className="text-neutral-slate text-sm">
+                  Data Warehouse, Azure-Middleware, ERP-Migration — 10 Jahre aufgebaut und betrieben.
+                </p>
+                <Link
+                  href="/referenzen#helion-dw"
+                  className="text-primary font-semibold text-sm hover:underline whitespace-nowrap flex-shrink-0"
+                >
+                  Zum Projekt →
+                </Link>
+              </div>
+            </div>
+
+            {/* SBKH */}
+            <div className="rounded-xl bg-neutral-off-white border border-neutral-light-gray overflow-hidden shadow-card">
+              <div className="px-8 pt-7 pb-5 border-b border-neutral-light-gray">
+                <div className="flex flex-wrap items-center gap-3 mb-3">
+                  <span className="font-bold text-neutral-charcoal text-lg">SBKH GmbH</span>
+                  <span className="rounded-full bg-primary/[0.08] text-primary px-3 py-0.5 text-xs font-medium">
+                    E-Commerce / Preisvergleich
+                  </span>
+                  <span className="rounded-full bg-accent/10 text-accent px-3 py-0.5 text-xs font-semibold">
+                    2019 – 2020
+                  </span>
+                </div>
+                <p className="text-primary font-semibold text-lg leading-snug border-l-4 border-accent pl-4">
+                  Null manueller Aufwand. Sortiment wächst ohne zusätzliches Personal.
+                </p>
+              </div>
+              <div className="px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <p className="text-neutral-slate text-sm">
+                  Vollautomatisierte Pipeline: tägliche Abholung, Transformation und Einspielung aus mehreren Quellen.
+                </p>
+                <Link
+                  href="/referenzen#sbkh"
+                  className="text-primary font-semibold text-sm hover:underline whitespace-nowrap flex-shrink-0"
+                >
+                  Zum Projekt →
+                </Link>
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
 
       {/* CTA Section */}
       <section className="bg-primary py-16 text-white">
         <Container size="md">
-          <p className="mb-6 text-2xl font-semibold sm:text-3xl">
+          <p className="mb-2 text-2xl font-semibold sm:text-3xl">
             Welcher Ablauf frisst bei Ihnen am meisten Zeit?
+          </p>
+          <p className="text-white/60 mb-8 max-w-md">
+            Im Prozess-Check schauen wir uns gemeinsam an, was sich als erstes angehen lässt.
           </p>
           <Link
             href="/angebot#prozess-check"
