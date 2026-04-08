@@ -8,8 +8,8 @@ export default function Impressum() {
   return (
     <>
       <SEOHead
-        title="Impressum"
-        description="Impressum und rechtliche Informationen von klauser designs&coaching."
+        title="klauser designs | Impressum"
+        description="Impressum und rechtliche Informationen von klauser designs &amp; coaching."
         canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/impressum`}
         noindex={true}
       />
@@ -43,7 +43,7 @@ export default function Impressum() {
                     <p>
                       <strong className="text-neutral-charcoal">Firma:</strong>
                       <br />
-                      klauser designs&coaching
+                      klauser designs &amp; coaching
                     </p>
                     <p>
                       <strong className="text-neutral-charcoal">
@@ -88,6 +88,15 @@ export default function Impressum() {
                         className="text-primary hover:text-primary-light hover:underline"
                       >
                         michael@klauserdesigns.ch
+                      </a>
+                    </p>
+                    <p>
+                      <strong className="text-neutral-charcoal">Telefon:</strong>{' '}
+                      <a
+                        href="tel:+41796915598"
+                        className="text-primary hover:text-primary-light hover:underline"
+                      >
+                        +41 79 691 55 98
                       </a>
                     </p>
                     <p>

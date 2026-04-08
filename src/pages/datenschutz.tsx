@@ -8,8 +8,8 @@ export default function Datenschutz() {
   return (
     <>
       <SEOHead
-        title="Datenschutzerklärung"
-        description="Datenschutzerklärung von klauser designs&coaching. Erfahren Sie, wie wir Ihre Daten schützen und verarbeiten."
+        title="klauser designs | Datenschutzerklärung"
+        description="Datenschutzerklärung von klauser designs &amp; coaching. Erfahren Sie, wie wir Ihre Daten schützen und verarbeiten."
         canonical={`${process.env.NEXT_PUBLIC_SITE_URL}/datenschutz`}
         noindex={true}
       />
@@ -42,9 +42,8 @@ export default function Datenschutz() {
                   Verantwortlich für die Datenverarbeitung auf dieser Website ist:
                 </p>
                 <p>
-                  <strong>klauser designs&coaching</strong>
+                  <strong>klauser designs &amp; coaching, Michael Klauser</strong>
                   <br />
-                  Michael Klauser
                   <br />
                   Notkerstrasse 14
                   <br />
@@ -134,7 +133,36 @@ export default function Datenschutz() {
                   </a>
                 </p>
 
-                <h2>6. Ihre Rechte</h2>
+                <h2>6. Terminbuchung (TidyCal)</h2>
+                <p>
+                  Für die Online-Terminbuchung nutzen wir TidyCal. Wenn Sie einen Termin
+                  buchen, werden die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse,
+                  ggf. Telefonnummer) direkt an TidyCal übermittelt und dort verarbeitet.
+                </p>
+                <p>
+                  Buchungslink:{' '}
+                  <a
+                    href="https://tidycal.com/klauserdesignscoaching/prozess-check"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    tidycal.com/klauserdesignscoaching/prozess-check
+                  </a>
+                </p>
+                <p>
+                  Weitere Informationen zur Datenverarbeitung durch TidyCal finden Sie
+                  in der Datenschutzerklärung von TidyCal unter{' '}
+                  <a
+                    href="https://tidycal.com/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    tidycal.com/privacy
+                  </a>
+                  .
+                </p>
+
+                <h2>7. Ihre Rechte</h2>
                 <p>Sie haben folgende Rechte:</p>
                 <ul>
                   <li>Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)</li>
@@ -154,14 +182,14 @@ export default function Datenschutz() {
                   michael@klauserdesigns.ch
                 </p>
 
-                <h2>7. Speicherdauer</h2>
+                <h2>8. Speicherdauer</h2>
                 <p>
                   Wir speichern Ihre personenbezogenen Daten nur so lange, wie dies
                   für die Erfüllung des jeweiligen Zwecks erforderlich ist oder
                   gesetzliche Aufbewahrungsfristen dies vorsehen.
                 </p>
 
-                <h2>8. Datensicherheit</h2>
+                <h2>9. Datensicherheit</h2>
                 <p>
                   Wir setzen technische und organisatorische Sicherheitsmassnahmen
                   ein, um Ihre Daten gegen zufällige oder vorsätzliche Manipulation,
@@ -170,7 +198,7 @@ export default function Datenschutz() {
                   Sicherheitsupdates).
                 </p>
 
-                <h2>9. Änderungen der Datenschutzerklärung</h2>
+                <h2>10. Änderungen der Datenschutzerklärung</h2>
                 <p>
                   Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie
                   an geänderte Rechtslagen oder Änderungen unserer Dienstleistungen
