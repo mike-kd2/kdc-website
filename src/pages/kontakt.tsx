@@ -5,7 +5,7 @@ import { TidyCalEmbed } from '@/components/integrations/TidyCalEmbed';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
-const PROZESS_CHECK_URL = 'https://tidycal.com/klauserdesignscoaching/prozess-check';
+const PROZESS_CHECK_URL = 'https://tidycal.com/klauserdesigns/prozess-check';
 
 export default function Kontakt() {
   return (

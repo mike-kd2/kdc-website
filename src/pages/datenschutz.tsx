@@ -142,11 +142,11 @@ export default function Datenschutz() {
                 <p>
                   Buchungslink:{' '}
                   <a
-                    href="https://tidycal.com/klauserdesignscoaching/prozess-check"
+                    href="https://tidycal.com/klauserdesigns/prozess-check"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    tidycal.com/klauserdesignscoaching/prozess-check
+                    tidycal.com/klauserdesigns/prozess-check
                   </a>
                 </p>
                 <p>

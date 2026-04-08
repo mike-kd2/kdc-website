@@ -9,7 +9,7 @@ export const CONTACT_PHONE = '+41 79 691 55 98'
 export const CONTACT_NAME = 'Michael Klauser'
 
 // External URLs
-export const TIDYCAL_URL = process.env.NEXT_PUBLIC_TIDYCAL_URL || 'https://tidycal.com/klauserdesignscoaching/discovery-call'
+export const TIDYCAL_URL = process.env.NEXT_PUBLIC_TIDYCAL_URL || 'https://tidycal.com/klauserdesigns/prozess-check'
 
 // Analytics
 export const PLAUSIBLE_DOMAIN = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN || 'klauserdesigns.ch'

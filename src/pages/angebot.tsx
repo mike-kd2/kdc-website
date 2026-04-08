@@ -3,7 +3,7 @@ import { Container } from '@/components/layout'
 import { PaketCard } from '@/components/ui/PaketCard'
 import { TidyCalEmbed } from '@/components/integrations/TidyCalEmbed'
 
-const PROZESS_CHECK_URL = 'https://tidycal.com/klauserdesignscoaching/prozess-check'
+const PROZESS_CHECK_URL = 'https://tidycal.com/klauserdesigns/prozess-check'
 
 export default function Angebot() {
   return (
