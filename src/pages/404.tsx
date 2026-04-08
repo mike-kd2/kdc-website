@@ -40,7 +40,7 @@ export default function NotFound() {
                     Zur Startseite
                   </Button>
                 </Link>
-                <Link href="/contact">
+                <Link href="/kontakt">
                   <Button variant="outline" size="lg">
                     <Search className="mr-2 h-5 w-5" />
                     Kontakt aufnehmen
@@ -55,28 +55,28 @@ export default function NotFound() {
                 </h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link
-                    href="/services"
+                    href="/angebot"
                     className="text-primary hover:text-primary-light hover:underline"
                   >
-                    Services
+                    Angebot
                   </Link>
                   <span className="text-neutral-slate">•</span>
                   <Link
-                    href="/about"
+                    href="/ueber-mich"
                     className="text-primary hover:text-primary-light hover:underline"
                   >
                     Über mich
                   </Link>
                   <span className="text-neutral-slate">•</span>
                   <Link
-                    href="/projects"
+                    href="/referenzen"
                     className="text-primary hover:text-primary-light hover:underline"
                   >
-                    Projekte
+                    Referenzen
                   </Link>
                   <span className="text-neutral-slate">•</span>
                   <Link
-                    href="/contact"
+                    href="/kontakt"
                     className="text-primary hover:text-primary-light hover:underline"
                   >
                     Kontakt
