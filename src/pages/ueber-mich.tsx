@@ -46,7 +46,7 @@ export default function UeberMich() {
                 Hi, ich bin Michael.
               </h1>
               <div className="flex flex-wrap gap-2 mb-6">
-                {['Ingenieur', 'Entwickler', 'Coach'].map((tag) => (
+                {['Ingenieur', 'Entwickler', 'Berater'].map((tag) => (
                   <span
                     key={tag}
                     className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary"
@@ -75,10 +75,6 @@ export default function UeberMich() {
                 <div className="flex gap-3">
                   <dt className="w-24 shrink-0 font-semibold text-neutral-charcoal">Ausbildung</dt>
                   <dd className="text-neutral-slate">Dipl. Systemtechnik-Ingenieur FH, NTB Buchs</dd>
-                </div>
-                <div className="flex gap-3">
-                  <dt className="w-24 shrink-0 font-semibold text-neutral-charcoal">Coaching</dt>
-                  <dd className="text-neutral-slate">Dipl. Persönlichkeits- und Team-Coach, MPI</dd>
                 </div>
                 <div className="flex gap-3">
                   <dt className="w-24 shrink-0 font-semibold text-neutral-charcoal">Sprachen</dt>
@@ -122,56 +118,31 @@ export default function UeberMich() {
         </Container>
       </section>
 
-      {/* Ingenieur + Coach */}
+      {/* Wie ich arbeite */}
       <section className="bg-white py-16 md:py-20">
         <Container size="md">
           <ScrollReveal>
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-[1fr_1fr] md:gap-16 md:items-start">
-              <div>
-                <h2 className="text-2xl font-bold text-neutral-charcoal mb-6">
-                  Ingenieur und Coach — kein Widerspruch.
-                </h2>
-                <div className="space-y-5 text-neutral-slate leading-relaxed">
-                  <p>
-                    Neben meiner IT-Arbeit bin ich ausgebildeter Persönlichkeits- und
-                    Team-Coach. Das klingt vielleicht ungewöhnlich für einen Ingenieur.
-                    Aber genau diese Kombination macht meine Arbeit aus.
-                  </p>
-                  <p>
-                    Wenn ich eine Lösung baue, denke ich immer mit: Wer nutzt das am
-                    Ende? Was braucht diese Person, damit es wirklich funktioniert? Wie
-                    nehme ich Beteiligte mit, die vielleicht skeptisch sind?
-                  </p>
-                  <p>
-                    Gerade bei Verbänden, wo ehrenamtliche Strukturen und
-                    unterschiedliche Erwartungen aufeinandertreffen, macht das einen
-                    spürbaren Unterschied.
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-neutral-charcoal mb-6">
-                  Wie ich arbeite.
-                </h2>
-                <div className="space-y-5 text-neutral-slate leading-relaxed">
-                  <p>
-                    Ich bin ein pragmatischer Arbeiter. Ich höre zu, stelle Fragen,
-                    und dann setze ich um. Kein monatelanges Konzeptieren, sondern
-                    schnelle Ergebnisse, die wir gemeinsam verfeinern.
-                  </p>
-                  <p>
-                    Meine Werkzeuge wähle ich nach dem, was Sinn macht, nicht nach
-                    dem, was gerade trendy ist. Oft ist das SQL Server und C#, manchmal
-                    Python, manchmal Power BI. Das Werkzeug ist Mittel zum Zweck,
-                    nicht das Ziel.
-                  </p>
-                  <p>
-                    Was mich antreibt: Wenn ein Kunde sagt, er verbringt jetzt zwei
-                    Tage pro Monat weniger mit Excel. Oder wenn ein Verband seine
-                    Prüfungsauswertung in einer Stunde statt in drei Tagen erledigt.
-                  </p>
-                </div>
+            <div className="max-w-2xl">
+              <h2 className="text-2xl font-bold text-neutral-charcoal mb-6">
+                Wie ich arbeite.
+              </h2>
+              <div className="space-y-5 text-neutral-slate leading-relaxed">
+                <p>
+                  Ich bin ein pragmatischer Arbeiter. Ich höre zu, stelle Fragen,
+                  und dann setze ich um. Kein monatelanges Konzeptieren, sondern
+                  schnelle Ergebnisse, die wir gemeinsam verfeinern.
+                </p>
+                <p>
+                  Meine Werkzeuge wähle ich nach dem, was Sinn macht, nicht nach
+                  dem, was gerade trendy ist. Oft ist das SQL Server und C#, manchmal
+                  Python, manchmal Power BI. Das Werkzeug ist Mittel zum Zweck,
+                  nicht das Ziel.
+                </p>
+                <p>
+                  Was mich antreibt: Wenn ein Kunde sagt, er verbringt jetzt zwei
+                  Tage pro Monat weniger mit Excel. Oder wenn ein Verband seine
+                  Prüfungsauswertung in einer Stunde statt in drei Tagen erledigt.
+                </p>
               </div>
             </div>
           </ScrollReveal>
