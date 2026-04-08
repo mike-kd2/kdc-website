@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui'
-import { NAVIGATION_ITEMS, CONTACT_EMAIL, CONTACT_PHONE, TIDYCAL_URL } from '@/lib/constants'
+import { NAVIGATION_ITEMS, CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -20,13 +20,11 @@ export function Footer() {
             <p className="text-neutral-light-gray max-w-md mb-6">
               Automatisierung, massgeschneiderte Tools und Datenlösungen für Verbände und KMUs in der Schweiz.
             </p>
-            <Button
-              variant="secondary"
-              size="md"
-              onClick={() => window.open(TIDYCAL_URL, '_blank')}
-            >
-              Gespräch vereinbaren
-            </Button>
+            <Link href="/angebot#prozess-check">
+              <Button variant="secondary" size="md">
+                Prozess-Check anfragen
+              </Button>
+            </Link>
           </div>
 
           {/* Navigation */}

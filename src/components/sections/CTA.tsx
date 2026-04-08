@@ -16,7 +16,7 @@ interface CTAProps {
 export function CTA({
   title = 'Haben Sie eine Aufgabe, die Sie schon lange nervt?',
   text = 'Erzählen Sie mir davon. In einem kurzen Gespräch finde ich heraus, ob und wie ich Ihnen helfen kann. Unverbindlich, direkt und ohne Verkaufsgespräch.',
-  buttonText = 'Gespräch vereinbaren',
+  buttonText = 'Prozess-Check anfragen',
   ctaHref = '/angebot#prozess-check',
   showContactDetails = true,
 }: CTAProps) {
