@@ -10,50 +10,103 @@ export default function Angebot() {
     <>
       <SEOHead
         title="klauser designs | Angebot"
-        description="Drei klare Einstiegspunkte: Prozess-Check (kostenlos), Erster Prototyp, Laufende Betreuung."
+        description="Drei klare Schritte: Prozess-Check (kostenlos), Erster Prototyp, Laufende Betreuung. Kein Kleingedrucktes."
       />
 
-      {/* Header Section */}
-      <section className="bg-primary py-16 text-white md:py-24">
+      {/* Hero Section */}
+      <section className="relative bg-primary overflow-hidden py-16 text-white md:py-24">
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+            backgroundSize: '64px 64px',
+          }}
+        />
+        <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary-light opacity-40 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-16 left-1/3 w-48 h-48 rounded-full bg-accent opacity-15 blur-2xl pointer-events-none" />
+
         <Container size="md">
-          <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
-            Angebot
-          </p>
-          <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl max-w-2xl mb-6">
-            Drei klare Einstiegspunkte. Kein Kleingedrucktes.
-          </h1>
-          <p className="text-white/75 text-lg max-w-xl">
-            Fangen Sie klein an. Lernen Sie, ob es funktioniert. Dann entscheiden Sie, wie es weitergeht.
-          </p>
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-4">
+                Angebot
+              </p>
+              <h1 className="mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl max-w-2xl">
+                Klein anfangen.<br />Dann entscheiden.
+              </h1>
+              <p className="text-lg text-white/75 max-w-lg">
+                Kein grosses Commitment von Anfang an. Wir starten mit einem
+                kostenlosen Gespräch — und nur wenn es Sinn macht, geht es weiter.
+              </p>
+            </div>
+
+            {/* Visual: Schritte preview */}
+            <div className="hidden lg:flex flex-col gap-3">
+              <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Wie es läuft</p>
+              {[
+                { schritt: '01', label: 'Prozess-Check', note: 'Kostenlos' },
+                { schritt: '02', label: 'Erster Prototyp', note: 'ab CHF 3\'000' },
+                { schritt: '03', label: 'Laufende Betreuung', note: 'ab CHF 1\'500 / Mt.' },
+              ].map(({ schritt, label, note }) => (
+                <div
+                  key={schritt}
+                  className="flex items-center gap-4 rounded-md bg-white/[0.06] border border-white/10 px-4 py-3"
+                >
+                  <span className="text-xl font-bold text-white/20 tabular-nums w-8 flex-shrink-0">
+                    {schritt}
+                  </span>
+                  <span className="text-white/80 text-sm font-medium flex-1">{label}</span>
+                  <span className="text-accent text-xs font-semibold">{note}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </Container>
       </section>
 
-      {/* Pakete Section */}
+      {/* Schritte Section */}
       <section id="prozess-check" className="bg-neutral-off-white py-16">
-        <Container>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Container size="md">
+          <div className="flex flex-col gap-6">
             <PaketCard
+              nummer={1}
               titel="Prozess-Check"
               preis="Kostenlos"
-              beschreibung="Ein Gespräch, ein konkreter Ablauf, eine ehrliche Einschätzung: Lohnt sich Automatisierung bei Ihnen? Was bringt es? Was kostet es ungefähr? Kein Verkaufsgespräch. Wenn es keinen Sinn macht, sage ich das."
-              details={['45–60 Minuten', 'Klare Empfehlung, ob und wie es weitergeht']}
+              badge="Einstieg"
+              beschreibung="Ein Gespräch, ein konkreter Ablauf, eine ehrliche Einschätzung: Lohnt sich Automatisierung bei Ihnen? Was bringt es? Was kostet es ungefähr? Kein Verkaufsgespräch — wenn es keinen Sinn macht, sage ich das."
+              details={[
+                '45–60 Minuten',
+                'Analyse Ihres konkreten Ablaufs',
+                'Klare Empfehlung, ob und wie es weitergeht',
+              ]}
               ctaText="Prozess-Check buchen"
               ctaHref={PROZESS_CHECK_URL}
               highlight={true}
             />
             <PaketCard
+              nummer={2}
               titel="Erster Prototyp"
               preis="ab CHF 3'000"
-              beschreibung="Ich baue einen funktionierenden Prototyp für einen konkreten Prozess. Sie sehen innerhalb von 2–4 Wochen, ob die Lösung funktioniert, bevor Sie sich auf ein grosses Projekt einlassen."
-              details={['Ein klar abgegrenzter Prozess', '2–4 Wochen Zeitrahmen', "CHF 3'000–5'000"]}
+              beschreibung="Ich baue einen funktionierenden Prototyp für einen konkreten Prozess. Sie sehen innerhalb von 2–4 Wochen, ob die Lösung tatsächlich funktioniert — bevor Sie sich auf ein grösseres Projekt einlassen."
+              details={[
+                'Ein klar abgegrenzter Prozess',
+                '2–4 Wochen Zeitrahmen',
+                "Festpreis CHF 3'000 – 5'000",
+              ]}
               ctaText="Prototyp besprechen"
               ctaHref="/kontakt"
             />
             <PaketCard
+              nummer={3}
               titel="Laufende Betreuung"
-              preis="ab CHF 1'500/Monat"
+              preis="ab CHF 1'500 / Monat"
               beschreibung="Ihre Lösung läuft. Jetzt geht es um Wartung, Anpassungen und den nächsten Automatisierungsschritt. Planbar für Sie, planbar für mich."
-              details={['Wartung & Fehlerbehebung', 'Weiterentwicklungen', 'Neue Automatisierungen nach Bedarf']}
+              details={[
+                'Wartung & Fehlerbehebung',
+                'Weiterentwicklungen nach Bedarf',
+                'Neue Automatisierungen schrittweise',
+              ]}
               ctaText="Betreuung anfragen"
               ctaHref="/kontakt"
             />
@@ -62,14 +115,18 @@ export default function Angebot() {
       </section>
 
       {/* TidyCal Embed Section */}
-      <section className="bg-white py-16">
+      <section className="bg-white border-t border-neutral-light-gray py-16">
         <Container size="md">
           <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
-            Termin buchen
+            Direkt buchen
           </p>
-          <h2 className="mb-8 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
-            Direkt einen Prozess-Check reservieren
+          <h2 className="mb-2 text-3xl font-bold text-neutral-charcoal sm:text-4xl">
+            Prozess-Check reservieren
           </h2>
+          <p className="text-neutral-slate mb-10 max-w-lg">
+            Wählen Sie einen Termin, der Ihnen passt. Ich melde mich vorab mit
+            ein paar Fragen, damit wir die 45 Minuten optimal nutzen können.
+          </p>
           <TidyCalEmbed url={PROZESS_CHECK_URL} />
         </Container>
       </section>

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
 export interface PaketCardProps {
+  nummer: number
   titel: string
   preis: string
   beschreibung: string
@@ -11,9 +12,11 @@ export interface PaketCardProps {
   ctaText: string
   ctaHref: string
   highlight?: boolean
+  badge?: string
 }
 
 export function PaketCard({
+  nummer,
   titel,
   preis,
   beschreibung,
@@ -21,54 +24,72 @@ export function PaketCard({
   ctaText,
   ctaHref,
   highlight = false,
+  badge,
 }: PaketCardProps) {
   return (
     <div
       className={cn(
-        'flex flex-col rounded-lg bg-white p-6 shadow-card transition-shadow hover:shadow-card-hover',
+        'rounded-xl bg-white border shadow-card hover:shadow-card-hover transition-shadow overflow-hidden',
         highlight
-          ? 'border-t-4 border-accent'
-          : 'border-t-4 border-primary/20'
+          ? 'border-accent/40'
+          : 'border-neutral-light-gray'
       )}
     >
-      {highlight && (
-        <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
-          Einstieg
-        </p>
-      )}
-      <div className="mb-4">
-        <h3 className="text-xl font-bold text-neutral-charcoal">{titel}</h3>
-        <p className={cn('mt-2 text-3xl font-bold', highlight ? 'text-accent' : 'text-primary')}>
-          {preis}
-        </p>
-      </div>
+      {/* Accent bar for highlight */}
+      {highlight && <div className="h-1 bg-accent w-full" />}
 
-      <p className="mb-6 text-neutral-slate leading-relaxed">{beschreibung}</p>
+      <div className="p-8 flex items-start gap-6">
+        {/* Step number */}
+        <span className="flex-shrink-0 text-5xl font-bold text-primary/10 leading-none tabular-nums select-none mt-1">
+          {String(nummer).padStart(2, '0')}
+        </span>
 
-      {details && details.length > 0 && (
-        <ul className="mb-6 flex flex-col gap-2">
-          {details.map((item, index) => (
-            <li key={index} className="flex items-start gap-2">
-              <Check
-                className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
-                aria-hidden="true"
-              />
-              <span className="text-sm text-neutral-slate">{item}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+        {/* Content */}
+        <div className="flex-1 min-w-0">
+          {badge && (
+            <p className="text-xs font-bold text-accent uppercase tracking-widest mb-2">
+              {badge}
+            </p>
+          )}
 
-      <div className="mt-auto">
-        <Link href={ctaHref} className="block w-full">
-          <Button
-            variant={highlight ? 'secondary' : 'outline'}
-            size="md"
-            className="w-full"
-          >
-            {ctaText}
-          </Button>
-        </Link>
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+            <div>
+              <h3 className="text-xl font-bold text-neutral-charcoal">{titel}</h3>
+              <p
+                className={cn(
+                  'text-2xl font-bold mt-1',
+                  highlight ? 'text-accent' : 'text-primary'
+                )}
+              >
+                {preis}
+              </p>
+            </div>
+            <Link href={ctaHref} className="flex-shrink-0 self-start">
+              <Button
+                variant={highlight ? 'secondary' : 'outline'}
+                size="md"
+              >
+                {ctaText}
+              </Button>
+            </Link>
+          </div>
+
+          <p className="text-neutral-slate leading-relaxed mb-5">{beschreibung}</p>
+
+          {details && details.length > 0 && (
+            <ul className="flex flex-col gap-2">
+              {details.map((item, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <Check
+                    className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
+                    aria-hidden="true"
+                  />
+                  <span className="text-sm text-neutral-slate">{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     </div>
   )
