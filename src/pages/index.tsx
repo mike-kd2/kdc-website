@@ -141,15 +141,15 @@ export default function Home() {
       </section>
 
       {/* Referenz-Teaser */}
-      <section className="bg-neutral-charcoal py-20">
+      <section className="bg-neutral-off-white py-20 border-t border-neutral-light-gray">
         <Container size="md">
-          <h2 className="text-2xl font-bold text-white mb-3">
-            Was ich bereits gebaut habe.
-          </h2>
-          <p className="text-white/50 text-sm mb-10 uppercase tracking-widest">
+          <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
             Ausgewählte Projekte
           </p>
-          <div className="flex flex-col gap-4">
+          <h2 className="text-2xl font-bold text-neutral-charcoal mb-10">
+            Was ich bereits gebaut habe.
+          </h2>
+          <div className="flex flex-col gap-3">
             {[
               {
                 firma: 'OdA ARTECURA',
@@ -173,18 +173,18 @@ export default function Home() {
               <Link
                 key={firma}
                 href={href}
-                className="group flex items-start gap-4 rounded-lg bg-white/[0.05] border border-white/10 hover:bg-white/10 hover:border-accent/40 transition-all px-6 py-5"
+                className="group flex items-center gap-4 rounded-lg bg-white border border-neutral-light-gray hover:border-primary/30 hover:shadow-card transition-all px-6 py-5"
               >
-                <span className="mt-0.5 flex-shrink-0 w-1 h-full min-h-[40px] rounded-full bg-primary-light opacity-60 group-hover:opacity-100 transition-opacity" />
-                <div className="min-w-0">
-                  <p className="font-bold text-white text-lg leading-tight mb-1">
+                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-accent" />
+                <div className="min-w-0 flex-1">
+                  <p className="font-bold text-neutral-charcoal text-base leading-tight mb-0.5">
                     {firma}
                   </p>
-                  <p className="text-white/60 text-sm leading-relaxed group-hover:text-accent/90 transition-colors">
+                  <p className="text-neutral-slate text-sm leading-relaxed">
                     {ergebnis}
                   </p>
                 </div>
-                <span className="ml-auto flex-shrink-0 text-white/30 group-hover:text-accent transition-colors text-lg self-center">
+                <span className="flex-shrink-0 text-primary/40 group-hover:text-primary transition-colors text-base self-center">
                   →
                 </span>
               </Link>
