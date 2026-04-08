@@ -200,10 +200,10 @@ export default function Referenzen() {
       <section className="bg-primary py-16 text-white">
         <Container size="md">
           <p className="mb-2 text-2xl font-semibold sm:text-3xl">
-            Auch Ihr Ablauf könnte so aussehen.
+            Kommt Ihnen etwas davon bekannt vor?
           </p>
           <p className="text-white/60 mb-8 max-w-md">
-            Ein 30-minütiges Gespräch reicht, um zu sehen, ob und wie ich helfen kann.
+            In 30 Minuten sehen wir gemeinsam, ob meine Erfahrung zu Ihrem Problem passt.
           </p>
           <Link
             href="/angebot#prozess-check"
