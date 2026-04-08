@@ -10,71 +10,20 @@ const stats = [
   { wert: '6+', label: 'Branchen' },
 ]
 
-// Chronologisch aufsteigend (ältestes zuerst)
+// Chronologisch absteigend (neuestes zuerst)
 const projekte = [
   {
-    id: 'imt-ag',
-    startJahr: '2002',
-    firma: 'IMT AG',
-    branche: 'Medizintechnik (FDA/CE-reguliert)',
-    zeitraum: '2002 – 2013',
+    id: 'oda-artecura',
+    startJahr: '2026',
+    firma: 'OdA ARTECURA',
+    branche: 'Berufsverband Kunsttherapie',
+    zeitraum: '2026',
     problem:
-      'Wachsendes Medtech-Unternehmen ohne professionelle IT-Struktur — in einem regulierten Umfeld (FDA, CE, CSA), das höchste Anforderungen an Prozesse und Dokumentation stellt.',
+      'Das gesamte Qualifikationsverfahren lief manuell in Excel — über 9 Worksheets, händische Formeln, fehleranfällig und zeitintensiv für die Geschäftsstelle.',
     loesung:
-      'Als CIO und Mitglied der Geschäftsleitung: Aufbau und Leitung der gesamten IT und des Entwicklungsteams. Software für Beatmungs- und Anästhesiegeräte. Compliance-konforme Infrastruktur.',
+      'C#-Service ersetzt Legacy-VBA: automatische Generierung individueller .xlsm-Bewertungsformulare mit Datenimport aus Prüfungsplänen und automatischer Notenberechnung.',
     ergebnis:
-      'Stabile IT-Struktur und Entwicklungsteam in einem regulierten Umfeld — über 7 Jahre aufgebaut und geführt.',
-  },
-  {
-    id: 'helion-dw',
-    startJahr: '2013',
-    firma: 'Helion Energy AG',
-    branche: 'Energieunternehmen',
-    zeitraum: '2013 – 2023',
-    problem:
-      'Kein zentrales Daten-Fundament. Berichte wurden manuell zusammengestellt — pro Report mehrere Tage Aufwand. Kein einheitliches Bild über Projekte und Geschäftszahlen.',
-    loesung:
-      'Aufbau und 10-jähriger Betrieb des firmenweiten Data Warehouse. KPI-Dashboards in Power BI. Automatische Aktualisierung, strukturierte Datenhaltung als Single Point of Truth.',
-    ergebnis:
-      'Reportingzeit von Tagen auf Stunden reduziert. Alle Geschäftsbereiche auf demselben Datenstand.',
-  },
-  {
-    id: 'helion-middleware',
-    startJahr: '2018',
-    firma: 'Helion Energy AG',
-    branche: 'Energieunternehmen',
-    zeitraum: '2018 – 2025',
-    problem:
-      'Eigenentwickelte Vertriebs- und Projektmanagementsoftware, on-premise ERP und konzernweites SAP liefen aneinander vorbei. Daten wurden manuell zwischen Systemen übertragen.',
-    loesung:
-      'Azure-Middleware für vollautomatischen Import und Sync von Adress-, Projekt-, Offert- und Rechnungsdaten. Anbindung externer Logistikpartner. Modular gebaut für geplante ERP-Migration.',
-    ergebnis:
-      'Kein manuelles Übertragen mehr. Vollautomatische Datenflüsse zwischen allen Systemen.',
-  },
-  {
-    id: 'sbkh',
-    startJahr: '2019',
-    firma: 'SBKH GmbH',
-    branche: 'E-Commerce / Preisvergleich',
-    zeitraum: '2019 – 2020',
-    problem:
-      'Täglich neue Produktdaten aus mehreren externen Quellen — Abholung, Transformation und Einspielung liefen komplett manuell. Wachstum war dadurch personalabhängig.',
-    loesung:
-      'Vollautomatisierte Pipeline: Abholung aus mehreren Quellen, Transformation, Qualitätsprüfung, Bereitstellung. Täglicher Lauf ohne manuelle Eingriffe.',
-    ergebnis: 'Null manueller Aufwand. Sortiment wächst ohne zusätzliches Personal.',
-  },
-  {
-    id: 'helion-migration',
-    startJahr: '2024',
-    firma: 'Helion Energy AG',
-    branche: 'Energieunternehmen',
-    zeitraum: '2024 – 2025',
-    problem:
-      'Ablösung des Legacy-Systems ES2000 durch Microsoft Dynamics 365 CRM und BC. Bisherige Migrationsstrategie basierte auf Stichproben — zu riskant für eine vollständige Datenmigration.',
-    loesung:
-      'End-to-End Datenmigration mit Python und SQL. Automatisierte 100%-Validierung aller migrierten Datensätze. Tägliche Validierungszyklen zur frühzeitigen Erkennung von Inkonsistenzen.',
-    ergebnis:
-      '100% der migrierten Datensätze validiert — statt Stichproben. Keine Post-Migration-Korrekturen.',
+      'Die Geschäftsstelle führt das Verfahren eigenständig durch — mit einem Bruchteil des bisherigen Aufwands.',
   },
   {
     id: 'haustechnik-d365',
@@ -90,17 +39,68 @@ const projekte = [
       'Strukturierter Go-Live-Prozess mit klaren Verantwortlichkeiten und definierten Rollback-Szenarien.',
   },
   {
-    id: 'oda-artecura',
-    startJahr: '2026',
-    firma: 'OdA ARTECURA',
-    branche: 'Berufsverband Kunsttherapie',
-    zeitraum: '2026',
+    id: 'helion-migration',
+    startJahr: '2024',
+    firma: 'Helion Energy AG',
+    branche: 'Energieunternehmen',
+    zeitraum: '2024 – 2025',
     problem:
-      'Das gesamte Qualifikationsverfahren lief manuell in Excel — über 9 Worksheets, händische Formeln, fehleranfällig und zeitintensiv für die Geschäftsstelle.',
+      'Ablösung des Legacy-Systems ES2000 durch Microsoft Dynamics 365 CRM und BC. Bisherige Migrationsstrategie basierte auf Stichproben — zu riskant für eine vollständige Datenmigration.',
     loesung:
-      'C#-Service ersetzt Legacy-VBA: automatische Generierung individueller .xlsm-Bewertungsformulare mit Datenimport aus Prüfungsplänen und automatischer Notenberechnung.',
+      'End-to-End Datenmigration mit Python und SQL. Automatisierte 100%-Validierung aller migrierten Datensätze. Tägliche Validierungszyklen zur frühzeitigen Erkennung von Inkonsistenzen.',
     ergebnis:
-      'Die Geschäftsstelle führt das Verfahren eigenständig durch — mit einem Bruchteil des bisherigen Aufwands.',
+      '100% der migrierten Datensätze validiert — statt Stichproben. Keine Post-Migration-Korrekturen.',
+  },
+  {
+    id: 'sbkh',
+    startJahr: '2019',
+    firma: 'SBKH GmbH',
+    branche: 'E-Commerce / Preisvergleich',
+    zeitraum: '2019 – 2020',
+    problem:
+      'Täglich neue Produktdaten aus mehreren externen Quellen — Abholung, Transformation und Einspielung liefen komplett manuell. Wachstum war dadurch personalabhängig.',
+    loesung:
+      'Vollautomatisierte Pipeline: Abholung aus mehreren Quellen, Transformation, Qualitätsprüfung, Bereitstellung. Täglicher Lauf ohne manuelle Eingriffe.',
+    ergebnis: 'Null manueller Aufwand. Sortiment wächst ohne zusätzliches Personal.',
+  },
+  {
+    id: 'helion-middleware',
+    startJahr: '2018',
+    firma: 'Helion Energy AG',
+    branche: 'Energieunternehmen',
+    zeitraum: '2018 – 2025',
+    problem:
+      'Eigenentwickelte Vertriebs- und Projektmanagementsoftware, on-premise ERP und konzernweites SAP liefen aneinander vorbei. Daten wurden manuell zwischen Systemen übertragen.',
+    loesung:
+      'Azure-Middleware für vollautomatischen Import und Sync von Adress-, Projekt-, Offert- und Rechnungsdaten. Anbindung externer Logistikpartner. Modular gebaut für geplante ERP-Migration.',
+    ergebnis:
+      'Kein manuelles Übertragen mehr. Vollautomatische Datenflüsse zwischen allen Systemen.',
+  },
+  {
+    id: 'helion-dw',
+    startJahr: '2013',
+    firma: 'Helion Energy AG',
+    branche: 'Energieunternehmen',
+    zeitraum: '2013 – 2023',
+    problem:
+      'Kein zentrales Daten-Fundament. Berichte wurden manuell zusammengestellt — pro Report mehrere Tage Aufwand. Kein einheitliches Bild über Projekte und Geschäftszahlen.',
+    loesung:
+      'Aufbau und 10-jähriger Betrieb des firmenweiten Data Warehouse. KPI-Dashboards in Power BI. Automatische Aktualisierung, strukturierte Datenhaltung als Single Point of Truth.',
+    ergebnis:
+      'Reportingzeit von Tagen auf Stunden reduziert. Alle Geschäftsbereiche auf demselben Datenstand.',
+  },
+  {
+    id: 'imt-ag',
+    startJahr: '2002',
+    firma: 'IMT AG',
+    branche: 'Medizintechnik (FDA/CE-reguliert)',
+    zeitraum: '2002 – 2013',
+    problem:
+      'Wachsendes Medtech-Unternehmen ohne professionelle IT-Struktur — in einem regulierten Umfeld (FDA, CE, CSA), das höchste Anforderungen an Prozesse und Dokumentation stellt.',
+    loesung:
+      'Als CIO und Mitglied der Geschäftsleitung: Aufbau und Leitung der gesamten IT und des Entwicklungsteams. Software für Beatmungs- und Anästhesiegeräte. Compliance-konforme Infrastruktur.',
+    ergebnis:
+      'Stabile IT-Struktur und Entwicklungsteam in einem regulierten Umfeld — über 7 Jahre aufgebaut und geführt.',
   },
 ]
 
@@ -131,12 +131,11 @@ export default function Referenzen() {
               Referenzen
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl max-w-3xl mb-6">
-              10 Jahre beim selben Kunden.<br />So arbeite ich.
+              Manche Kunden kommen einmal.<br />Manche bleiben ein Jahrzehnt.
             </h1>
             <p className="text-lg text-white/70 max-w-xl">
-              Kein einmaliger Auftritt — sondern Zusammenarbeit, die wächst.
-              Die meisten meiner Kunden kommen zurück. Manche bleiben ein Jahrzehnt.
-              Hier steht, was dabei entstanden ist.
+              Ich arbeite nicht mit möglichst vielen Kunden — sondern möglichst
+              tief mit den richtigen. Was dabei entsteht, sehen Sie hier.
             </p>
           </div>
         </Container>
