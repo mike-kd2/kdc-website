@@ -2,20 +2,22 @@ import { Button } from '@/components/ui'
 import { Container, Section } from '@/components/layout'
 import { ScrollReveal } from '@/components/animations'
 import { ArrowRight } from 'lucide-react'
-import { TIDYCAL_URL, CONTACT_NAME, CONTACT_PHONE, CONTACT_EMAIL } from '@/lib/constants'
-import { trackDiscoveryCallClick } from '@/lib/analytics'
+import { CONTACT_NAME, CONTACT_PHONE, CONTACT_EMAIL } from '@/lib/constants'
+import Link from 'next/link'
 
 interface CTAProps {
   title?: string
   text?: string
   buttonText?: string
+  ctaHref?: string
   showContactDetails?: boolean
 }
 
 export function CTA({
   title = 'Haben Sie eine Aufgabe, die Sie schon lange nervt?',
-  text = 'Erzählen Sie mir davon. In einem kurzen Gespräch finden wir heraus, ob und wie ich Ihnen helfen kann. Unverbindlich, direkt und ohne Verkaufsgespräch.',
+  text = 'Erzählen Sie mir davon. In einem kurzen Gespräch finde ich heraus, ob und wie ich Ihnen helfen kann. Unverbindlich, direkt und ohne Verkaufsgespräch.',
   buttonText = 'Gespräch vereinbaren',
+  ctaHref = '/angebot#prozess-check',
   showContactDetails = true,
 }: CTAProps) {
   return (
@@ -29,18 +31,16 @@ export function CTA({
             <p className="mb-8 text-lg text-white/90 md:text-xl">
               {text}
             </p>
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => {
-                trackDiscoveryCallClick('cta_section')
-                window.open(TIDYCAL_URL, '_blank')
-              }}
-              className="w-full sm:w-auto"
-            >
-              {buttonText}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href={ctaHref} className="inline-block w-full sm:w-auto">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="w-full sm:w-auto"
+              >
+                {buttonText}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             {showContactDetails && (
               <div className="mt-8 text-white/80">
                 <p className="font-medium text-white">{CONTACT_NAME}</p>
