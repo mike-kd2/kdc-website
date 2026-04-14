@@ -37,7 +37,7 @@ export default function Angebot() {
               </h1>
               <p className="text-lg text-white/75 max-w-lg">
                 Kein grosses Commitment von Anfang an. Wir starten mit einem
-                kostenlosen Gespräch — und nur wenn es Sinn macht, geht es weiter.
+                kostenlosen Gespräch und nur wenn es Sinn macht, geht es weiter.
               </p>
             </div>
 
@@ -47,7 +47,7 @@ export default function Angebot() {
               {[
                 { schritt: '01', label: 'Prozess-Check', note: 'Kostenlos' },
                 { schritt: '02', label: 'Erster Prototyp', note: 'ab CHF 3\'000' },
-                { schritt: '03', label: 'Laufende Betreuung', note: 'ab CHF 1\'500 / Mt.' },
+                { schritt: '03', label: 'Laufende Betreuung', note: 'ab CHF 1\'000 / Mt.' },
               ].map(({ schritt, label, note }) => (
                 <div
                   key={schritt}
@@ -100,7 +100,7 @@ export default function Angebot() {
             <PaketCard
               nummer={3}
               titel="Laufende Betreuung"
-              preis="ab CHF 1'500 / Monat"
+              preis="ab CHF 1'000 / Monat"
               beschreibung="Ihre Lösung läuft. Jetzt geht es um Wartung, Anpassungen und den nächsten Automatisierungsschritt. Planbar für Sie, planbar für mich."
               details={[
                 'Wartung & Fehlerbehebung',

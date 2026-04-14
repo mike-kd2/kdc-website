@@ -97,7 +97,7 @@ export default function Home() {
             </p>
             <p className="mt-5 text-base text-neutral-slate">
               Ob das ein klassischer Workflow ist, ein massgeschneidertes Tool
-              oder KI an den richtigen Stellen: Ich entscheide nach dem, was
+              oder KI an den richtigen Stellen: Wir entscheiden nach dem, was
               für Ihr Problem wirklich Sinn ergibt.
             </p>
           </div>

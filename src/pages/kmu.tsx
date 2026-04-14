@@ -132,7 +132,7 @@ export default function KMU() {
                   </span>
                 </div>
                 <p className="text-primary font-semibold text-lg leading-snug border-l-4 border-accent pl-4">
-                  Reportingzeit von Tagen auf Stunden reduziert. Alle Geschäftsbereiche auf demselben Datenstand.
+                  Reportingzeit von Tagen auf Minuten reduziert. Alle Geschäftsbereiche auf demselben Datenstand.
                 </p>
               </div>
               <div className="px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">

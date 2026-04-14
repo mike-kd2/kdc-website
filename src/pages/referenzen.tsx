@@ -87,7 +87,7 @@ const projekte = [
     loesung:
       'Aufbau und 10-jähriger Betrieb des firmenweiten Data Warehouse. KPI-Dashboards in Power BI. Automatische Aktualisierung, strukturierte Datenhaltung als Single Point of Truth.',
     ergebnis:
-      'Reportingzeit von Tagen auf Stunden reduziert. Alle Geschäftsbereiche auf demselben Datenstand.',
+      'Reportingzeit von Tagen auf Minuten reduziert. Alle Geschäftsbereiche auf demselben Datenstand.',
   },
   {
     id: 'imt-ag',
